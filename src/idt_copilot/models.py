@@ -33,6 +33,11 @@ class Allergy(BaseModel):
     reaction: str | None = None
 
 
+class Immunization(BaseModel):
+    imm_date: date
+    description: str
+
+
 class Encounter(BaseModel):
     id: str
     start: date
@@ -73,6 +78,7 @@ class Participant(BaseModel):
     encounters: list[Encounter]
     observations: list[Observation]
     notes: list[Note]
+    immunizations: list[Immunization] = Field(default_factory=list)
 
     @property
     def age(self) -> int:

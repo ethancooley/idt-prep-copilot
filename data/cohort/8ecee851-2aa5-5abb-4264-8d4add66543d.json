@@ -1153,5 +1153,15 @@
       "note_type": "Activity note",
       "text": "Rafael enjoyed the gardening group and talked about growing tomatoes as a child."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2024-09-06",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-08-29",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

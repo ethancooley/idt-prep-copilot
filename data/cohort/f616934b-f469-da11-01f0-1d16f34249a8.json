@@ -303,5 +303,19 @@
       "note_type": "Activity note",
       "text": "Winford enjoyed the gardening group and talked about growing tomatoes as a child."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-01-22",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-01-22",
+      "description": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+    },
+    {
+      "imm_date": "2026-01-28",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

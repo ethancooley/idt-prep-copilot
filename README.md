@@ -12,8 +12,8 @@ line to the note it came from, and leaves the final call to a clinician.
 | --- | --- | --- |
 | 1 | Synthetic data foundation: cohort, answer keys, Postgres + pgvector | Done |
 | 2 | MCP server with chart tools | Done |
-| 3 | LangGraph agent on Claude: plan, gather, draft, verify citations | Next |
-| 4 | Eval harness against the answer keys, run in CI | |
+| 3 | LangGraph agent on Claude: plan, gather, draft, verify citations | Done |
+| 4 | Eval harness against the answer keys, run in CI | Next |
 | 5 | React app: brief with clickable citations, approve/edit/reject, audit log | |
 | 6 | Docker, GitHub Actions, AWS deployment, tracing | |
 
@@ -74,6 +74,31 @@ claude mcp add idt-chart -e DATABASE_URL=postgresql://idt:idt@localhost:5432/idt
 
 Then ask: *"Using the idt-chart tools, what changed for Mariana Arriaga since her last IDT review? Cite note ids."*
 
+## The agent
+
+`src/idt_copilot/agent/graph.py` is a [LangGraph](https://langchain-ai.github.io/langgraph/) state machine:
+
+| Step | Model | What happens |
+| --- | --- | --- |
+| Plan | Claude Haiku | Reads the participant summary and lists what to check |
+| Gather | Claude Haiku | Calls the MCP chart tools; code guarantees the core tools always run and every call is scoped to this participant |
+| Draft | Claude Sonnet | Writes a structured brief; every item must cite note ids or records |
+| Verify | Code + Claude Sonnet | Code rejects citations that do not exist; Claude checks each claim against its cited sources |
+| Retry | | Unsupported claims send the graph back to Gather once, with the verifier's reasons |
+| Finalize | | Keeps supported items, flags partial ones, and lists removed claims for audit |
+
+Each run records model calls, tokens, cost, latency, and every tool call.
+
+```bash
+cp .env.example .env      # add your ANTHROPIC_API_KEY
+python -m idt_copilot.agent.run --participant "Mariana Arriaga"
+```
+
+The brief prints as Markdown and is saved to `briefs/` as JSON and Markdown. By default the agent reaches the
+chart through the MCP server over stdio, just like Claude Desktop; `--in-process` skips the subprocess.
+
+The tests run the full graph against a scripted stand-in for Claude, so they need no API key.
+
 ## Quick start
 
 ```bash
@@ -103,5 +128,9 @@ src/idt_copilot/
   db/load.py           Loads the cohort; --embed adds note embeddings (local model, no API cost)
   chart/repository.py  Read-only chart queries used by the tools
   chart/server.py      MCP server exposing the chart tools
-tests/                 Cohort consistency and chart tool checks
+  agent/graph.py       LangGraph agent: plan, gather, draft, verify, finalize
+  agent/chart_client.py  Reaches the chart over MCP (stdio) or in process
+  agent/llm.py         Anthropic client wrapper with token and cost tracking
+  agent/run.py         CLI: generate a brief for one participant
+tests/                 Cohort, chart tool, and agent checks
 ```

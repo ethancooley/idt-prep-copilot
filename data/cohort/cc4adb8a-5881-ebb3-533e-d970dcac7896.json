@@ -1258,5 +1258,15 @@
       "note_type": "Attendance note",
       "text": "Darleen attended day center, joined chair exercise and music group, and ate most of lunch."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-01-05",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-12-28",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

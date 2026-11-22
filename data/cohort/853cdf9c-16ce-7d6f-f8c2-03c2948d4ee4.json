@@ -604,5 +604,19 @@
       "note_type": "Activity note",
       "text": "Damaris enjoyed the gardening group and talked about growing tomatoes as a child."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2026-02-05",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-02-05",
+      "description": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+    },
+    {
+      "imm_date": "2026-09-03",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

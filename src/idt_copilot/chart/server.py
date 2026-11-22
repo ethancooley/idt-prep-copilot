@@ -92,6 +92,12 @@ def get_medication_changes(participant_id: str, since: str | None = None) -> dic
     return _call(repo.get_medication_changes, participant_id, since)
 
 
+@server.tool()
+def get_immunizations(participant_id: str) -> dict:
+    """Immunizations from the last two years, and whether a flu vaccine is documented this season."""
+    return _call(repo.get_immunizations, participant_id)
+
+
 def main() -> None:
     server.run("stdio")
 

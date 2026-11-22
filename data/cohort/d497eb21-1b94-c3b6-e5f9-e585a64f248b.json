@@ -399,5 +399,19 @@
       "note_type": "Home care visit",
       "text": "Assisted with light housekeeping and meal prep. Santos in good spirits."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-04-28",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-05-04",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-05-04",
+      "description": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+    }
   ]
 }

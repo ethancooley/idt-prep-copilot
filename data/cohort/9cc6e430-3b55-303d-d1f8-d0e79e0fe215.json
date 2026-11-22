@@ -250,5 +250,15 @@
       "note_type": "Post-acute follow-up",
       "text": "Post-hospital follow-up for chest pain; cardiac workup negative. Garland is back to baseline per his son. Reviewed discharge medications. Will monitor closely over the next two weeks."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-03-16",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-03-22",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

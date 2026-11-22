@@ -394,5 +394,15 @@
       "note_type": "Nursing note",
       "text": "Blood pressure 164/89 today, third elevated reading this month. Lamont admits to missing evening doses some days. Reinforced adherence; flagged for PCP review of antihypertensive regimen."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-07-06",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-07-12",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

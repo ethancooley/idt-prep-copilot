@@ -430,5 +430,19 @@
       "note_type": "Nutrition assessment",
       "text": "Weight 83.0 kg, down from 88.7 kg on Sep 5, 2026 (6%). Federico reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-03-27",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-03-27",
+      "description": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+    },
+    {
+      "imm_date": "2026-04-02",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

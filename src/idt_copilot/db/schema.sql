@@ -1,7 +1,7 @@
 -- IDT Prep Copilot schema. All data is synthetic.
 CREATE EXTENSION IF NOT EXISTS vector;
 
-DROP TABLE IF EXISTS notes, observations, encounters, allergies, medications, conditions, participants CASCADE;
+DROP TABLE IF EXISTS immunizations, notes, observations, encounters, allergies, medications, conditions, participants CASCADE;
 
 CREATE TABLE participants (
     id              TEXT PRIMARY KEY,
@@ -68,6 +68,13 @@ CREATE TABLE notes (
     note_type      TEXT NOT NULL,
     text           TEXT NOT NULL,
     embedding      vector(384)      -- bge-small-en-v1.5; filled by `idt-load-db --embed`
+);
+
+CREATE TABLE immunizations (
+    id             SERIAL PRIMARY KEY,
+    participant_id TEXT NOT NULL REFERENCES participants(id) ON DELETE CASCADE,
+    imm_date       DATE NOT NULL,
+    description    TEXT NOT NULL
 );
 
 CREATE INDEX ON conditions (participant_id);

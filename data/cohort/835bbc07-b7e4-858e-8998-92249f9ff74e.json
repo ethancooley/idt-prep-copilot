@@ -266,5 +266,15 @@
       "note_type": "Nursing note",
       "text": "Linda reports Dorthea has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-03-13",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-03-19",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

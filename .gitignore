@@ -8,3 +8,6 @@ __pycache__/
 # Raw Synthea output is regenerated with scripts/generate_synthea.sh
 data/synthea/
 vendor/
+
+# Generated briefs (commit hand-picked examples to examples/ instead)
+briefs/

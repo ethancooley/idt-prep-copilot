@@ -70,6 +70,12 @@ def test_structured_tools_match_answer_keys(repo, keys):
         assert (vitals["blood_pressure"]["elevated_count"] >= 3) == ("vitals" in cats)
 
 
+def test_immunizations_match_flu_answer_key(repo, keys):
+    for key in keys:
+        due = any(t.id == "flu_vaccine" for t in key.must_surface)
+        assert repo.get_immunizations(key.participant_id)["flu_vaccine_this_season"] is (not due)
+
+
 def test_search_finds_the_dietitian_note(repo, keys):
     key = next(k for k in keys if any(t.category == "weight_loss" for t in k.must_surface))
     item = next(t for t in key.must_surface if t.category == "weight_loss")
@@ -98,4 +104,5 @@ def test_mcp_server_exposes_tools(repo):
     server.repo._use_embeddings = False
     names = {t.name for t in asyncio.run(server.server.list_tools())}
     assert names == {"list_participants", "get_participant_summary", "get_notes", "get_note",
-                     "search_notes", "get_vitals", "get_encounters", "get_medication_changes"}
+                     "search_notes", "get_vitals", "get_encounters", "get_medication_changes",
+                     "get_immunizations"}

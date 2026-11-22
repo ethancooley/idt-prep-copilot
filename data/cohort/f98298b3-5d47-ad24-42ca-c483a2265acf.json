@@ -320,5 +320,15 @@
       "note_type": "Social work note",
       "text": "Met with James, Billie's spouse and primary caregiver. James reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-01-22",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-01-28",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

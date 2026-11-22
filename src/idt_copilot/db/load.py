@@ -53,6 +53,9 @@ def insert_participant(cur: psycopg.Cursor, p: Participant) -> None:
           o.value if isinstance(o.value, float) else None,
           o.value if isinstance(o.value, str) else None, o.units) for o in p.observations])
     cur.executemany(
+        "INSERT INTO immunizations (participant_id, imm_date, description) VALUES (%s,%s,%s)",
+        [(p.id, i.imm_date, i.description) for i in p.immunizations])
+    cur.executemany(
         "INSERT INTO notes (id, participant_id, note_date, author_role, note_type, text) "
         "VALUES (%s,%s,%s,%s,%s,%s)",
         [(n.id, p.id, n.note_date, n.author_role, n.note_type, n.text) for n in p.notes])

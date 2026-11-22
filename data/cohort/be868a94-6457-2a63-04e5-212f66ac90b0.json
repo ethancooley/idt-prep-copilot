@@ -337,5 +337,23 @@
       "note_type": "Nutrition assessment",
       "text": "Weight 76.4 kg, down from 83.4 kg on Sep 5, 2026 (8%). Salvador reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2024-12-22",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-12-28",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-12-28",
+      "description": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+    },
+    {
+      "imm_date": "2026-01-04",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

@@ -420,5 +420,19 @@
       "note_type": "Attendance note",
       "text": "Kraig attended day center, joined chair exercise and music group, and ate most of lunch."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-03-09",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-04-20",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-06-14",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

@@ -336,5 +336,19 @@
       "note_type": "Nutrition assessment",
       "text": "Weight 78.5 kg, down from 84.8 kg on Sep 5, 2026 (7%). Ricardo reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2024-11-28",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-12-04",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-11-05",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

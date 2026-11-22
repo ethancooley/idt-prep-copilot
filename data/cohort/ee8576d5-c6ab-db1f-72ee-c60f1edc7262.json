@@ -371,5 +371,15 @@
       "note_type": "Activity note",
       "text": "Benito enjoyed the gardening group and talked about growing tomatoes as a child."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-03-16",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-11-08",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

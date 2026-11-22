@@ -208,6 +208,17 @@ class ChartRepository:
             (participant_id, start, start))
         return {"since": start.isoformat(), "started": started, "stopped": stopped}
 
+    def get_immunizations(self, participant_id: str) -> dict:
+        review = self._window(participant_id)["review_date"]
+        season_start = date(review.year if review.month >= 8 else review.year - 1, 8, 1)
+        records = self._all("""
+            SELECT imm_date, description FROM immunizations
+            WHERE participant_id = %s ORDER BY imm_date DESC""", (participant_id,))
+        flu_this_season = any(r["imm_date"] >= season_start.isoformat() and "influenza" in r["description"].lower()
+                              for r in records)
+        return {"records_last_two_years": records, "flu_season_start": season_start.isoformat(),
+                "flu_vaccine_this_season": flu_this_season}
+
     # ------------------------------------------------------------ embeddings
 
     def _has_embeddings(self, participant_id: str) -> bool:
@@ -217,7 +228,7 @@ class ChartRepository:
         return bool(row["e"])
 
     def _get_embedder(self):
-        if not self._use_embeddings:
+        if not self._use_embeddings or os.environ.get("IDT_DISABLE_EMBEDDINGS") == "1":
             return None
         if self._embedder is None:
             try:

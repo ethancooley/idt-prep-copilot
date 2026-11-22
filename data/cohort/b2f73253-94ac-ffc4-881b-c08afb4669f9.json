@@ -369,5 +369,15 @@
       "note_type": "Nutrition assessment",
       "text": "Weight 63.1 kg, down from 68.9 kg on Sep 5, 2026 (8%). Luisa reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-02-12",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-02-18",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

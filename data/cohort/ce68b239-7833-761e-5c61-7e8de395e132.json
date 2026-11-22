@@ -291,5 +291,15 @@
       "note_type": "Progress note",
       "text": "Chronic conditions reviewed and stable. Continue current plan."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-01-30",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-02-05",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

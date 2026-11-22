@@ -362,5 +362,15 @@
       "note_type": "Activity note",
       "text": "Chong enjoyed the gardening group and talked about growing tomatoes as a child."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-07-13",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-07-19",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

@@ -366,5 +366,19 @@
       "note_type": "Activity note",
       "text": "Shelby enjoyed the gardening group and talked about growing tomatoes as a child."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-04-19",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-09-27",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-04-25",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

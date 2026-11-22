@@ -350,5 +350,19 @@
       "note_type": "Social work note",
       "text": "Met with Angela, Francene's son and primary caregiver. Angela reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2024-10-01",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-10-07",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-10-13",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

@@ -331,5 +331,23 @@
       "note_type": "Nursing note",
       "text": "Rosa reports Carlota has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2024-09-30",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2025-01-13",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-10-12",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-10-12",
+      "description": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+    }
   ]
 }

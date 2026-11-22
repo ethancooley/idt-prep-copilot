@@ -508,5 +508,15 @@
       "note_type": "Medication reconciliation",
       "text": "Added sertraline 25 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
     }
+  ],
+  "immunizations": [
+    {
+      "imm_date": "2025-03-10",
+      "description": "Influenza  split virus  trivalent  PF"
+    },
+    {
+      "imm_date": "2026-03-16",
+      "description": "Influenza  split virus  trivalent  PF"
+    }
   ]
 }

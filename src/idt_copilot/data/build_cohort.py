@@ -15,7 +15,7 @@ from pathlib import Path
 
 from idt_copilot.data import scenarios as sc
 from idt_copilot.data.synthea import SyntheaPerson, load_people
-from idt_copilot.models import AnswerKey, Medication, Observation, Participant
+from idt_copilot.models import AnswerKey, Immunization, Medication, Observation, Participant
 
 
 def _routine_vitals(ctx: sc.Context, include_weight: bool, include_bp: bool) -> list[Observation]:
@@ -93,6 +93,10 @@ def build_participant(person: SyntheaPerson, review_date: date, window_days: int
         observations=sorted([o for o in person.observations if history_start <= o.obs_date < window_start]
                             + observations, key=lambda o: o.obs_date),
         notes=sorted(notes, key=lambda n: (n.note_date, n.id)),
+        immunizations=sorted(
+            (Immunization(imm_date=d, description=desc) for d, desc in person.immunizations
+             if window_start - timedelta(days=730) <= d < review_date),
+            key=lambda i: i.imm_date),
     )
     key = AnswerKey(participant_id=person.id, review_date=review_date, window_start=window_start,
                     must_surface=truth, must_not_surface_as_new=distractors)
