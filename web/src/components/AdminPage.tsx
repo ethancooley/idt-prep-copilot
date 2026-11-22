@@ -1,7 +1,7 @@
 // The admin console: make personal access codes for live runs, see how each is used, and turn them off.
 // Not linked from the navigation; open /#/admin. Everything here needs the admin password, which is kept
 // only for this browser tab (sessionStorage) and sent to the live-run API as a bearer token.
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { LIVE_API_URL, longDate } from "../lib";
 import { Meter } from "./charts";
 
@@ -48,6 +48,7 @@ export default function AdminPage() {
   const [runs, setRuns] = useState<RunsResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [created, setCreated] = useState<{ code: string; record: CodeRecord } | null>(null);
+  const [editing, setEditing] = useState<number | null>(null);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const call = useCallback(async (method: string, path: string, body?: unknown): Promise<any> => {
@@ -166,26 +167,46 @@ export default function AdminPage() {
             </thead>
             <tbody>
               {codes?.map((c) => (
-                <tr key={c.id} className="no-link">
-                  <td data-label="For"><strong>{c.label}</strong><span className="cell-sub">Made {when(c.created_at)}</span></td>
-                  <td data-label="Status"><span className={`review-chip code-${c.state}`}>{STATE_LABEL[c.state]}</span></td>
-                  <td data-label="Runs">
-                    <span className="usage">{c.runs_used} of {c.max_runs}</span>
-                    <Meter value={c.runs_used} max={c.max_runs} label={`Runs used by ${c.label}`} />
-                  </td>
-                  <td data-label="Spending">
-                    <span className="usage">{money(c.cost_used_usd)} of {money(c.max_cost_usd)}</span>
-                    <Meter value={c.cost_used_usd} max={c.max_cost_usd} label={`Spending by ${c.label}`} />
-                  </td>
-                  <td data-label="Expires">{c.expires_at ? longDate(c.expires_at.slice(0, 10)) : "Never"}</td>
-                  <td data-label="Last used">{when(c.last_used_at)}</td>
-                  <td data-label="Actions">
-                    {c.state !== "revoked" && <RevokeButton label={c.label} onRevoke={async () => {
-                      await call("POST", `/admin/codes/${c.id}/revoke`);
-                      void refresh();
-                    }} />}
-                  </td>
-                </tr>
+                <Fragment key={c.id}>
+                  <tr className="no-link">
+                    <td data-label="For"><strong>{c.label}</strong><span className="cell-sub">Made {when(c.created_at)}</span></td>
+                    <td data-label="Status"><span className={`review-chip code-${c.state}`}>{STATE_LABEL[c.state]}</span></td>
+                    <td data-label="Runs">
+                      <span className="usage">{c.runs_used} of {c.max_runs}</span>
+                      <Meter value={c.runs_used} max={c.max_runs} label={`Runs used by ${c.label}`} />
+                    </td>
+                    <td data-label="Spending">
+                      <span className="usage">{money(c.cost_used_usd)} of {money(c.max_cost_usd)}</span>
+                      <Meter value={c.cost_used_usd} max={c.max_cost_usd} label={`Spending by ${c.label}`} />
+                    </td>
+                    <td data-label="Expires">{c.expires_at ? longDate(c.expires_at.slice(0, 10)) : "Never"}</td>
+                    <td data-label="Last used">{when(c.last_used_at)}</td>
+                    <td data-label="Actions">
+                      <span className="code-actions">
+                        {c.state !== "revoked" && editing !== c.id && (
+                          <button type="button" className="link-button" onClick={() => setEditing(c.id)}>
+                            {c.state === "active" ? "Change limits" : c.state === "expired" ? "Extend" : "Give more runs"}
+                          </button>
+                        )}
+                        {c.state === "active" && <RevokeButton label={c.label} onRevoke={async () => {
+                          await call("POST", `/admin/codes/${c.id}/revoke`);
+                          void refresh();
+                        }} />}
+                      </span>
+                    </td>
+                  </tr>
+                  {editing === c.id && (
+                    <tr className="no-link edit-row">
+                      <td colSpan={7}>
+                        <EditLimits code={c} onCancel={() => setEditing(null)} onSave={async (input) => {
+                          await call("POST", `/admin/codes/${c.id}/update`, input);
+                          setEditing(null);
+                          void refresh();
+                        }} />
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
               ))}
             </tbody>
           </table>
@@ -329,6 +350,55 @@ function NewCode({ code, record, onDone }: { code: string; record: CodeRecord; o
         <textarea readOnly rows={5} value={message} onFocus={(e) => e.currentTarget.select()} />
       </label>
     </section>
+  );
+}
+
+function EditLimits({ code, onSave, onCancel }: {
+  code: CodeRecord;
+  onSave: (input: { max_runs: number; max_cost_usd: number; expires: string }) => Promise<void>;
+  onCancel: () => void;
+}) {
+  const [runs, setRuns] = useState(Math.max(code.max_runs, code.runs_used + (code.state === "active" ? 0 : 2)));
+  const [cost, setCost] = useState(code.max_cost_usd);
+  const [expires, setExpires] = useState(code.state === "expired" ? "30" : "keep");
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  return (
+    <form className="edit-limits" onSubmit={async (e) => {
+      e.preventDefault();
+      setBusy(true);
+      setError(null);
+      try { await onSave({ max_runs: runs, max_cost_usd: cost, expires }); }
+      catch (err) { setError((err as Error).message); }
+      finally { setBusy(false); }
+    }}>
+      <p className="edit-limits-title">
+        Limits for {code.label}. It has used {code.runs_used} run{code.runs_used === 1 ? "" : "s"} and {money(code.cost_used_usd)}.
+      </p>
+      <label className="field">
+        <span>Total live runs</span>
+        <input type="number" min={1} max={100} value={runs} onChange={(e) => setRuns(Number(e.target.value))} required />
+      </label>
+      <label className="field">
+        <span>Total spending limit ($)</span>
+        <input type="number" min={0.1} max={50} step="any" value={cost} onChange={(e) => setCost(Number(e.target.value))} required />
+      </label>
+      <label className="field">
+        <span>Expires</span>
+        <select value={expires} onChange={(e) => setExpires(e.target.value)}>
+          {code.state !== "expired" && <option value="keep">{code.expires_at ? `Keep (${longDate(code.expires_at.slice(0, 10))})` : "Keep (never)"}</option>}
+          <option value="7">7 days from now</option>
+          <option value="30">30 days from now</option>
+          <option value="90">90 days from now</option>
+          <option value="never">Never</option>
+        </select>
+      </label>
+      <div className="edit-limits-actions">
+        <button type="submit" className="button-small" disabled={busy}>{busy ? "Saving" : "Save limits"}</button>
+        <button type="button" className="link-button" onClick={onCancel}>Cancel</button>
+      </div>
+      {error && <p className="form-error" role="alert">{error}</p>}
+    </form>
   );
 }
 

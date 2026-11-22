@@ -137,3 +137,31 @@ def test_parallel_first_requests_set_up_tables_once(env):
     [t.start() for t in threads]
     [t.join() for t in threads]
     assert results == [200] * 6
+
+
+def test_more_runs_bring_a_used_up_code_back(env):
+    pid, _ = env
+    code, record = make(runs=1)
+    assert run(pid, code)[0] == 200
+    assert run(pid, code)[0] == 429
+    status, body = handle_admin("POST", f"/admin/codes/{record['id']}/update", ADMIN,
+                                {"max_runs": 3, "max_cost_usd": 5, "expires": "keep"})
+    assert status == 200 and body["record"]["state"] == "active" and body["record"]["max_runs"] == 3
+    assert body["record"]["expires_at"] == record["expires_at"]   # "keep" leaves the expiry alone
+    assert run(pid, code)[0] == 200
+
+
+def test_an_expired_code_can_be_extended_but_a_turned_off_one_cannot(env):
+    pid, conn = env
+    code, record = make()
+    conn.execute("UPDATE access_codes SET expires_at = now() - interval '1 day' WHERE id = %s", (record["id"],))
+    status, body = handle_admin("POST", f"/admin/codes/{record['id']}/update", ADMIN,
+                                {"max_runs": 3, "max_cost_usd": 5, "expires": "30"})
+    assert status == 200 and body["record"]["state"] == "active"
+    assert run(pid, code)[0] == 200
+
+    handle_admin("POST", f"/admin/codes/{record['id']}/revoke", ADMIN)
+    status, body = handle_admin("POST", f"/admin/codes/{record['id']}/update", ADMIN,
+                                {"max_runs": 9, "max_cost_usd": 5, "expires": "keep"})
+    assert status == 409 and "stay off" in body["error"]
+    assert handle_admin("POST", "/admin/codes/99999/update", ADMIN, {"max_runs": 3, "max_cost_usd": 5})[0] == 404

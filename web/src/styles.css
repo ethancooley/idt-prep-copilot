@@ -1041,3 +1041,10 @@ mark {
   .admin-form { grid-template-columns: 1fr; }
   .admin-table .meter { width: 100%; }
 }
+.code-actions { display: inline-flex; gap: 14px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.edit-row td { background: var(--surface-2); }
+.edit-limits { display: grid; grid-template-columns: repeat(3, minmax(0, 220px)) auto; gap: 12px 16px; align-items: end; padding: 4px 0; }
+.edit-limits-title { grid-column: 1 / -1; font-weight: 600; color: var(--ink); }
+.edit-limits-actions { display: flex; gap: 12px; align-items: center; padding-bottom: 6px; }
+.edit-limits .form-error { grid-column: 1 / -1; }
+@media (max-width: 640px) { .edit-limits { grid-template-columns: 1fr; } }

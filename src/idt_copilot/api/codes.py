@@ -100,6 +100,29 @@ def list_codes(conn) -> list[dict]:
     return [_public(r) for r in conn.execute("SELECT * FROM access_codes ORDER BY created_at DESC").fetchall()]
 
 
+def update_code(conn, code_id: int, max_runs: int, max_cost_usd: float, expires_in_days: int | None,
+                keep_expiry: bool) -> dict | None:
+    """Change a code's limits: more runs, more spending, a later expiry. Turned-off codes stay off."""
+    ensure_schema(conn)
+    current = conn.execute("SELECT * FROM access_codes WHERE id = %s", (code_id,)).fetchone()
+    if not current:
+        return None
+    if current["revoked_at"]:
+        raise CodeRejected(409, "This code was turned off, and turned-off codes stay off. Make a new code instead.")
+    if not 1 <= max_runs <= 100:
+        raise ValueError("Runs must be between 1 and 100.")
+    if not MIN_RUN_BUDGET <= max_cost_usd <= 50:
+        raise ValueError(f"Spending limit must be between ${MIN_RUN_BUDGET:.2f} and $50.")
+    if keep_expiry:
+        expires = current["expires_at"]
+    else:
+        expires = (datetime.now(timezone.utc) + timedelta(days=expires_in_days)) if expires_in_days else None
+    row = conn.execute(
+        "UPDATE access_codes SET max_runs = %s, max_cost_usd = %s, expires_at = %s WHERE id = %s RETURNING *",
+        (max_runs, max_cost_usd, expires, code_id)).fetchone()
+    return _public(row)
+
+
 def revoke_code(conn, code_id: int) -> dict | None:
     ensure_schema(conn)
     row = conn.execute("UPDATE access_codes SET revoked_at = COALESCE(revoked_at, now()) WHERE id = %s RETURNING *",

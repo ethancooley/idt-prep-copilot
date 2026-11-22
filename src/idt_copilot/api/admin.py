@@ -4,7 +4,8 @@ token; admin is off entirely when it isn't set.
     GET  /admin/codes                 every code with its usage (never the codes themselves)
     POST /admin/codes                 create one: {label, max_runs, max_cost_usd, expires_in_days}
                                       the response holds the code; it is never shown again
-    POST /admin/codes/<id>/revoke     turn a code off
+    POST /admin/codes/<id>/update     change limits: {max_runs, max_cost_usd, expires: "keep" | "never" | days}
+    POST /admin/codes/<id>/revoke     turn a code off (for good)
     GET  /admin/runs                  recent live runs, and totals for today
 """
 from __future__ import annotations
@@ -49,6 +50,20 @@ def handle_admin(method: str, path: str, authorization: str | None, body: dict |
         except (TypeError, ValueError) as e:
             return 400, {"error": str(e) or "Check the values and try again."}
         return 201, {"code": code, "record": record}
+
+    if method == "POST" and (m := re.fullmatch(r"/admin/codes/(\d+)/update", path)):
+        body = body or {}
+        expires = str(body.get("expires", "keep"))
+        try:
+            record = codes.update_code(conn, int(m.group(1)), int(body.get("max_runs", 0)),
+                                       float(body.get("max_cost_usd", 0)),
+                                       None if expires in ("keep", "never") else int(expires),
+                                       keep_expiry=expires == "keep")
+        except codes.CodeRejected as e:
+            return e.status, {"error": e.message}
+        except (TypeError, ValueError) as e:
+            return 400, {"error": str(e) or "Check the values and try again."}
+        return (200, {"record": record}) if record else (404, {"error": "No code with that id."})
 
     if method == "POST" and (m := re.fullmatch(r"/admin/codes/(\d+)/revoke", path)):
         record = codes.revoke_code(conn, int(m.group(1)))
