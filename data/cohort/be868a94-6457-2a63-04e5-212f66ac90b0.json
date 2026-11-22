@@ -1,0 +1,341 @@
+{
+  "id": "be868a94-6457-2a63-04e5-212f66ac90b0",
+  "first_name": "Salvador",
+  "last_name": "Mercado",
+  "birth_date": "1944-07-01",
+  "sex": "M",
+  "city": "Los Angeles",
+  "enrollment_date": "2025-03-22",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1972-09-09"
+    },
+    {
+      "code": "127294003",
+      "description": "Traumatic or nontraumatic brain injury (disorder)",
+      "onset": "1975-06-12"
+    },
+    {
+      "code": "55822004",
+      "description": "Hyperlipidemia (disorder)",
+      "onset": "2007-09-15"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2009-09-26"
+    },
+    {
+      "code": "64859006",
+      "description": "Osteoporosis (disorder)",
+      "onset": "2024-12-21"
+    }
+  ],
+  "medications": [
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2009-10-04",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2009-10-04",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2009-10-04",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2009-10-04",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "904419",
+      "description": "Alendronic acid 10 MG Oral Tablet",
+      "start": "2026-01-04",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314231",
+      "description": "Simvastatin 10 MG Oral Tablet",
+      "start": "2026-01-25",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "new-rx",
+      "description": "apixaban 5 MG Oral Tablet",
+      "start": "2026-10-24",
+      "stop": null,
+      "note": "started for new atrial fibrillation found on ECG"
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "be868a94-6457-2a63-81ed-c90d8c86123f",
+      "start": "2025-12-28",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "be868a94-6457-2a63-0f9d-d25d3b2387eb",
+      "start": "2026-01-04",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "be868a94-6457-2a63-45c9-acdbb91d064e",
+      "start": "2026-01-11",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Acute bronchitis (disorder)"
+    },
+    {
+      "id": "be868a94-6457-2a63-c325-35134188515e",
+      "start": "2026-01-18",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "be868a94-6457-2a63-8f53-52fd54657b5a",
+      "start": "2026-01-25",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Hyperlipidemia (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2025-12-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 83.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-12-28",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 82.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-28",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 108.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-28",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 62.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-01-25",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 72.7,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-01-25",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 68.0,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-09-05",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 83.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 128.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 82.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 80.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 118.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 81.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 78.5,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 135.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 81.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 76.4,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "be868a94-n005",
+      "note_date": "2026-05-31",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Salvador slipped on the porch step on May 31, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "be868a94-n013",
+      "note_date": "2026-09-05",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Salvador enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "be868a94-n009",
+      "note_date": "2026-09-10",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Salvador enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "be868a94-n012",
+      "note_date": "2026-09-13",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "be868a94-n008",
+      "note_date": "2026-09-20",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Salvador attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "be868a94-n007",
+      "note_date": "2026-09-25",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "be868a94-n010",
+      "note_date": "2026-09-25",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "be868a94-n011",
+      "note_date": "2026-10-21",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Salvador enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "be868a94-n001",
+      "note_date": "2026-10-24",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Started apixaban 5 MG Oral Tablet for new atrial fibrillation found on ECG. Discussed risks and benefits with Salvador and his niece. Recheck in 4 weeks."
+    },
+    {
+      "id": "be868a94-n002",
+      "note_date": "2026-10-26",
+      "author_role": "Pharmacist",
+      "note_type": "Medication reconciliation",
+      "text": "Added apixaban 5 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
+    },
+    {
+      "id": "be868a94-n006",
+      "note_date": "2026-10-26",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Salvador enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "be868a94-n004",
+      "note_date": "2026-11-03",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Marcus reports Salvador has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "be868a94-n014",
+      "note_date": "2026-11-12",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "be868a94-n003",
+      "note_date": "2026-11-24",
+      "author_role": "Dietitian",
+      "note_type": "Nutrition assessment",
+      "text": "Weight 76.4 kg, down from 83.4 kg on Sep 5, 2026 (8%). Salvador reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
+    }
+  ]
+}

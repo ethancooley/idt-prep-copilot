@@ -1,0 +1,270 @@
+{
+  "id": "835bbc07-b7e4-858e-8998-92249f9ff74e",
+  "first_name": "Dorthea",
+  "last_name": "Gutkowski",
+  "birth_date": "1955-11-23",
+  "sex": "F",
+  "city": "Cathedral City",
+  "enrollment_date": "2025-12-18",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1981-01-28"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2024-03-06"
+    }
+  ],
+  "medications": [
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2024-03-14",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2024-03-14",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2024-03-14",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2024-03-14",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "new-rx",
+      "description": "furosemide 20 MG Oral Tablet",
+      "start": "2026-10-08",
+      "stop": null,
+      "note": "started for lower-extremity edema and weight gain"
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "835bbc07-b7e4-858e-00b7-e4a4098c6a4a",
+      "start": "2025-11-30",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Screening for malignant neoplasm of colon (procedure)"
+    },
+    {
+      "id": "835bbc07-b7e4-858e-1cf9-a215accf5cef",
+      "start": "2026-03-19",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "835bbc07-b7e4-858e-f1ba-fe1f66d1f990",
+      "start": "2026-08-14",
+      "encounter_class": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": "Fracture of bone (disorder)"
+    },
+    {
+      "id": "835bbc07-ed1",
+      "start": "2026-09-29",
+      "encounter_class": "inpatient",
+      "description": "Hospital admission",
+      "reason": "chest pain; cardiac workup negative"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-03-19",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-03-19",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 82.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-03-19",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 123.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-03-19",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 76.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-09-09",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 74.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 118.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 78.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 130.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 83.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.5,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 131.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 70.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "835bbc07-n012",
+      "note_date": "2026-09-03",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Dorthea in good spirits."
+    },
+    {
+      "id": "835bbc07-n009",
+      "note_date": "2026-09-14",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "835bbc07-n011",
+      "note_date": "2026-09-15",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Dorthea enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "835bbc07-n004",
+      "note_date": "2026-10-02",
+      "author_role": "Hospital physician",
+      "note_type": "ED/hospital discharge summary",
+      "text": "Seen at partner hospital emergency department on Sep 29, 2026 for chest pain; cardiac workup negative; admitted for 3 days. No new medications at discharge. Follow up with PACE primary care within 7 days."
+    },
+    {
+      "id": "835bbc07-n007",
+      "note_date": "2026-10-04",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Dorthea in good spirits."
+    },
+    {
+      "id": "835bbc07-n002",
+      "note_date": "2026-10-08",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Started furosemide 20 MG Oral Tablet for lower-extremity edema and weight gain. Discussed risks and benefits with Dorthea and her spouse. Recheck in 4 weeks."
+    },
+    {
+      "id": "835bbc07-n005",
+      "note_date": "2026-10-08",
+      "author_role": "Primary care physician",
+      "note_type": "Post-acute follow-up",
+      "text": "Post-hospital follow-up for chest pain; cardiac workup negative. Dorthea is back to baseline per her spouse. Reviewed discharge medications. Will monitor closely over the next two weeks."
+    },
+    {
+      "id": "835bbc07-n010",
+      "note_date": "2026-10-08",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "835bbc07-n003",
+      "note_date": "2026-10-10",
+      "author_role": "Pharmacist",
+      "note_type": "Medication reconciliation",
+      "text": "Added furosemide 20 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
+    },
+    {
+      "id": "835bbc07-n008",
+      "note_date": "2026-11-03",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Dorthea enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "835bbc07-n001",
+      "note_date": "2026-11-07",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Linda, Dorthea's spouse and primary caregiver. Linda reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    },
+    {
+      "id": "835bbc07-n006",
+      "note_date": "2026-11-09",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Linda reports Dorthea has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    }
+  ]
+}

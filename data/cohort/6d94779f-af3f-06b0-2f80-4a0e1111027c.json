@@ -1,0 +1,512 @@
+{
+  "id": "6d94779f-af3f-06b0-2f80-4a0e1111027c",
+  "first_name": "Minnie",
+  "last_name": "Upton",
+  "birth_date": "1955-11-21",
+  "sex": "F",
+  "city": "Bakersfield",
+  "enrollment_date": "2025-01-08",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1984-01-30"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1987-02-02"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1987-02-02"
+    },
+    {
+      "code": "26929004",
+      "description": "Alzheimer's disease (disorder)",
+      "onset": "2025-03-10"
+    },
+    {
+      "code": "68496003",
+      "description": "Polyp of colon (disorder)",
+      "onset": "2026-01-04"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2026-03-16"
+    },
+    {
+      "code": "55822004",
+      "description": "Hyperlipidemia (disorder)",
+      "onset": "2026-03-16"
+    }
+  ],
+  "medications": [
+    {
+      "code": "2001499",
+      "description": "Vitamin B12 5 MG/ML Injectable Solution",
+      "start": "1987-02-09",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2026-03-23",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2026-03-23",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2026-03-23",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2026-03-23",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314231",
+      "description": "Simvastatin 10 MG Oral Tablet",
+      "start": "2026-04-20",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "new-rx",
+      "description": "sertraline 25 MG Oral Tablet",
+      "start": "2026-11-13",
+      "stop": null,
+      "note": "started for depressive symptoms (PHQ-9 of 14)"
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "6d94779f-af3f-06b0-c125-eff12d95d570",
+      "start": "2026-01-04",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Screening for malignant neoplasm of colon (procedure)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-ae6d-7f236bfb774a",
+      "start": "2026-03-16",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "6d94779f-af3f-06b0-79e6-ed835052fcd7",
+      "start": "2026-03-23",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Ischemic heart disease (disorder)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-582c-f7cf827b7623",
+      "start": "2026-03-28",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Ischemic heart disease (disorder)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-affe-db05a5d30025",
+      "start": "2026-04-04",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-8fc8-09830061f1f1",
+      "start": "2026-04-06",
+      "encounter_class": "ambulatory",
+      "description": "Hospital admission (procedure)",
+      "reason": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-371b-e33eff5bbb60",
+      "start": "2026-04-06",
+      "encounter_class": "inpatient",
+      "description": "Patient transfer to intensive care unit (procedure)",
+      "reason": "History of coronary artery bypass grafting (situation)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-1af1-ac31a5287302",
+      "start": "2026-04-16",
+      "encounter_class": "inpatient",
+      "description": "Admission to ward (procedure)",
+      "reason": "History of coronary artery bypass grafting (situation)"
+    },
+    {
+      "id": "6d94779f-af3f-06b0-1117-3f10d3d7f81e",
+      "start": "2026-04-20",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Hyperlipidemia (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-03-16",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 6.0,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 94.0,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 80.5,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 70.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 78.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 95.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 92.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-03-16",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 94.0,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-04-04",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.7,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-04",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 6.2,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-04-06",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 7.2,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-07",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 9.6,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-07",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.8,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-08",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 13.4,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-08",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 10.7,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-09",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 5.4,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-09",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.4,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-10",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.0,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-10",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 6.9,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-11",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 12.5,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-11",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 13.1,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-12",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 10.6,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-12",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 5.6,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-13",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 12.1,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-13",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.0,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 9.7,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 12.8,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-15",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 5.3,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-15",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.3,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-04-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 11.5,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-09-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 70.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 121.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 70.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 70.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 118.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 84.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 69.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 130.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 82.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "6d94779f-n007",
+      "note_date": "2026-09-10",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Minnie in good spirits."
+    },
+    {
+      "id": "6d94779f-n009",
+      "note_date": "2026-10-03",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "6d94779f-n003",
+      "note_date": "2026-10-05",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Minnie needed hands-on help getting out of the tub today and said she has been skipping showers because she is afraid of slipping."
+    },
+    {
+      "id": "6d94779f-n005",
+      "note_date": "2026-10-07",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Minnie enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "6d94779f-n004",
+      "note_date": "2026-10-11",
+      "author_role": "Occupational therapist",
+      "note_type": "Therapy evaluation",
+      "text": "ADL reassessment. Minnie now needs moderate assistance with bathing and lower-body dressing; independent at last review. Recommend tub transfer bench, handheld shower, and increasing home care hours for bathing support."
+    },
+    {
+      "id": "6d94779f-n010",
+      "note_date": "2026-10-21",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "6d94779f-n008",
+      "note_date": "2026-10-25",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "6d94779f-n006",
+      "note_date": "2026-11-04",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Minnie enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "6d94779f-n001",
+      "note_date": "2026-11-13",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Started sertraline 25 MG Oral Tablet for depressive symptoms (PHQ-9 of 14). Discussed risks and benefits with Minnie and her daughter. Recheck in 4 weeks."
+    },
+    {
+      "id": "6d94779f-n002",
+      "note_date": "2026-11-15",
+      "author_role": "Pharmacist",
+      "note_type": "Medication reconciliation",
+      "text": "Added sertraline 25 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
+    }
+  ]
+}

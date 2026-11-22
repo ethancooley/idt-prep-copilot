@@ -1,0 +1,360 @@
+{
+  "id": "23d5346a-3e4d-83f0-c991-b2f876f13dae",
+  "first_name": "Elmer",
+  "last_name": "Murray",
+  "birth_date": "1944-07-17",
+  "sex": "M",
+  "city": "Sunnyvale",
+  "enrollment_date": "2025-01-31",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1986-07-28"
+    },
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "1990-06-18"
+    },
+    {
+      "code": "40055000",
+      "description": "Chronic sinusitis (disorder)",
+      "onset": "2004-03-20"
+    },
+    {
+      "code": "431855005",
+      "description": "Chronic kidney disease stage 1 (disorder)",
+      "onset": "2022-12-26"
+    },
+    {
+      "code": "127013003",
+      "description": "Disorder of kidney due to diabetes mellitus (disorder)",
+      "onset": "2022-12-26"
+    },
+    {
+      "code": "431856006",
+      "description": "Chronic kidney disease stage 2 (disorder)",
+      "onset": "2025-01-06"
+    },
+    {
+      "code": "90781000119102",
+      "description": "Microalbuminuria due to type 2 diabetes mellitus (disorder)",
+      "onset": "2025-01-06"
+    },
+    {
+      "code": "64859006",
+      "description": "Osteoporosis (disorder)",
+      "onset": "2025-01-06"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2025-01-06"
+    }
+  ],
+  "medications": [
+    {
+      "code": "1649987",
+      "description": "doxycycline hyclate 100 MG",
+      "start": "1948-08-02",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2025-01-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2025-01-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2025-01-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2025-01-13",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [
+    {
+      "description": "Allergic disposition (finding)",
+      "reaction": null
+    },
+    {
+      "description": "Penicillin V",
+      "reaction": "Wheal (finding)"
+    },
+    {
+      "description": "Eggs (edible) (substance)",
+      "reaction": null
+    }
+  ],
+  "encounters": [
+    {
+      "id": "23d5346a-3e4d-83f0-a0da-226f198a28b9",
+      "start": "2025-11-17",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "23d5346a-3e4d-83f0-f8b6-f92593baf672",
+      "start": "2026-01-12",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2025-11-17",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 73.7,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-17",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 89.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-11-17",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 84.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-11-17",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 129.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-11-17",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 83.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-11-17",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 51.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-01-12",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 81.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-01-12",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 89.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-01-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 88.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 122.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-12",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 87.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-01-12",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 32.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-09-15",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 89.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-26",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 158.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-26",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 88.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 89.2,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-25",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 167.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-25",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 97.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-07",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 175.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-07",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 88.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 89.5,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "23d5346a-n011",
+      "note_date": "2026-09-06",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Elmer enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "23d5346a-n007",
+      "note_date": "2026-09-07",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "23d5346a-n010",
+      "note_date": "2026-09-08",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "23d5346a-n003",
+      "note_date": "2026-10-04",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Rosa, Elmer's spouse and primary caregiver. Rosa reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    },
+    {
+      "id": "23d5346a-n009",
+      "note_date": "2026-10-21",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Elmer in good spirits."
+    },
+    {
+      "id": "23d5346a-n012",
+      "note_date": "2026-11-02",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "23d5346a-n006",
+      "note_date": "2026-11-03",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Elmer in good spirits."
+    },
+    {
+      "id": "23d5346a-n008",
+      "note_date": "2026-11-06",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Elmer in good spirits."
+    },
+    {
+      "id": "23d5346a-n004",
+      "note_date": "2026-11-07",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Blood pressure 175/88 today, third elevated reading this month. Elmer admits to missing evening doses some days. Reinforced adherence; flagged for PCP review of antihypertensive regimen."
+    },
+    {
+      "id": "23d5346a-n005",
+      "note_date": "2026-11-13",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Elmer in good spirits."
+    },
+    {
+      "id": "23d5346a-n001",
+      "note_date": "2026-11-17",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Elmer has missed 4 of the last 8 scheduled day center days. When present, he stays quiet and leaves activities early."
+    },
+    {
+      "id": "23d5346a-n002",
+      "note_date": "2026-11-19",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Called Elmer about missed day center days. Reports feeling \"down\" and not wanting to leave the house since a close friend died last month. Will screen for depression and offer grief support."
+    }
+  ]
+}

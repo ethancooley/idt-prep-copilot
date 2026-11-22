@@ -1,0 +1,366 @@
+{
+  "id": "e2062053-c54f-e137-1e90-5872f5dc95c0",
+  "first_name": "Chong",
+  "last_name": "Smitham",
+  "birth_date": "1940-10-20",
+  "sex": "M",
+  "city": "Granite Bay",
+  "enrollment_date": "2024-06-14",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1975-01-05"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1978-01-08"
+    },
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "1980-10-26"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1980-10-26"
+    },
+    {
+      "code": "237602007",
+      "description": "Metabolic syndrome X (disorder)",
+      "onset": "1985-11-24"
+    },
+    {
+      "code": "44054006",
+      "description": "Diabetes mellitus type 2 (disorder)",
+      "onset": "1995-01-15"
+    },
+    {
+      "code": "302870006",
+      "description": "Hypertriglyceridemia (disorder)",
+      "onset": "1995-06-11"
+    },
+    {
+      "code": "368581000119106",
+      "description": "Neuropathy due to type 2 diabetes mellitus (disorder)",
+      "onset": "1999-02-07"
+    },
+    {
+      "code": "197927001",
+      "description": "Recurrent urinary tract infection (disorder)",
+      "onset": "2007-03-25"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2008-03-30"
+    }
+  ],
+  "medications": [
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2008-04-06",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2008-04-06",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2008-04-06",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2008-04-06",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "310798",
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "start": "2026-07-19",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314076",
+      "description": "lisinopril 10 MG Oral Tablet",
+      "start": "2026-07-19",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "308136",
+      "description": "amLODIPine 2.5 MG Oral Tablet",
+      "start": "2026-07-19",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "e2062053-c54f-e137-1840-68544afa54db",
+      "start": "2026-06-07",
+      "encounter_class": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": "Burn injury (morphologic abnormality)"
+    },
+    {
+      "id": "e2062053-c54f-e137-0af9-f4d4e4958909",
+      "start": "2026-06-07",
+      "encounter_class": "snf",
+      "description": "Hospital admission (procedure)",
+      "reason": "Patient transfer to skilled nursing facility (procedure)"
+    },
+    {
+      "id": "e2062053-c54f-e137-93c1-01bbe738b0d2",
+      "start": "2026-07-09",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Epidermal burn of skin (disorder)"
+    },
+    {
+      "id": "e2062053-c54f-e137-ca24-ac7233604b98",
+      "start": "2026-07-19",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "e2062053-c54f-e137-c52f-150c67731853",
+      "start": "2026-08-02",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-07-19",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 7.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-07-19",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 86.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-07-19",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 46.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-07-19",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 74.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-07-19",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 68.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-07-19",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 115.7,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-07-19",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 121.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-09-05",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 86.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 158.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 92.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 84.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-19",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 162.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-19",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 92.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 82.6,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 171.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 89.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 80.9,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "e2062053-n008",
+      "note_date": "2026-09-06",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "e2062053-n011",
+      "note_date": "2026-09-15",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "e2062053-n003",
+      "note_date": "2026-10-05",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Chong reported a fall at home on Oct 5, 2026 in the bathroom at night. His grandson Denise found him on the floor. Denies head strike or loss of consciousness. Bruising to right hip; able to bear weight, no deformity. Vitals stable. Fall risk reassessed as high. PT referral placed for gait evaluation."
+    },
+    {
+      "id": "e2062053-n004",
+      "note_date": "2026-10-09",
+      "author_role": "Physical therapist",
+      "note_type": "Therapy evaluation",
+      "text": "PT evaluation following fall on Oct 5, 2026. Gait slow and unsteady with intermittent cane use; Timed Up and Go 19 seconds. Recommend front-wheeled walker, home safety evaluation, and grab bars in the bathroom. Will see twice weekly for strength and balance."
+    },
+    {
+      "id": "e2062053-n005",
+      "note_date": "2026-10-26",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Denise reports Chong has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "e2062053-n013",
+      "note_date": "2026-10-28",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Chong attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "e2062053-n012",
+      "note_date": "2026-10-30",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "e2062053-n001",
+      "note_date": "2026-11-08",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Blood pressure 171/89 today, third elevated reading this month. Chong admits to missing evening doses some days. Reinforced adherence; flagged for PCP review of antihypertensive regimen."
+    },
+    {
+      "id": "e2062053-n009",
+      "note_date": "2026-11-17",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Chong in good spirits."
+    },
+    {
+      "id": "e2062053-n010",
+      "note_date": "2026-11-20",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Chong attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "e2062053-n006",
+      "note_date": "2026-11-21",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "e2062053-n002",
+      "note_date": "2026-11-24",
+      "author_role": "Dietitian",
+      "note_type": "Nutrition assessment",
+      "text": "Weight 80.9 kg, down from 86.7 kg on Sep 5, 2026 (7%). Chong reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
+    },
+    {
+      "id": "e2062053-n007",
+      "note_date": "2026-11-28",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Chong enjoyed the gardening group and talked about growing tomatoes as a child."
+    }
+  ]
+}

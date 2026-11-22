@@ -1,0 +1,287 @@
+{
+  "id": "8ea8952a-9bc0-c643-686c-508badc8bb8a",
+  "first_name": "Annalee",
+  "last_name": "Zemlak",
+  "birth_date": "1936-05-10",
+  "sex": "F",
+  "city": "Porterville",
+  "enrollment_date": "2025-02-25",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1976-05-16"
+    },
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1987-05-17"
+    },
+    {
+      "code": "37320007",
+      "description": "Loss of teeth (disorder)",
+      "onset": "1997-08-03"
+    },
+    {
+      "code": "401303003",
+      "description": "Acute ST segment elevation myocardial infarction (disorder)",
+      "onset": "2013-12-22"
+    }
+  ],
+  "medications": [
+    {
+      "code": "243670",
+      "description": "aspirin 81 MG Oral Tablet",
+      "start": "2013-12-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "200032",
+      "description": "carvedilol 12.5 MG Oral Tablet",
+      "start": "2013-12-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "617310",
+      "description": "atorvastatin 20 MG Oral Tablet",
+      "start": "2013-12-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "311354",
+      "description": "lisinopril 5 MG Oral Tablet",
+      "start": "2013-12-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "855812",
+      "description": "prasugrel 10 MG Oral Tablet",
+      "start": "2013-12-22",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "8ea8952a-9bc0-c643-a31f-96032c6c6742",
+      "start": "2025-12-21",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2025-12-21",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 6.2,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-12-21",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 81.2,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-12-21",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 75.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-21",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 117.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-21",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 94.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-12-21",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 85.0,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 80.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 124.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 80.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 80.8,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 136.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 73.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 80.8,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 137.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "8ea8952a-n004",
+      "note_date": "2026-05-15",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Annalee slipped on the porch step on May 15, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "8ea8952a-n013",
+      "note_date": "2026-09-14",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "8ea8952a-n010",
+      "note_date": "2026-09-30",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Annalee enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "8ea8952a-n011",
+      "note_date": "2026-10-08",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "8ea8952a-n005",
+      "note_date": "2026-10-11",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Annalee in good spirits."
+    },
+    {
+      "id": "8ea8952a-n012",
+      "note_date": "2026-10-15",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Annalee attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "8ea8952a-n006",
+      "note_date": "2026-10-25",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Annalee enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "8ea8952a-n002",
+      "note_date": "2026-10-26",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Annalee has missed 6 of the last 8 scheduled day center days. When present, she stays quiet and leaves activities early."
+    },
+    {
+      "id": "8ea8952a-n003",
+      "note_date": "2026-10-28",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Called Annalee about missed day center days. Reports feeling \"down\" and not wanting to leave the house since a close friend died last month. Will screen for depression and offer grief support."
+    },
+    {
+      "id": "8ea8952a-n008",
+      "note_date": "2026-10-29",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Annalee in good spirits."
+    },
+    {
+      "id": "8ea8952a-n007",
+      "note_date": "2026-11-07",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "8ea8952a-n001",
+      "note_date": "2026-11-12",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Marcus, Annalee's spouse and primary caregiver. Marcus reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    },
+    {
+      "id": "8ea8952a-n014",
+      "note_date": "2026-11-23",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Annalee enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "8ea8952a-n009",
+      "note_date": "2026-11-24",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    }
+  ]
+}

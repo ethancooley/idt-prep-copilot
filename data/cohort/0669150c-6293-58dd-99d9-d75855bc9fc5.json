@@ -1,0 +1,384 @@
+{
+  "id": "0669150c-6293-58dd-99d9-d75855bc9fc5",
+  "first_name": "Debora",
+  "last_name": "Hudson",
+  "birth_date": "1950-12-02",
+  "sex": "F",
+  "city": "Los Angeles",
+  "enrollment_date": "2026-01-04",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "40055000",
+      "description": "Chronic sinusitis (disorder)",
+      "onset": "1979-05-20"
+    },
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1985-02-16"
+    },
+    {
+      "code": "82423001",
+      "description": "Chronic pain (finding)",
+      "onset": "1990-04-23"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1994-12-17"
+    },
+    {
+      "code": "254837009",
+      "description": "Malignant neoplasm of breast (disorder)",
+      "onset": "2000-02-23"
+    },
+    {
+      "code": "185086009",
+      "description": "Chronic obstructive bronchitis (disorder)",
+      "onset": "2001-12-08"
+    },
+    {
+      "code": "83664006",
+      "description": "Idiopathic atrophic hypothyroidism (disorder)",
+      "onset": "2012-02-25"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2025-04-19"
+    }
+  ],
+  "medications": [
+    {
+      "code": "966222",
+      "description": "Levothyroxine Sodium 0.075 MG Oral Tablet",
+      "start": "2012-02-25",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2025-04-26",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2025-04-26",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2025-04-26",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2025-04-26",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "245314",
+      "description": "albuterol 5 MG/ML Inhalation Solution",
+      "start": "2026-04-25",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "896209",
+      "description": "60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",
+      "start": "2026-04-25",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "new-rx",
+      "description": "sertraline 25 MG Oral Tablet",
+      "start": "2026-09-13",
+      "stop": null,
+      "note": "started for depressive symptoms (PHQ-9 of 14)"
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "0669150c-6293-58dd-c339-d8637e572647",
+      "start": "2025-12-06",
+      "encounter_class": "hospice",
+      "description": "Admission to hospice (procedure)",
+      "reason": "Chronic obstructive bronchitis (disorder)"
+    },
+    {
+      "id": "0669150c-6293-58dd-5271-d632f264f7b8",
+      "start": "2026-01-03",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Screening for malignant neoplasm of colon (procedure)"
+    },
+    {
+      "id": "0669150c-6293-58dd-86b5-35ac1e9c288c",
+      "start": "2026-04-25",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "0669150c-6293-58dd-e24b-5dc1059180ba",
+      "start": "2026-08-04",
+      "encounter_class": "ambulatory",
+      "description": "Postoperative follow-up visit (procedure)",
+      "reason": "Malignant neoplasm of breast (disorder)"
+    },
+    {
+      "id": "0669150c-6293-58dd-2f33-23eaa306571b",
+      "start": "2026-08-04",
+      "encounter_class": "ambulatory",
+      "description": "Screening surveillance (regime/therapy)",
+      "reason": "Malignant neoplasm of breast (disorder)"
+    },
+    {
+      "id": "0669150c-6293-58dd-cc9f-e4784a1ea606",
+      "start": "2026-08-04",
+      "encounter_class": "ambulatory",
+      "description": "Gynecology service (qualifier value)",
+      "reason": "Malignant neoplasm of breast (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-04-25",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 6.3,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-04-25",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 88.2,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-04-25",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-04-25",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 105.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-04-25",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 61.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-04-25",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 78.6,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-09-14",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 88.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-14",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 137.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-14",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 81.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 88.8,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 122.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 76.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-14",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 88.3,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-14",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 130.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-14",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 84.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "0669150c-n008",
+      "note_date": "2026-05-12",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Debora slipped on the porch step on May 12, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "0669150c-n003",
+      "note_date": "2026-09-13",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Started sertraline 25 MG Oral Tablet for depressive symptoms (PHQ-9 of 14). Discussed risks and benefits with Debora and her spouse. Recheck in 4 weeks."
+    },
+    {
+      "id": "0669150c-n017",
+      "note_date": "2026-09-14",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Debora enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "0669150c-n004",
+      "note_date": "2026-09-15",
+      "author_role": "Pharmacist",
+      "note_type": "Medication reconciliation",
+      "text": "Added sertraline 25 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
+    },
+    {
+      "id": "0669150c-n012",
+      "note_date": "2026-09-26",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "0669150c-n005",
+      "note_date": "2026-10-02",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Debora reported a fall at home on Oct 2, 2026 in the kitchen while reaching for a cabinet. Her spouse Kevin found her on the floor. Denies head strike or loss of consciousness. Small skin tear to left forearm, cleaned and dressed. Vitals stable. Fall risk reassessed as high. PT referral placed for gait evaluation."
+    },
+    {
+      "id": "0669150c-n006",
+      "note_date": "2026-10-05",
+      "author_role": "Physical therapist",
+      "note_type": "Therapy evaluation",
+      "text": "PT evaluation following fall on Oct 2, 2026. Gait slow and unsteady with intermittent cane use; Timed Up and Go 19 seconds. Recommend front-wheeled walker, home safety evaluation, and grab bars in the bathroom. Will see twice weekly for strength and balance."
+    },
+    {
+      "id": "0669150c-n007",
+      "note_date": "2026-10-13",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Kevin, Debora's spouse and primary caregiver. Kevin reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    },
+    {
+      "id": "0669150c-n001",
+      "note_date": "2026-10-19",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Debora needed hands-on help getting out of the tub today and said she has been skipping showers because she is afraid of slipping."
+    },
+    {
+      "id": "0669150c-n011",
+      "note_date": "2026-10-20",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "0669150c-n002",
+      "note_date": "2026-10-26",
+      "author_role": "Occupational therapist",
+      "note_type": "Therapy evaluation",
+      "text": "ADL reassessment. Debora now needs moderate assistance with bathing and lower-body dressing; independent at last review. Recommend tub transfer bench, handheld shower, and increasing home care hours for bathing support."
+    },
+    {
+      "id": "0669150c-n013",
+      "note_date": "2026-10-27",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "0669150c-n016",
+      "note_date": "2026-10-27",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "0669150c-n009",
+      "note_date": "2026-11-09",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "0669150c-n010",
+      "note_date": "2026-11-13",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "0669150c-n015",
+      "note_date": "2026-11-13",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "0669150c-n014",
+      "note_date": "2026-11-15",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Debora enjoyed the gardening group and talked about growing tomatoes as a child."
+    }
+  ]
+}

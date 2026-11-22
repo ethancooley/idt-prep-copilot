@@ -1,0 +1,354 @@
+{
+  "id": "aa0bac69-46b8-9677-e881-805eb63382d1",
+  "first_name": "Francene",
+  "last_name": "Keebler",
+  "birth_date": "1940-03-19",
+  "sex": "F",
+  "city": "San Francisco",
+  "enrollment_date": "2025-10-26",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "37320007",
+      "description": "Loss of teeth (disorder)",
+      "onset": "1969-11-25"
+    },
+    {
+      "code": "40055000",
+      "description": "Chronic sinusitis (disorder)",
+      "onset": "1985-10-23"
+    },
+    {
+      "code": "239873007",
+      "description": "Osteoarthritis of knee (disorder)",
+      "onset": "1990-07-26"
+    },
+    {
+      "code": "55822004",
+      "description": "Hyperlipidemia (disorder)",
+      "onset": "1994-04-12"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2003-06-03"
+    }
+  ],
+  "medications": [
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2003-06-10",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2003-06-10",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2003-06-10",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2003-06-10",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "new-rx",
+      "description": "furosemide 20 MG Oral Tablet",
+      "start": "2026-10-13",
+      "stop": null,
+      "note": "started for lower-extremity edema and weight gain"
+    }
+  ],
+  "allergies": [
+    {
+      "description": "Allergic disposition (finding)",
+      "reaction": null
+    },
+    {
+      "description": "Tree pollen (substance)",
+      "reaction": null
+    },
+    {
+      "description": "Tree nut (substance)",
+      "reaction": "Anaphylaxis (disorder)"
+    }
+  ],
+  "encounters": [
+    {
+      "id": "aa0bac69-46b8-9677-fd3d-6f14fd0fb1da",
+      "start": "2025-10-07",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "aa0bac69-46b8-9677-325e-f4b8359f90f8",
+      "start": "2025-10-08",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Hyperlipidemia (disorder)"
+    },
+    {
+      "id": "aa0bac69-46b8-9677-471c-b46f4bb32c5a",
+      "start": "2026-03-10",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Loss of teeth (disorder)"
+    },
+    {
+      "id": "aa0bac69-46b8-9677-5d68-b9f35d7b2b6e",
+      "start": "2026-04-01",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Loss of teeth (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2025-10-07",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 74.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-10-07",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 63.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-10-07",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 115.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-10-07",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 80.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-10-08",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 66.5,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-10-08",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 72.6,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 74.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 134.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 74.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 126.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 81.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 73.6,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 119.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 76.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "aa0bac69-n008",
+      "note_date": "2026-05-05",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Francene slipped on the porch step on May 5, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "aa0bac69-n009",
+      "note_date": "2026-09-08",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "aa0bac69-n013",
+      "note_date": "2026-09-10",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Francene attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "aa0bac69-n010",
+      "note_date": "2026-09-17",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Francene in good spirits."
+    },
+    {
+      "id": "aa0bac69-n014",
+      "note_date": "2026-09-17",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Francene enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "aa0bac69-n012",
+      "note_date": "2026-09-26",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "aa0bac69-n011",
+      "note_date": "2026-10-04",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Francene enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "aa0bac69-n001",
+      "note_date": "2026-10-06",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Francene needed hands-on help getting out of the tub today and said she has been skipping showers because she is afraid of slipping."
+    },
+    {
+      "id": "aa0bac69-n002",
+      "note_date": "2026-10-12",
+      "author_role": "Occupational therapist",
+      "note_type": "Therapy evaluation",
+      "text": "ADL reassessment. Francene now needs moderate assistance with bathing and lower-body dressing; independent at last review. Recommend tub transfer bench, handheld shower, and increasing home care hours for bathing support."
+    },
+    {
+      "id": "aa0bac69-n005",
+      "note_date": "2026-10-13",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Started furosemide 20 MG Oral Tablet for lower-extremity edema and weight gain. Discussed risks and benefits with Francene and her son. Recheck in 4 weeks."
+    },
+    {
+      "id": "aa0bac69-n017",
+      "note_date": "2026-10-13",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Francene in good spirits."
+    },
+    {
+      "id": "aa0bac69-n006",
+      "note_date": "2026-10-15",
+      "author_role": "Pharmacist",
+      "note_type": "Medication reconciliation",
+      "text": "Added furosemide 20 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
+    },
+    {
+      "id": "aa0bac69-n003",
+      "note_date": "2026-10-25",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Francene reported a fall at home on Oct 25, 2026 in the bedroom getting out of bed. Her son Angela found her on the floor. Denies head strike or loss of consciousness. No injury noted on assessment. Vitals stable. Fall risk reassessed as high. PT referral placed for gait evaluation."
+    },
+    {
+      "id": "aa0bac69-n004",
+      "note_date": "2026-10-31",
+      "author_role": "Physical therapist",
+      "note_type": "Therapy evaluation",
+      "text": "PT evaluation following fall on Oct 25, 2026. Gait slow and unsteady with intermittent cane use; Timed Up and Go 19 seconds. Recommend front-wheeled walker, home safety evaluation, and grab bars in the bathroom. Will see twice weekly for strength and balance."
+    },
+    {
+      "id": "aa0bac69-n016",
+      "note_date": "2026-11-04",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "aa0bac69-n015",
+      "note_date": "2026-11-10",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "aa0bac69-n018",
+      "note_date": "2026-11-17",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "aa0bac69-n007",
+      "note_date": "2026-11-19",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Angela, Francene's son and primary caregiver. Angela reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    }
+  ]
+}

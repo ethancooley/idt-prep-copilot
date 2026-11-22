@@ -1,0 +1,51 @@
+{
+  "participant_id": "b158639c-8d13-dfc8-6533-30ddeb64b0aa",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "new_confusion",
+      "category": "cognition",
+      "severity": "high",
+      "summary": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+      "event_date": "2026-11-11",
+      "supporting_note_ids": [
+        "b158639c-n001"
+      ]
+    },
+    {
+      "id": "missed_attendance",
+      "category": "psychosocial",
+      "severity": "medium",
+      "summary": "Missed 4 of last 8 day center days; low mood after a friend's death. Depression screen planned.",
+      "event_date": "2026-11-15",
+      "supporting_note_ids": [
+        "b158639c-n002",
+        "b158639c-n003"
+      ]
+    },
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 14 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "b158639c-n004"
+      ]
+    },
+    {
+      "id": "med_change",
+      "category": "medication_change",
+      "severity": "high",
+      "summary": "Started apixaban 5 MG on Sep 8, 2026 for new atrial fibrillation found on ECG.",
+      "event_date": "2026-09-08",
+      "supporting_note_ids": [
+        "b158639c-n005",
+        "b158639c-n006"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [],
+  "reviewed_by_human": false
+}

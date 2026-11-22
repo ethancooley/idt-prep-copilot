@@ -1,0 +1,1650 @@
+{
+  "id": "08e17e4e-b18f-32c9-fbf5-996e180b5ca3",
+  "first_name": "Mariana",
+  "last_name": "Arriaga",
+  "birth_date": "1945-02-06",
+  "sex": "F",
+  "city": "Los Angeles",
+  "enrollment_date": "2024-09-24",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1970-04-14"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1970-04-14"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1970-04-14"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "1995-02-07"
+    },
+    {
+      "code": "237602007",
+      "description": "Metabolic syndrome X (disorder)",
+      "onset": "1996-02-13"
+    },
+    {
+      "code": "44054006",
+      "description": "Diabetes mellitus type 2 (disorder)",
+      "onset": "1996-02-13"
+    },
+    {
+      "code": "302870006",
+      "description": "Hypertriglyceridemia (disorder)",
+      "onset": "1997-02-18"
+    },
+    {
+      "code": "80394007",
+      "description": "Hyperglycemia (disorder)",
+      "onset": "1999-03-02"
+    },
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "2000-03-07"
+    },
+    {
+      "code": "64859006",
+      "description": "Osteoporosis (disorder)",
+      "onset": "2015-06-02"
+    },
+    {
+      "code": "431855005",
+      "description": "Chronic kidney disease stage 1 (disorder)",
+      "onset": "2020-03-10"
+    },
+    {
+      "code": "127013003",
+      "description": "Disorder of kidney due to diabetes mellitus (disorder)",
+      "onset": "2020-03-10"
+    }
+  ],
+  "medications": [
+    {
+      "code": "2001499",
+      "description": "Vitamin B12 5 MG/ML Injectable Solution",
+      "start": "1970-04-21",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "1995-02-14",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "1995-02-14",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "1995-02-14",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "08e17e4e-b18f-32c9-e058-cd1c5f648e60",
+      "start": "2025-09-16",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-9c77-2c27b94145ff",
+      "start": "2025-11-04",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-62ed-9d359e664a4b",
+      "start": "2025-11-11",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-e014-cd501b18d2a8",
+      "start": "2025-11-18",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-a65c-f05e720a191e",
+      "start": "2025-11-25",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-8cdf-c57f6ceed8d6",
+      "start": "2025-12-02",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-cb0f-62bddc606acc",
+      "start": "2025-12-16",
+      "encounter_class": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-3fb1-91ab77273f2e",
+      "start": "2025-12-23",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-f0d9-ecffad82af94",
+      "start": "2025-12-30",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-8bb2-f74b7c34c32f",
+      "start": "2026-01-06",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-3a73-4b7051ba896e",
+      "start": "2026-01-20",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-9de5-2d136d8c4c05",
+      "start": "2026-02-03",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-300c-3d7cf9e65229",
+      "start": "2026-02-10",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-cacb-087bb3ce3992",
+      "start": "2026-02-24",
+      "encounter_class": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-8719-4b23ffe95de7",
+      "start": "2026-03-03",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-7451-57df88a7c1fe",
+      "start": "2026-03-17",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-3656-88b4bff9bf25",
+      "start": "2026-03-24",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-149e-ce2455a4891d",
+      "start": "2026-03-31",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-466f-5bb5bbfd1f8f",
+      "start": "2026-04-14",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-63dc-e91fced9faef",
+      "start": "2026-04-21",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-8ffd-98bd2aff43ca",
+      "start": "2026-04-28",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-e0fd-af97d5bf3c7b",
+      "start": "2026-05-12",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-15de-0eb737d6d625",
+      "start": "2026-05-19",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-e9e9-65c32fa52610",
+      "start": "2026-05-26",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-5e29-9b9169b2f9b3",
+      "start": "2026-06-09",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-c041-3e6c1405e09a",
+      "start": "2026-06-16",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-ddda-296b47719958",
+      "start": "2026-06-23",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-70ac-54dad272a6f7",
+      "start": "2026-06-30",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-2748-f55e7ec1e4f7",
+      "start": "2026-07-14",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-542e-a4898953b8a7",
+      "start": "2026-07-21",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-1dba-c2a4942ebe93",
+      "start": "2026-07-28",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-bb46-aa6a4b6bc460",
+      "start": "2026-08-11",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-df95-bea477645b9f",
+      "start": "2026-08-18",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "08e17e4e-b18f-32c9-3141-5883e3d4ab4c",
+      "start": "2026-08-25",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2025-09-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 136.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 109.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 89.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 66.8,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-09-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 80.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 133.9,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 112.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 98.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 85.2,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-11-04",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 73.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-11",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 103.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-11",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 146.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 105.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 78.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 72.2,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-11-18",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 82.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-25",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 128.9,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-11-25",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 141.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 74.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 106.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 93.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 91.4,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-12-02",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 88.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 94.1,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 68.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 111.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 72.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 81.3,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-12-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 78.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-12-23",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 131.6,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-12-23",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 95.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 79.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 120.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 87.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 99.8,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2025-12-30",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 60.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 105.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 107.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 98.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 89.0,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-01-20",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 62.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 119.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 115.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 87.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 81.6,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-02-03",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 72.7,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 136.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 119.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 82.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 88.4,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-02-24",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 73.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-03-03",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 119.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-03-03",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 113.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 77.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 112.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 64.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 88.4,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-03-17",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 82.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-03-24",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 110.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-03-24",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 149.0,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 75.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 106.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 80.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 80.9,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-04-14",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 86.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-04-21",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 127.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-04-21",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 118.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 69.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 106.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 88.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 78.4,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-05-12",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 86.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-05-19",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 107.7,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-05-19",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 115.7,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 68.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 114.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 95.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 92.8,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-05-26",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 76.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 136.0,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 70.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 111.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 90.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 93.9,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-06-09",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 80.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-06-16",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 129.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-06-16",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 114.0,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 109.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 86.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 86.7,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-06-23",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 80.9,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 147.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 119.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 70.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 85.6,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-07-14",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 76.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-07-21",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 122.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-07-21",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 106.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 73.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 106.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 61.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 81.5,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-08-11",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 71.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-08-18",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 109.1,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-08-18",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 117.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 110.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 91.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 66.3,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-08-25",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 64.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-09-05",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 77.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 130.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 74.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.7,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-14",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 134.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-14",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 77.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 73.6,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 130.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 71.7,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "08e17e4e-n003",
+      "note_date": "2026-05-24",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Mariana slipped on the porch step on May 24, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "08e17e4e-n004",
+      "note_date": "2026-09-02",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "08e17e4e-n007",
+      "note_date": "2026-09-06",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "08e17e4e-n012",
+      "note_date": "2026-09-08",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "08e17e4e-n011",
+      "note_date": "2026-09-21",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Mariana in good spirits."
+    },
+    {
+      "id": "08e17e4e-n001",
+      "note_date": "2026-09-27",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Marcus, Mariana's son and primary caregiver. Marcus reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    },
+    {
+      "id": "08e17e4e-n010",
+      "note_date": "2026-09-27",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "08e17e4e-n005",
+      "note_date": "2026-10-04",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Mariana enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "08e17e4e-n009",
+      "note_date": "2026-10-09",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Mariana attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "08e17e4e-n008",
+      "note_date": "2026-10-26",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Mariana in good spirits."
+    },
+    {
+      "id": "08e17e4e-n002",
+      "note_date": "2026-11-24",
+      "author_role": "Dietitian",
+      "note_type": "Nutrition assessment",
+      "text": "Weight 71.7 kg, down from 77.9 kg on Sep 5, 2026 (8%). Mariana reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
+    },
+    {
+      "id": "08e17e4e-n006",
+      "note_date": "2026-11-27",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    }
+  ]
+}

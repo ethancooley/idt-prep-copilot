@@ -1,0 +1,272 @@
+{
+  "id": "7d8911a6-9697-5c23-3a4a-a22ef14ec200",
+  "first_name": "Georgianne",
+  "last_name": "Funk",
+  "birth_date": "1958-11-07",
+  "sex": "F",
+  "city": "Los Angeles",
+  "enrollment_date": "2024-11-02",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "2012-11-30"
+    }
+  ],
+  "medications": [
+    {
+      "code": "2001499",
+      "description": "Vitamin B12 5 MG/ML Injectable Solution",
+      "start": "1983-12-09",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "new-rx",
+      "description": "sertraline 25 MG Oral Tablet",
+      "start": "2026-09-25",
+      "stop": null,
+      "note": "started for depressive symptoms (PHQ-9 of 14)"
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "7d8911a6-9697-5c23-ab35-d262b669a009",
+      "start": "2025-11-12",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Viral sinusitis (disorder)"
+    },
+    {
+      "id": "7d8911a6-9697-5c23-cd82-8290dbf03561",
+      "start": "2026-02-13",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "7d8911a6-9697-5c23-2de2-792c799b4c45",
+      "start": "2026-02-27",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    },
+    {
+      "id": "7d8911a6-ed1",
+      "start": "2026-10-31",
+      "encounter_class": "inpatient",
+      "description": "Hospital admission",
+      "reason": "chest pain; cardiac workup negative"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-02-13",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 6.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-02-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.8,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-02-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 79.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 93.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-13",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 83.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-02-13",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 72.9,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 76.2,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 128.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 78.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-09",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.3,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 124.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 75.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 128.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "7d8911a6-n009",
+      "note_date": "2026-09-02",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "7d8911a6-n003",
+      "note_date": "2026-09-25",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Started sertraline 25 MG Oral Tablet for depressive symptoms (PHQ-9 of 14). Discussed risks and benefits with Georgianne and her grandson. Recheck in 4 weeks."
+    },
+    {
+      "id": "7d8911a6-n004",
+      "note_date": "2026-09-27",
+      "author_role": "Pharmacist",
+      "note_type": "Medication reconciliation",
+      "text": "Added sertraline 25 MG Oral Tablet to the active list. Checked interactions; counseled on side effects. Blister pack updated."
+    },
+    {
+      "id": "7d8911a6-n007",
+      "note_date": "2026-10-08",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "7d8911a6-n012",
+      "note_date": "2026-10-11",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Georgianne in good spirits."
+    },
+    {
+      "id": "7d8911a6-n008",
+      "note_date": "2026-10-12",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "7d8911a6-n013",
+      "note_date": "2026-10-17",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Georgianne in good spirits."
+    },
+    {
+      "id": "7d8911a6-n014",
+      "note_date": "2026-10-18",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "7d8911a6-n005",
+      "note_date": "2026-11-03",
+      "author_role": "Hospital physician",
+      "note_type": "ED/hospital discharge summary",
+      "text": "Seen at partner hospital emergency department on Oct 31, 2026 for chest pain; cardiac workup negative; admitted for 3 days. No new medications at discharge. Follow up with PACE primary care within 7 days."
+    },
+    {
+      "id": "7d8911a6-n001",
+      "note_date": "2026-11-06",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Georgianne has missed 6 of the last 8 scheduled day center days. When present, she stays quiet and leaves activities early."
+    },
+    {
+      "id": "7d8911a6-n006",
+      "note_date": "2026-11-06",
+      "author_role": "Primary care physician",
+      "note_type": "Post-acute follow-up",
+      "text": "Post-hospital follow-up for chest pain; cardiac workup negative. Georgianne is back to baseline per her grandson. Reviewed discharge medications. Will monitor closely over the next two weeks."
+    },
+    {
+      "id": "7d8911a6-n002",
+      "note_date": "2026-11-08",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Called Georgianne about missed day center days. Reports feeling \"down\" and not wanting to leave the house since a close friend died last month. Will screen for depression and offer grief support."
+    },
+    {
+      "id": "7d8911a6-n010",
+      "note_date": "2026-11-15",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "7d8911a6-n011",
+      "note_date": "2026-11-26",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Georgianne attended day center, joined chair exercise and music group, and ate most of lunch."
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "id": "ee8576d5-c6ab-db1f-72ee-c60f1edc7262",
+  "first_name": "Benito",
+  "last_name": "Olvera",
+  "birth_date": "1950-08-27",
+  "sex": "M",
+  "city": "Los Angeles",
+  "enrollment_date": "2026-01-12",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1972-10-29"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1975-11-02"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1990-09-02"
+    },
+    {
+      "code": "55822004",
+      "description": "Hyperlipidemia (disorder)",
+      "onset": "1998-09-20"
+    },
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "2004-09-19"
+    },
+    {
+      "code": "237602007",
+      "description": "Metabolic syndrome X (disorder)",
+      "onset": "2004-09-19"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2006-10-01"
+    },
+    {
+      "code": "431855005",
+      "description": "Chronic kidney disease stage 1 (disorder)",
+      "onset": "2018-03-25"
+    },
+    {
+      "code": "127013003",
+      "description": "Disorder of kidney due to diabetes mellitus (disorder)",
+      "onset": "2018-03-25"
+    }
+  ],
+  "medications": [
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2006-10-08",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2006-10-08",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2006-10-08",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2006-10-08",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314231",
+      "description": "Simvastatin 10 MG Oral Tablet",
+      "start": "2026-02-04",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "ee8576d5-c6ab-db1f-4f29-ca27c4edd17e",
+      "start": "2026-01-18",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "ee8576d5-c6ab-db1f-459a-30ef1c310c41",
+      "start": "2026-02-04",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Hyperlipidemia (disorder)"
+    },
+    {
+      "id": "ee8576d5-ed1",
+      "start": "2026-10-21",
+      "encounter_class": "inpatient",
+      "description": "Hospital admission",
+      "reason": "chest pain; cardiac workup negative"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-01-18",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 91.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 3.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 96.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 95.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 113.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 98.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 87.9,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-01-18",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 63.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-04",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 84.1,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-02-04",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 89.9,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-09-05",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 96.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 125.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 77.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 94.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 118.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 79.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 128.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 76.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 88.6,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "ee8576d5-n016",
+      "note_date": "2026-09-16",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "ee8576d5-n014",
+      "note_date": "2026-09-23",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "ee8576d5-n011",
+      "note_date": "2026-09-29",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Benito in good spirits."
+    },
+    {
+      "id": "ee8576d5-n009",
+      "note_date": "2026-10-10",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "ee8576d5-n013",
+      "note_date": "2026-10-17",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Benito attended day center, joined chair exercise and music group, and ate most of lunch."
+    },
+    {
+      "id": "ee8576d5-n005",
+      "note_date": "2026-10-23",
+      "author_role": "Hospital physician",
+      "note_type": "ED/hospital discharge summary",
+      "text": "Seen at partner hospital emergency department on Oct 21, 2026 for chest pain; cardiac workup negative; admitted for 2 days. No new medications at discharge. Follow up with PACE primary care within 7 days."
+    },
+    {
+      "id": "ee8576d5-n006",
+      "note_date": "2026-10-25",
+      "author_role": "Primary care physician",
+      "note_type": "Post-acute follow-up",
+      "text": "Post-hospital follow-up for chest pain; cardiac workup negative. Benito is back to baseline per his spouse. Reviewed discharge medications. Will monitor closely over the next two weeks."
+    },
+    {
+      "id": "ee8576d5-n008",
+      "note_date": "2026-10-31",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Benito enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "ee8576d5-n015",
+      "note_date": "2026-11-04",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "ee8576d5-n007",
+      "note_date": "2026-11-16",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "ee8576d5-n002",
+      "note_date": "2026-11-17",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Denise reports Benito has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "ee8576d5-n010",
+      "note_date": "2026-11-19",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "ee8576d5-n003",
+      "note_date": "2026-11-21",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Benito has missed 4 of the last 8 scheduled day center days. When present, he stays quiet and leaves activities early."
+    },
+    {
+      "id": "ee8576d5-n004",
+      "note_date": "2026-11-23",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Called Benito about missed day center days. Reports feeling \"down\" and not wanting to leave the house since a close friend died last month. Will screen for depression and offer grief support."
+    },
+    {
+      "id": "ee8576d5-n001",
+      "note_date": "2026-11-24",
+      "author_role": "Dietitian",
+      "note_type": "Nutrition assessment",
+      "text": "Weight 88.6 kg, down from 96.9 kg on Sep 5, 2026 (9%). Benito reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
+    },
+    {
+      "id": "ee8576d5-n012",
+      "note_date": "2026-11-28",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Benito enjoyed the gardening group and talked about growing tomatoes as a child."
+    }
+  ]
+}

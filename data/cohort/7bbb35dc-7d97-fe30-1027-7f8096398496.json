@@ -1,0 +1,696 @@
+{
+  "id": "7bbb35dc-7d97-fe30-1027-7f8096398496",
+  "first_name": "Vincenzo",
+  "last_name": "Bernier",
+  "birth_date": "1945-05-24",
+  "sex": "M",
+  "city": "Lakewood",
+  "enrollment_date": "2024-10-15",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "1979-08-09"
+    },
+    {
+      "code": "37320007",
+      "description": "Loss of teeth (disorder)",
+      "onset": "1988-10-20"
+    },
+    {
+      "code": "239873007",
+      "description": "Osteoarthritis of knee (disorder)",
+      "onset": "1990-05-25"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1990-10-11"
+    },
+    {
+      "code": "55822004",
+      "description": "Hyperlipidemia (disorder)",
+      "onset": "1991-10-17"
+    },
+    {
+      "code": "401314000",
+      "description": "Acute non-ST segment elevation myocardial infarction (disorder)",
+      "onset": "2009-11-14"
+    },
+    {
+      "code": "68496003",
+      "description": "Polyp of colon (disorder)",
+      "onset": "2010-05-24"
+    },
+    {
+      "code": "713197008",
+      "description": "Recurrent rectal polyp (disorder)",
+      "onset": "2011-10-31"
+    },
+    {
+      "code": "431855005",
+      "description": "Chronic kidney disease stage 1 (disorder)",
+      "onset": "2013-02-14"
+    },
+    {
+      "code": "127013003",
+      "description": "Disorder of kidney due to diabetes mellitus (disorder)",
+      "onset": "2013-02-14"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2018-03-15"
+    },
+    {
+      "code": "431856006",
+      "description": "Chronic kidney disease stage 2 (disorder)",
+      "onset": "2025-01-30"
+    },
+    {
+      "code": "90781000119102",
+      "description": "Microalbuminuria due to type 2 diabetes mellitus (disorder)",
+      "onset": "2025-01-30"
+    }
+  ],
+  "medications": [
+    {
+      "code": "849574",
+      "description": "Naproxen sodium 220 MG Oral Tablet",
+      "start": "1990-05-25",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "243670",
+      "description": "aspirin 81 MG Oral Tablet",
+      "start": "2009-11-16",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866419",
+      "description": "24 HR metoprolol succinate 200 MG Extended Release Oral Tablet",
+      "start": "2009-11-16",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "859424",
+      "description": "rosuvastatin calcium 5 MG Oral Tablet",
+      "start": "2009-11-16",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "979480",
+      "description": "losartan potassium 100 MG Oral Tablet",
+      "start": "2009-11-16",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "855812",
+      "description": "prasugrel 10 MG Oral Tablet",
+      "start": "2009-11-16",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2018-03-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2018-03-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2018-03-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2018-03-22",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314231",
+      "description": "Simvastatin 10 MG Oral Tablet",
+      "start": "2026-05-01",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "308136",
+      "description": "amLODIPine 2.5 MG Oral Tablet",
+      "start": "2026-05-21",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "7bbb35dc-7d97-fe30-5998-9003ee75564c",
+      "start": "2025-09-25",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-f6aa-e0799a3895a9",
+      "start": "2025-10-02",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-c739-bf7aba6c057a",
+      "start": "2025-10-09",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-8c29-9ddd60ec1158",
+      "start": "2025-10-16",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Viral sinusitis (disorder)"
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-74b3-3ccd66e2519e",
+      "start": "2025-10-23",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-10b2-578c6bf1883c",
+      "start": "2025-10-30",
+      "encounter_class": "urgentcare",
+      "description": "Urgent care clinic (environment)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-2071-39465d5377a0",
+      "start": "2025-11-06",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-5a93-c364ae7ba4a1",
+      "start": "2026-02-19",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-f675-1ab8bb9bf994",
+      "start": "2026-03-05",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)"
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-9d0a-8d98ca59a684",
+      "start": "2026-04-30",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-ec26-6cf628a8d5b3",
+      "start": "2026-05-01",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Hyperlipidemia (disorder)"
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-38e9-8191aa44edcf",
+      "start": "2026-05-21",
+      "encounter_class": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": null
+    },
+    {
+      "id": "7bbb35dc-7d97-fe30-b102-ca991181aa54",
+      "start": "2026-06-04",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2025-09-25",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 62.7,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-09-25",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-09-25",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 61.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-09-25",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 109.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-09-25",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 78.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-09-25",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 47.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-10-02",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 83.6,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-10-09",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 63.1,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-10-09",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-10-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 62.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-10-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 110.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-10-09",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 85.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-10-09",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 42.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-10-23",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 86.2,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-10-23",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2025-10-23",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 65.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-10-23",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 106.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2025-10-23",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 67.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2025-10-23",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 52.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2025-10-30",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 76.5,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-19",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 66.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-02-19",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-02-19",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 69.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-19",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 108.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-19",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 88.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-02-19",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 57.8,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-04-30",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 85.1,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-04-30",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-04-30",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 68.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-04-30",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 109.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-04-30",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 85.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-04-30",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 40.9,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-05-01",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 78.3,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-05-01",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 72.5,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-05-21",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 81.1,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-05-21",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-05-21",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 66.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-05-21",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 110.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-05-21",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 92.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-05-21",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 45.4,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-09-10",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.2,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-10",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 136.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-10",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 72.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.3,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 118.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 76.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-14",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 91.1,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-14",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 127.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-14",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 76.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "7bbb35dc-n004",
+      "note_date": "2026-07-18",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Vincenzo slipped on the porch step on Jul 18, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "7bbb35dc-n011",
+      "note_date": "2026-09-25",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Vincenzo enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "7bbb35dc-n010",
+      "note_date": "2026-10-02",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "7bbb35dc-n003",
+      "note_date": "2026-10-04",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "James reports Vincenzo has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "7bbb35dc-n006",
+      "note_date": "2026-10-04",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Vincenzo in good spirits."
+    },
+    {
+      "id": "7bbb35dc-n008",
+      "note_date": "2026-10-23",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "7bbb35dc-n012",
+      "note_date": "2026-10-29",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "7bbb35dc-n007",
+      "note_date": "2026-11-03",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "7bbb35dc-n001",
+      "note_date": "2026-11-19",
+      "author_role": "Day center coordinator",
+      "note_type": "Attendance note",
+      "text": "Vincenzo has missed 4 of the last 8 scheduled day center days. When present, he stays quiet and leaves activities early."
+    },
+    {
+      "id": "7bbb35dc-n002",
+      "note_date": "2026-11-21",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Called Vincenzo about missed day center days. Reports feeling \"down\" and not wanting to leave the house since a close friend died last month. Will screen for depression and offer grief support."
+    },
+    {
+      "id": "7bbb35dc-n005",
+      "note_date": "2026-11-21",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Vincenzo enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "7bbb35dc-n009",
+      "note_date": "2026-11-26",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "7bbb35dc-n013",
+      "note_date": "2026-11-26",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Vincenzo enjoyed the gardening group and talked about growing tomatoes as a child."
+    }
+  ]
+}

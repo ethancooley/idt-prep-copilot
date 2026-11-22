@@ -1,0 +1,39 @@
+{
+  "participant_id": "6d94779f-af3f-06b0-2f80-4a0e1111027c",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "med_change",
+      "category": "medication_change",
+      "severity": "medium",
+      "summary": "Started sertraline 25 MG on Nov 13, 2026 for depressive symptoms (PHQ-9 of 14).",
+      "event_date": "2026-11-13",
+      "supporting_note_ids": [
+        "6d94779f-n001",
+        "6d94779f-n002"
+      ]
+    },
+    {
+      "id": "functional_decline",
+      "category": "functional_status",
+      "severity": "medium",
+      "summary": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+      "event_date": "2026-10-11",
+      "supporting_note_ids": [
+        "6d94779f-n003",
+        "6d94779f-n004"
+      ]
+    },
+    {
+      "id": "flu_vaccine",
+      "category": "care_plan_due",
+      "severity": "low",
+      "summary": "No seasonal flu vaccine documented this season.",
+      "event_date": null,
+      "supporting_note_ids": []
+    }
+  ],
+  "must_not_surface_as_new": [],
+  "reviewed_by_human": false
+}

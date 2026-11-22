@@ -1,0 +1,59 @@
+{
+  "participant_id": "12daa29d-1ab3-e1da-43f3-f4ff64980e5f",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "fall",
+      "category": "fall",
+      "severity": "high",
+      "summary": "Fall at home on Oct 19, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
+      "event_date": "2026-10-19",
+      "supporting_note_ids": [
+        "12daa29d-n001",
+        "12daa29d-n002"
+      ]
+    },
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 16 lb (9%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "12daa29d-n003"
+      ]
+    },
+    {
+      "id": "new_confusion",
+      "category": "cognition",
+      "severity": "high",
+      "summary": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+      "event_date": "2026-11-09",
+      "supporting_note_ids": [
+        "12daa29d-n004"
+      ]
+    },
+    {
+      "id": "functional_decline",
+      "category": "functional_status",
+      "severity": "medium",
+      "summary": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+      "event_date": "2026-09-25",
+      "supporting_note_ids": [
+        "12daa29d-n005",
+        "12daa29d-n006"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Apr 11, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "12daa29d-n007"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

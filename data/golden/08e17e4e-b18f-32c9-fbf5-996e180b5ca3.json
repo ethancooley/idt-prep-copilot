@@ -1,0 +1,37 @@
+{
+  "participant_id": "08e17e4e-b18f-32c9-fbf5-996e180b5ca3",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (son) reports burnout and is requesting respite.",
+      "event_date": "2026-09-27",
+      "supporting_note_ids": [
+        "08e17e4e-n001"
+      ]
+    },
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 14 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "08e17e4e-n002"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on May 24, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "08e17e4e-n003"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

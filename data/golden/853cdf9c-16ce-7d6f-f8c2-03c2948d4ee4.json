@@ -1,0 +1,60 @@
+{
+  "participant_id": "853cdf9c-16ce-7d6f-f8c2-03c2948d4ee4",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "acute_visit",
+      "category": "hospital_or_ed",
+      "severity": "high",
+      "summary": "ED visit on Sep 18, 2026 for urinary tract infection with acute confusion.",
+      "event_date": "2026-09-18",
+      "supporting_note_ids": [
+        "853cdf9c-n001",
+        "853cdf9c-n002"
+      ]
+    },
+    {
+      "id": "med_change",
+      "category": "medication_change",
+      "severity": "medium",
+      "summary": "Stopped Naproxen sodium 220 MG on Oct 9, 2026 given declining kidney function and fall risk.",
+      "event_date": "2026-10-09",
+      "supporting_note_ids": [
+        "853cdf9c-n003",
+        "853cdf9c-n004"
+      ]
+    },
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (grandson) reports burnout and is requesting respite.",
+      "event_date": "2026-11-03",
+      "supporting_note_ids": [
+        "853cdf9c-n005"
+      ]
+    },
+    {
+      "id": "fall",
+      "category": "fall",
+      "severity": "high",
+      "summary": "Fall at home on Oct 12, 2026 with right hip bruising; PT recommends a walker and home safety evaluation.",
+      "event_date": "2026-10-12",
+      "supporting_note_ids": [
+        "853cdf9c-n006",
+        "853cdf9c-n007"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Apr 12, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "853cdf9c-n008"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

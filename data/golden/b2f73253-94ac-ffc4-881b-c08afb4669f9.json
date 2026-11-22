@@ -1,0 +1,47 @@
+{
+  "participant_id": "b2f73253-94ac-ffc4-881b-c08afb4669f9",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "bp_uncontrolled",
+      "category": "vitals",
+      "severity": "medium",
+      "summary": "Blood pressure elevated on three readings (latest 163/96) with missed evening doses.",
+      "event_date": "2026-11-15",
+      "supporting_note_ids": [
+        "b2f73253-n001"
+      ]
+    },
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 13 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "b2f73253-n002"
+      ]
+    },
+    {
+      "id": "new_confusion",
+      "category": "cognition",
+      "severity": "high",
+      "summary": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+      "event_date": "2026-10-26",
+      "supporting_note_ids": [
+        "b2f73253-n003"
+      ]
+    },
+    {
+      "id": "flu_vaccine",
+      "category": "care_plan_due",
+      "severity": "low",
+      "summary": "No seasonal flu vaccine documented this season.",
+      "event_date": null,
+      "supporting_note_ids": []
+    }
+  ],
+  "must_not_surface_as_new": [],
+  "reviewed_by_human": false
+}

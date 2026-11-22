@@ -1,0 +1,391 @@
+{
+  "id": "126822f8-bc47-c89f-2641-da07aca9b7bb",
+  "first_name": "Jerónimo",
+  "last_name": "Montes",
+  "birth_date": "1953-02-17",
+  "sex": "M",
+  "city": "San Diego",
+  "enrollment_date": "2024-04-21",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "203646004",
+      "description": "Adolescent idiopathic scoliosis (disorder)",
+      "onset": "1963-10-02"
+    },
+    {
+      "code": "82423001",
+      "description": "Chronic pain (finding)",
+      "onset": "1990-03-03"
+    },
+    {
+      "code": "124171000119105",
+      "description": "Chronic intractable migraine without aura (disorder)",
+      "onset": "1990-05-23"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1990-10-23"
+    },
+    {
+      "code": "196416002",
+      "description": "Impacted molars (disorder)",
+      "onset": "1991-09-19"
+    },
+    {
+      "code": "6525002",
+      "description": "Dependent drug abuse (disorder)",
+      "onset": "2018-06-19"
+    },
+    {
+      "code": "64859006",
+      "description": "Osteoporosis (disorder)",
+      "onset": "2023-06-13"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2026-06-30"
+    }
+  ],
+  "medications": [
+    {
+      "code": "904419",
+      "description": "Alendronic acid 10 MG Oral Tablet",
+      "start": "2026-06-30",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2026-07-07",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2026-07-07",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2026-07-07",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2026-07-07",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "126822f8-bc47-c89f-6354-dd8541dfc010",
+      "start": "2025-09-10",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-cbf2-dbe1d775eb88",
+      "start": "2025-10-10",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-87b5-25b75cb76c60",
+      "start": "2026-03-22",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-49d0-9a1a3dae19b4",
+      "start": "2026-04-21",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-e75c-c45b295e6020",
+      "start": "2026-05-21",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-5ab7-a7513a037167",
+      "start": "2026-06-20",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-67e3-f58c46c017ce",
+      "start": "2026-06-30",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "126822f8-bc47-c89f-6590-da43eee3acff",
+      "start": "2026-07-07",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Ischemic heart disease (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-6225-418d483182b9",
+      "start": "2026-07-09",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Ischemic heart disease (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-ab82-6b2986e7a072",
+      "start": "2026-07-21",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-3fd5-9af5a3cb1595",
+      "start": "2026-07-28",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-b629-cf1480d5dd9e",
+      "start": "2026-08-22",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Abnormal findings diagnostic imaging heart+coronary circulat (finding)"
+    },
+    {
+      "id": "126822f8-bc47-c89f-a48c-8c75f513d135",
+      "start": "2026-08-27",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Dependent drug abuse (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-06-30",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 84.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-06-30",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 73.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-06-30",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 126.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-06-30",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 86.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-08-23",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 10.9,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-08-23",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 5.2,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 85.3,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 138.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-13",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 79.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 84.3,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 135.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 70.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 85.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 132.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-10",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 82.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "126822f8-n005",
+      "note_date": "2026-05-14",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Jerónimo slipped on the porch step on May 14, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "126822f8-n006",
+      "note_date": "2026-09-16",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "126822f8-n002",
+      "note_date": "2026-09-25",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Jerónimo reported a fall at home on Sep 25, 2026 in the bedroom getting out of bed. His grandson Robert found him on the floor. Denies head strike or loss of consciousness. Small skin tear to left forearm, cleaned and dressed. Vitals stable. Fall risk reassessed as high. PT referral placed for gait evaluation."
+    },
+    {
+      "id": "126822f8-n003",
+      "note_date": "2026-09-29",
+      "author_role": "Physical therapist",
+      "note_type": "Therapy evaluation",
+      "text": "PT evaluation following fall on Sep 25, 2026. Gait slow and unsteady with intermittent cane use; Timed Up and Go 19 seconds. Recommend front-wheeled walker, home safety evaluation, and grab bars in the bathroom. Will see twice weekly for strength and balance."
+    },
+    {
+      "id": "126822f8-n013",
+      "note_date": "2026-10-04",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Jerónimo in good spirits."
+    },
+    {
+      "id": "126822f8-n008",
+      "note_date": "2026-10-13",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Jerónimo in good spirits."
+    },
+    {
+      "id": "126822f8-n010",
+      "note_date": "2026-10-15",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Jerónimo in good spirits."
+    },
+    {
+      "id": "126822f8-n011",
+      "note_date": "2026-10-15",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Jerónimo enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "126822f8-n014",
+      "note_date": "2026-10-26",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "126822f8-n007",
+      "note_date": "2026-10-28",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "126822f8-n004",
+      "note_date": "2026-11-02",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Robert reports Jerónimo has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "126822f8-n009",
+      "note_date": "2026-11-13",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "126822f8-n001",
+      "note_date": "2026-11-22",
+      "author_role": "Social worker",
+      "note_type": "Social work note",
+      "text": "Met with Robert, Jerónimo's grandson and primary caregiver. Robert reports exhaustion and poor sleep, and is worried about managing evenings alone. Requests respite. Discussed respite options and caregiver support group."
+    },
+    {
+      "id": "126822f8-n012",
+      "note_date": "2026-11-25",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Jerónimo enjoyed the gardening group and talked about growing tomatoes as a child."
+    }
+  ]
+}

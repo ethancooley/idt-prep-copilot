@@ -1,0 +1,376 @@
+{
+  "id": "54d552f1-657b-f05b-0b55-6a1a72e2dfa9",
+  "first_name": "Hank",
+  "last_name": "Willms",
+  "birth_date": "1937-06-25",
+  "sex": "M",
+  "city": "Tracy",
+  "enrollment_date": "2025-01-22",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "1968-09-06"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1973-10-05"
+    },
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1980-11-14"
+    },
+    {
+      "code": "55822004",
+      "description": "Hyperlipidemia (disorder)",
+      "onset": "1980-11-14"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1982-11-26"
+    },
+    {
+      "code": "237602007",
+      "description": "Metabolic syndrome X (disorder)",
+      "onset": "1983-12-02"
+    },
+    {
+      "code": "93143009",
+      "description": "Leukemia  disease (disorder)",
+      "onset": "2002-06-09"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2011-05-06"
+    }
+  ],
+  "medications": [
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2011-05-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2011-05-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2011-05-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2011-05-13",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314076",
+      "description": "lisinopril 10 MG Oral Tablet",
+      "start": "2026-07-31",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "314231",
+      "description": "Simvastatin 10 MG Oral Tablet",
+      "start": "2026-08-07",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [
+    {
+      "description": "Allergic disposition (finding)",
+      "reaction": null
+    },
+    {
+      "description": "Tree pollen (substance)",
+      "reaction": null
+    },
+    {
+      "description": "Aspirin",
+      "reaction": "Abdominal pain (finding)"
+    }
+  ],
+  "encounters": [
+    {
+      "id": "54d552f1-657b-f05b-f7a9-dc4f4b5f21e9",
+      "start": "2026-07-31",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "54d552f1-657b-f05b-ad99-d039d27446b2",
+      "start": "2026-08-07",
+      "encounter_class": "ambulatory",
+      "description": "Follow-up encounter (procedure)",
+      "reason": "Hyperlipidemia (disorder)"
+    },
+    {
+      "id": "54d552f1-657b-f05b-4575-b0eedb7cd338",
+      "start": "2026-08-14",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-07-31",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 6.3,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-07-31",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 93.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-07-31",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 81.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-07-31",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 122.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-07-31",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 88.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-07-31",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 85.5,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-07-31",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 144.9,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-08-07",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 76.9,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-08-07",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 81.8,
+      "units": "mL/min"
+    },
+    {
+      "obs_date": "2026-09-05",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 93.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 135.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 76.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 90.5,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-09",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 126.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-09",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 71.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 88.0,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 123.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-08",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 81.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 85.9,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "54d552f1-n006",
+      "note_date": "2026-05-26",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Hank slipped on the porch step on May 26, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "54d552f1-n014",
+      "note_date": "2026-09-05",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "54d552f1-n011",
+      "note_date": "2026-09-20",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Hank in good spirits."
+    },
+    {
+      "id": "54d552f1-n009",
+      "note_date": "2026-10-08",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Hank in good spirits."
+    },
+    {
+      "id": "54d552f1-n002",
+      "note_date": "2026-10-11",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Hank reported a fall at home on Oct 11, 2026 in the bathroom at night. His grandson Teresa found him on the floor. Denies head strike or loss of consciousness. Small skin tear to left forearm, cleaned and dressed. Vitals stable. Fall risk reassessed as high. PT referral placed for gait evaluation."
+    },
+    {
+      "id": "54d552f1-n003",
+      "note_date": "2026-10-14",
+      "author_role": "Physical therapist",
+      "note_type": "Therapy evaluation",
+      "text": "PT evaluation following fall on Oct 11, 2026. Gait slow and unsteady with intermittent cane use; Timed Up and Go 19 seconds. Recommend front-wheeled walker, home safety evaluation, and grab bars in the bathroom. Will see twice weekly for strength and balance."
+    },
+    {
+      "id": "54d552f1-n008",
+      "note_date": "2026-10-25",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "54d552f1-n015",
+      "note_date": "2026-10-25",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Hank enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "54d552f1-n013",
+      "note_date": "2026-10-28",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Hank in good spirits."
+    },
+    {
+      "id": "54d552f1-n007",
+      "note_date": "2026-11-10",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Hank enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "54d552f1-n004",
+      "note_date": "2026-11-11",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Hank needed hands-on help getting out of the tub today and said he has been skipping showers because he is afraid of slipping."
+    },
+    {
+      "id": "54d552f1-n010",
+      "note_date": "2026-11-11",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Hank enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "54d552f1-n005",
+      "note_date": "2026-11-18",
+      "author_role": "Occupational therapist",
+      "note_type": "Therapy evaluation",
+      "text": "ADL reassessment. Hank now needs moderate assistance with bathing and lower-body dressing; independent at last review. Recommend tub transfer bench, handheld shower, and increasing home care hours for bathing support."
+    },
+    {
+      "id": "54d552f1-n012",
+      "note_date": "2026-11-19",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "54d552f1-n001",
+      "note_date": "2026-11-24",
+      "author_role": "Dietitian",
+      "note_type": "Nutrition assessment",
+      "text": "Weight 85.9 kg, down from 93.0 kg on Sep 5, 2026 (8%). Hank reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "participant_id": "bde01e11-0f68-c9f7-13b5-8f574c33248d",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 13 lb (6%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "bde01e11-n001"
+      ]
+    },
+    {
+      "id": "med_change",
+      "category": "medication_change",
+      "severity": "high",
+      "summary": "Started apixaban 5 MG on Oct 24, 2026 for new atrial fibrillation found on ECG.",
+      "event_date": "2026-10-24",
+      "supporting_note_ids": [
+        "bde01e11-n002",
+        "bde01e11-n003"
+      ]
+    },
+    {
+      "id": "fall",
+      "category": "fall",
+      "severity": "high",
+      "summary": "Fall at home on Nov 3, 2026 with no injury; PT recommends a walker and home safety evaluation.",
+      "event_date": "2026-11-03",
+      "supporting_note_ids": [
+        "bde01e11-n004",
+        "bde01e11-n005"
+      ]
+    },
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (grandson) reports burnout and is requesting respite.",
+      "event_date": "2026-10-13",
+      "supporting_note_ids": [
+        "bde01e11-n006"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Apr 26, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "bde01e11-n007"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

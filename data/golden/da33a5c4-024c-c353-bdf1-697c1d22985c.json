@@ -1,0 +1,56 @@
+{
+  "participant_id": "da33a5c4-024c-c353-bdf1-697c1d22985c",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "med_change",
+      "category": "medication_change",
+      "severity": "high",
+      "summary": "Started apixaban 5 MG on Sep 7, 2026 for new atrial fibrillation found on ECG.",
+      "event_date": "2026-09-07",
+      "supporting_note_ids": [
+        "da33a5c4-n001",
+        "da33a5c4-n002"
+      ]
+    },
+    {
+      "id": "bp_uncontrolled",
+      "category": "vitals",
+      "severity": "medium",
+      "summary": "Blood pressure elevated on three readings (latest 164/89) with missed evening doses.",
+      "event_date": "2026-11-11",
+      "supporting_note_ids": [
+        "da33a5c4-n003"
+      ]
+    },
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (son) reports burnout and is requesting respite.",
+      "event_date": "2026-11-01",
+      "supporting_note_ids": [
+        "da33a5c4-n004"
+      ]
+    },
+    {
+      "id": "flu_vaccine",
+      "category": "care_plan_due",
+      "severity": "low",
+      "summary": "No seasonal flu vaccine documented this season.",
+      "event_date": null,
+      "supporting_note_ids": []
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Jun 8, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "da33a5c4-n005"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

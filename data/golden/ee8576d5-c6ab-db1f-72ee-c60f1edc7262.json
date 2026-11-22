@@ -1,0 +1,51 @@
+{
+  "participant_id": "ee8576d5-c6ab-db1f-72ee-c60f1edc7262",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 18 lb (9%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "ee8576d5-n001"
+      ]
+    },
+    {
+      "id": "new_confusion",
+      "category": "cognition",
+      "severity": "high",
+      "summary": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+      "event_date": "2026-11-17",
+      "supporting_note_ids": [
+        "ee8576d5-n002"
+      ]
+    },
+    {
+      "id": "missed_attendance",
+      "category": "psychosocial",
+      "severity": "medium",
+      "summary": "Missed 4 of last 8 day center days; low mood after a friend's death. Depression screen planned.",
+      "event_date": "2026-11-21",
+      "supporting_note_ids": [
+        "ee8576d5-n003",
+        "ee8576d5-n004"
+      ]
+    },
+    {
+      "id": "acute_visit",
+      "category": "hospital_or_ed",
+      "severity": "high",
+      "summary": "Hospital admission on Oct 21, 2026 for chest pain; cardiac workup negative (2 days).",
+      "event_date": "2026-10-21",
+      "supporting_note_ids": [
+        "ee8576d5-n005",
+        "ee8576d5-n006"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [],
+  "reviewed_by_human": false
+}

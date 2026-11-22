@@ -1,0 +1,46 @@
+{
+  "participant_id": "8ea8952a-9bc0-c643-686c-508badc8bb8a",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (spouse) reports burnout and is requesting respite.",
+      "event_date": "2026-11-12",
+      "supporting_note_ids": [
+        "8ea8952a-n001"
+      ]
+    },
+    {
+      "id": "missed_attendance",
+      "category": "psychosocial",
+      "severity": "medium",
+      "summary": "Missed 6 of last 8 day center days; low mood after a friend's death. Depression screen planned.",
+      "event_date": "2026-10-26",
+      "supporting_note_ids": [
+        "8ea8952a-n002",
+        "8ea8952a-n003"
+      ]
+    },
+    {
+      "id": "flu_vaccine",
+      "category": "care_plan_due",
+      "severity": "low",
+      "summary": "No seasonal flu vaccine documented this season.",
+      "event_date": null,
+      "supporting_note_ids": []
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on May 15, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "8ea8952a-n004"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

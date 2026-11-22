@@ -1,0 +1,49 @@
+{
+  "participant_id": "de1e1874-bb08-e1de-bd72-d544fcf227f1",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "functional_decline",
+      "category": "functional_status",
+      "severity": "medium",
+      "summary": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+      "event_date": "2026-09-30",
+      "supporting_note_ids": [
+        "de1e1874-n001",
+        "de1e1874-n002"
+      ]
+    },
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 15 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "de1e1874-n003"
+      ]
+    },
+    {
+      "id": "acute_visit",
+      "category": "hospital_or_ed",
+      "severity": "high",
+      "summary": "Hospital admission on Oct 27, 2026 for chest pain; cardiac workup negative (3 days).",
+      "event_date": "2026-10-27",
+      "supporting_note_ids": [
+        "de1e1874-n004",
+        "de1e1874-n005"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Jul 1, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "de1e1874-n006"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

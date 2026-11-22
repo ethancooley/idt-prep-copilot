@@ -1,0 +1,56 @@
+{
+  "participant_id": "9cc6e430-3b55-303d-d1f8-d0e79e0fe215",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "new_confusion",
+      "category": "cognition",
+      "severity": "high",
+      "summary": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+      "event_date": "2026-11-01",
+      "supporting_note_ids": [
+        "9cc6e430-n001"
+      ]
+    },
+    {
+      "id": "acute_visit",
+      "category": "hospital_or_ed",
+      "severity": "high",
+      "summary": "Hospital admission on Nov 5, 2026 for chest pain; cardiac workup negative (3 days).",
+      "event_date": "2026-11-05",
+      "supporting_note_ids": [
+        "9cc6e430-n002",
+        "9cc6e430-n003"
+      ]
+    },
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (son) reports burnout and is requesting respite.",
+      "event_date": "2026-10-21",
+      "supporting_note_ids": [
+        "9cc6e430-n004"
+      ]
+    },
+    {
+      "id": "flu_vaccine",
+      "category": "care_plan_due",
+      "severity": "low",
+      "summary": "No seasonal flu vaccine documented this season.",
+      "event_date": null,
+      "supporting_note_ids": []
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Jun 7, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "9cc6e430-n005"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

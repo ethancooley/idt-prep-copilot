@@ -1,0 +1,49 @@
+{
+  "participant_id": "1462f7fa-b21b-4046-e34c-89994cf65db4",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "acute_visit",
+      "category": "hospital_or_ed",
+      "severity": "high",
+      "summary": "ED visit on Nov 5, 2026 for dehydration and dizziness.",
+      "event_date": "2026-11-05",
+      "supporting_note_ids": [
+        "1462f7fa-n001",
+        "1462f7fa-n002"
+      ]
+    },
+    {
+      "id": "fall",
+      "category": "fall",
+      "severity": "high",
+      "summary": "Fall at home on Sep 23, 2026 with no injury; PT recommends a walker and home safety evaluation.",
+      "event_date": "2026-09-23",
+      "supporting_note_ids": [
+        "1462f7fa-n003",
+        "1462f7fa-n004"
+      ]
+    },
+    {
+      "id": "new_confusion",
+      "category": "cognition",
+      "severity": "high",
+      "summary": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+      "event_date": "2026-11-15",
+      "supporting_note_ids": [
+        "1462f7fa-n005"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on Jun 25, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "1462f7fa-n006"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

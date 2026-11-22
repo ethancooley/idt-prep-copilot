@@ -1,0 +1,307 @@
+{
+  "id": "f616934b-f469-da11-01f0-1d16f34249a8",
+  "first_name": "Winford",
+  "last_name": "Fahey",
+  "birth_date": "1953-01-28",
+  "sex": "M",
+  "city": "San Diego",
+  "enrollment_date": "2025-07-02",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "195967001",
+      "description": "Asthma (disorder)",
+      "onset": "1972-03-29"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1977-04-27"
+    },
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1984-06-06"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1984-06-06"
+    },
+    {
+      "code": "91302008",
+      "description": "Sepsis (disorder)",
+      "onset": "2000-09-15"
+    },
+    {
+      "code": "44054006",
+      "description": "Diabetes mellitus type 2 (disorder)",
+      "onset": "2025-01-22"
+    },
+    {
+      "code": "302870006",
+      "description": "Hypertriglyceridemia (disorder)",
+      "onset": "2026-01-28"
+    },
+    {
+      "code": "237602007",
+      "description": "Metabolic syndrome X (disorder)",
+      "onset": "2026-01-28"
+    }
+  ],
+  "medications": [
+    {
+      "code": "859088",
+      "description": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+      "start": "2026-01-28",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "895996",
+      "description": "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+      "start": "2026-01-28",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "ed-rx",
+      "description": "predniSONE 40 MG Oral Tablet",
+      "start": "2026-09-12",
+      "stop": "2026-09-17",
+      "note": "short course after ED visit"
+    }
+  ],
+  "allergies": [],
+  "encounters": [
+    {
+      "id": "f616934b-f469-da11-042d-54eb8f8c4ead",
+      "start": "2026-01-08",
+      "encounter_class": "ambulatory",
+      "description": "Ophthalmic examination and evaluation (procedure)",
+      "reason": null
+    },
+    {
+      "id": "f616934b-f469-da11-ac42-f42d52dcb279",
+      "start": "2026-01-28",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "f616934b-ed1",
+      "start": "2026-09-12",
+      "encounter_class": "emergency",
+      "description": "Emergency department visit",
+      "reason": "COPD exacerbation"
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-01-28",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 7.1,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-01-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 72.4,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-01-28",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 77.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-28",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 119.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-01-28",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 77.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-01-28",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 111.0,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-01-28",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 96.3,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 72.2,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 136.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-09-12",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 78.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-10",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 72.3,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-10",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 136.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-10",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 84.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-11",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 72.6,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-11",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 135.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-11",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 75.0,
+      "units": "mm[Hg]"
+    }
+  ],
+  "notes": [
+    {
+      "id": "f616934b-n004",
+      "note_date": "2026-04-26",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Winford slipped on the porch step on Apr 26, 2026. No injury. Handrail installed the following week."
+    },
+    {
+      "id": "f616934b-n011",
+      "note_date": "2026-09-06",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Winford in good spirits."
+    },
+    {
+      "id": "f616934b-n001",
+      "note_date": "2026-09-12",
+      "author_role": "Hospital physician",
+      "note_type": "ED/hospital discharge summary",
+      "text": "Seen at partner hospital emergency department on Sep 12, 2026 for COPD exacerbation; treated and released the same day. Discharged on predniSONE 40 MG for 5 days. Follow up with PACE primary care within 7 days."
+    },
+    {
+      "id": "f616934b-n002",
+      "note_date": "2026-09-18",
+      "author_role": "Primary care physician",
+      "note_type": "Post-acute follow-up",
+      "text": "Post-hospital follow-up for COPD exacerbation. Winford is back to baseline per his niece. Reviewed discharge medications. Will monitor closely over the next two weeks."
+    },
+    {
+      "id": "f616934b-n007",
+      "note_date": "2026-09-19",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "f616934b-n006",
+      "note_date": "2026-09-23",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Winford enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "f616934b-n008",
+      "note_date": "2026-09-24",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "f616934b-n003",
+      "note_date": "2026-10-01",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Marcus reports Winford has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "f616934b-n010",
+      "note_date": "2026-10-10",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Winford enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "f616934b-n013",
+      "note_date": "2026-10-11",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within his usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "f616934b-n009",
+      "note_date": "2026-10-12",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Winford in good spirits."
+    },
+    {
+      "id": "f616934b-n005",
+      "note_date": "2026-10-13",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "f616934b-n012",
+      "note_date": "2026-10-22",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Winford enjoyed the gardening group and talked about growing tomatoes as a child."
+    }
+  ]
+}

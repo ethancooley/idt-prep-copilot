@@ -1,0 +1,373 @@
+{
+  "id": "b2f73253-94ac-ffc4-881b-c08afb4669f9",
+  "first_name": "Luisa",
+  "last_name": "Quiroz",
+  "birth_date": "1956-05-16",
+  "sex": "F",
+  "city": "West Covina",
+  "enrollment_date": "2024-07-27",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "conditions": [
+    {
+      "code": "59621000",
+      "description": "Essential hypertension (disorder)",
+      "onset": "1990-08-01"
+    },
+    {
+      "code": "162864005",
+      "description": "Body mass index 30+ - obesity (finding)",
+      "onset": "1990-08-01"
+    },
+    {
+      "code": "714628002",
+      "description": "Prediabetes (finding)",
+      "onset": "1991-08-07"
+    },
+    {
+      "code": "44054006",
+      "description": "Diabetes mellitus type 2 (disorder)",
+      "onset": "1994-08-24"
+    },
+    {
+      "code": "271737000",
+      "description": "Anemia (disorder)",
+      "onset": "1994-08-24"
+    },
+    {
+      "code": "80394007",
+      "description": "Hyperglycemia (disorder)",
+      "onset": "1995-08-30"
+    },
+    {
+      "code": "302870006",
+      "description": "Hypertriglyceridemia (disorder)",
+      "onset": "1995-08-30"
+    },
+    {
+      "code": "237602007",
+      "description": "Metabolic syndrome X (disorder)",
+      "onset": "1995-08-30"
+    },
+    {
+      "code": "414545008",
+      "description": "Ischemic heart disease (disorder)",
+      "onset": "2010-11-24"
+    }
+  ],
+  "medications": [
+    {
+      "code": "1049630",
+      "description": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+      "start": "1961-05-11",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "2001499",
+      "description": "Vitamin B12 5 MG/ML Injectable Solution",
+      "start": "1994-08-31",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "309362",
+      "description": "Clopidogrel 75 MG Oral Tablet",
+      "start": "2010-12-01",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "312961",
+      "description": "Simvastatin 20 MG Oral Tablet",
+      "start": "2010-12-01",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "866412",
+      "description": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+      "start": "2010-12-01",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "705129",
+      "description": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+      "start": "2010-12-01",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "860975",
+      "description": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet",
+      "start": "2026-02-18",
+      "stop": null,
+      "note": null
+    },
+    {
+      "code": "308136",
+      "description": "amLODIPine 2.5 MG Oral Tablet",
+      "start": "2026-02-18",
+      "stop": null,
+      "note": null
+    }
+  ],
+  "allergies": [
+    {
+      "description": "Allergic disposition (finding)",
+      "reaction": null
+    },
+    {
+      "description": "Mold (organism)",
+      "reaction": "Cutaneous hypersensitivity (disorder)"
+    },
+    {
+      "description": "Animal dander (substance)",
+      "reaction": "Rhinoconjunctivitis (disorder)"
+    },
+    {
+      "description": "Grass pollen (substance)",
+      "reaction": null
+    },
+    {
+      "description": "Tree pollen (substance)",
+      "reaction": null
+    },
+    {
+      "description": "Glycine max (substance)",
+      "reaction": "Finding of vomiting (finding)"
+    },
+    {
+      "description": "Wheat (substance)",
+      "reaction": "Diarrhea (finding)"
+    },
+    {
+      "description": "Shellfish (substance)",
+      "reaction": "Eruption of skin (disorder)"
+    }
+  ],
+  "encounters": [
+    {
+      "id": "b2f73253-94ac-ffc4-06e4-2fa42d67c497",
+      "start": "2026-01-03",
+      "encounter_class": "ambulatory",
+      "description": "Ophthalmic examination and evaluation (procedure)",
+      "reason": null
+    },
+    {
+      "id": "b2f73253-94ac-ffc4-d404-8b4b6d0ceec0",
+      "start": "2026-02-18",
+      "encounter_class": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": null
+    },
+    {
+      "id": "b2f73253-94ac-ffc4-add7-6f8e8f989ec5",
+      "start": "2026-07-02",
+      "encounter_class": "ambulatory",
+      "description": "Ophthalmic examination and evaluation (procedure)",
+      "reason": null
+    }
+  ],
+  "observations": [
+    {
+      "obs_date": "2026-02-18",
+      "code": "4548-4",
+      "description": "Hemoglobin A1c",
+      "value": 5.3,
+      "units": "%"
+    },
+    {
+      "obs_date": "2026-02-18",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 68.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-02-18",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 75.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-18",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 97.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-02-18",
+      "code": "8867-4",
+      "description": "Heart rate",
+      "value": 86.0,
+      "units": "/min"
+    },
+    {
+      "obs_date": "2026-02-18",
+      "code": "2339-0",
+      "description": "Glucose",
+      "value": 84.8,
+      "units": "mg/dL"
+    },
+    {
+      "obs_date": "2026-02-18",
+      "code": "33914-3",
+      "description": "eGFR",
+      "value": 72.9,
+      "units": "mL/min/{1.73_m2}"
+    },
+    {
+      "obs_date": "2026-09-05",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 68.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-01",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 66.9,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-10-04",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 167.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-04",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 92.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-25",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 172.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-25",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 92.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-10-28",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 64.8,
+      "units": "kg"
+    },
+    {
+      "obs_date": "2026-11-15",
+      "code": "8480-6",
+      "description": "Systolic Blood Pressure",
+      "value": 163.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-15",
+      "code": "8462-4",
+      "description": "Diastolic Blood Pressure",
+      "value": 96.0,
+      "units": "mm[Hg]"
+    },
+    {
+      "obs_date": "2026-11-24",
+      "code": "29463-7",
+      "description": "Body Weight",
+      "value": 63.1,
+      "units": "kg"
+    }
+  ],
+  "notes": [
+    {
+      "id": "b2f73253-n010",
+      "note_date": "2026-09-28",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "b2f73253-n011",
+      "note_date": "2026-10-08",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Luisa in good spirits."
+    },
+    {
+      "id": "b2f73253-n003",
+      "note_date": "2026-10-26",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Maria reports Luisa has been more confused in the evenings for about two weeks, once leaving the stove on. Oriented to person and place today but not date. No fever. Plan: urinalysis, medication review, and PCP visit this week."
+    },
+    {
+      "id": "b2f73253-n006",
+      "note_date": "2026-11-03",
+      "author_role": "Primary care physician",
+      "note_type": "Progress note",
+      "text": "Chronic conditions reviewed and stable. Continue current plan."
+    },
+    {
+      "id": "b2f73253-n004",
+      "note_date": "2026-11-09",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Routine check. Vitals within her usual range. Medications taken as directed. No new concerns."
+    },
+    {
+      "id": "b2f73253-n008",
+      "note_date": "2026-11-09",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Luisa enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "b2f73253-n005",
+      "note_date": "2026-11-11",
+      "author_role": "Home care aide",
+      "note_type": "Home care visit",
+      "text": "Assisted with light housekeeping and meal prep. Luisa in good spirits."
+    },
+    {
+      "id": "b2f73253-n009",
+      "note_date": "2026-11-13",
+      "author_role": "Recreation therapist",
+      "note_type": "Activity note",
+      "text": "Luisa enjoyed the gardening group and talked about growing tomatoes as a child."
+    },
+    {
+      "id": "b2f73253-n001",
+      "note_date": "2026-11-15",
+      "author_role": "Registered nurse",
+      "note_type": "Nursing note",
+      "text": "Blood pressure 163/96 today, third elevated reading this month. Luisa admits to missing evening doses some days. Reinforced adherence; flagged for PCP review of antihypertensive regimen."
+    },
+    {
+      "id": "b2f73253-n007",
+      "note_date": "2026-11-15",
+      "author_role": "Driver",
+      "note_type": "Transportation note",
+      "text": "Picked up for day center on time; no issues during transport."
+    },
+    {
+      "id": "b2f73253-n002",
+      "note_date": "2026-11-24",
+      "author_role": "Dietitian",
+      "note_type": "Nutrition assessment",
+      "text": "Weight 63.1 kg, down from 68.9 kg on Sep 5, 2026 (8%). Luisa reports poor appetite and skipping breakfast. Eating about 50% of day center lunches. Plan: oral nutrition supplement twice daily, weekly weights, and dental check for chewing problems."
+    }
+  ]
+}

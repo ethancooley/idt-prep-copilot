@@ -1,0 +1,57 @@
+{
+  "participant_id": "ce68b239-7833-761e-5c61-7e8de395e132",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "weight_loss",
+      "category": "weight_loss",
+      "severity": "high",
+      "summary": "Weight down about 12 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
+      "event_date": "2026-11-24",
+      "supporting_note_ids": [
+        "ce68b239-n001"
+      ]
+    },
+    {
+      "id": "fall",
+      "category": "fall",
+      "severity": "high",
+      "summary": "Fall at home on Sep 14, 2026 with right hip bruising; PT recommends a walker and home safety evaluation.",
+      "event_date": "2026-09-14",
+      "supporting_note_ids": [
+        "ce68b239-n002",
+        "ce68b239-n003"
+      ]
+    },
+    {
+      "id": "functional_decline",
+      "category": "functional_status",
+      "severity": "medium",
+      "summary": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+      "event_date": "2026-09-28",
+      "supporting_note_ids": [
+        "ce68b239-n004",
+        "ce68b239-n005"
+      ]
+    },
+    {
+      "id": "flu_vaccine",
+      "category": "care_plan_due",
+      "severity": "low",
+      "summary": "No seasonal flu vaccine documented this season.",
+      "event_date": null,
+      "supporting_note_ids": []
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on May 30, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "ce68b239-n006"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}

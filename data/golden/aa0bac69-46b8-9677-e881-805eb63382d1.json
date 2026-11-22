@@ -1,0 +1,60 @@
+{
+  "participant_id": "aa0bac69-46b8-9677-e881-805eb63382d1",
+  "review_date": "2026-11-30",
+  "window_start": "2026-09-01",
+  "must_surface": [
+    {
+      "id": "functional_decline",
+      "category": "functional_status",
+      "severity": "medium",
+      "summary": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+      "event_date": "2026-10-12",
+      "supporting_note_ids": [
+        "aa0bac69-n001",
+        "aa0bac69-n002"
+      ]
+    },
+    {
+      "id": "fall",
+      "category": "fall",
+      "severity": "high",
+      "summary": "Fall at home on Oct 25, 2026 with no injury; PT recommends a walker and home safety evaluation.",
+      "event_date": "2026-10-25",
+      "supporting_note_ids": [
+        "aa0bac69-n003",
+        "aa0bac69-n004"
+      ]
+    },
+    {
+      "id": "med_change",
+      "category": "medication_change",
+      "severity": "medium",
+      "summary": "Started furosemide 20 MG on Oct 13, 2026 for lower-extremity edema and weight gain.",
+      "event_date": "2026-10-13",
+      "supporting_note_ids": [
+        "aa0bac69-n005",
+        "aa0bac69-n006"
+      ]
+    },
+    {
+      "id": "caregiver_strain",
+      "category": "caregiver",
+      "severity": "medium",
+      "summary": "Primary caregiver (son) reports burnout and is requesting respite.",
+      "event_date": "2026-11-19",
+      "supporting_note_ids": [
+        "aa0bac69-n007"
+      ]
+    }
+  ],
+  "must_not_surface_as_new": [
+    {
+      "id": "old_fall",
+      "reason": "Fall on May 5, 2026 happened before this review period and was resolved.",
+      "note_ids": [
+        "aa0bac69-n008"
+      ]
+    }
+  ],
+  "reviewed_by_human": false
+}
