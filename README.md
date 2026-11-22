@@ -14,8 +14,8 @@ line to the note it came from, and leaves the final call to a clinician.
 | 2 | MCP server with chart tools | Done |
 | 3 | LangGraph agent on Claude: plan, gather, draft, verify citations | Done |
 | 4 | Eval harness against the answer keys | Done |
-| 5 | React app: brief with clickable citations, approve/edit/reject, audit log | Next |
-| 6 | Docker, GitHub Actions, AWS deployment, tracing | |
+| 5 | React app: brief with clickable citations, approve/edit/reject, audit log | Done |
+| 6 | AWS deployment at $0/month with streamed live runs, GitHub Actions CI | Done |
 
 ## The data
 
@@ -123,6 +123,50 @@ python -m idt_copilot.evals.run_evals --briefs-dir evals/runs/<run>/briefs --min
 
 Each run writes `evals/runs/<timestamp>/` with the briefs, `results.json`, and a Markdown `report.md`.
 
+## The web app
+
+`web/` is a React app built for static hosting: the public site serves precomputed briefs as JSON, so visitors
+never trigger a model call.
+
+- **Review queue** of participants due for IDT review, most urgent first
+- **Brief reader** with a timeline of every note since the last review, colored by discipline. Selecting a
+  citation opens the source note with the most relevant sentences highlighted, or the vitals, encounters,
+  medication, or immunization record it points to
+- **Clinician review**: approve, edit, or reject each line, then approve the brief. Every action is logged
+  (in the browser for this demo)
+- **Export PDF** of the approved brief, without rejected lines
+- **How this brief was made**: the models, MCP tool calls, verifier outcome, cost, and time for that brief
+- **Watch the agent work**: with an access code, a visitor can start a live run and watch it stream in: the
+  plan, each MCP tool call and what it returned, the draft, and the verifier marking each claim supported or
+  striking it. Per-visitor and daily caps are enforced in Postgres (`src/idt_copilot/api/live.py`)
+
+```bash
+# 1. Export briefs and the chart data they cite (or --sample to build from the answer keys)
+python -m idt_copilot.export.static_bundle --briefs-dir evals/runs/<run>/briefs \
+    --eval-results evals/runs/<run>/results.json
+
+# 2. Run the app
+cd web && npm install && npm run dev
+
+# Optional: live runs locally
+IDT_ACCESS_CODE=choose-a-code python -m idt_copilot.api.server
+VITE_LIVE_API_URL=http://localhost:8787 npm run dev
+```
+
+## Deployment
+
+The site runs on AWS for $0 a month: S3 and CloudFront for the static site, one Lambda function behind a
+Function URL that streams live runs, secrets in SSM Parameter Store, and Postgres on Neon's free plan. A $1
+budget emails at the first cent. Setup and costs are in [deploy/README.md](deploy/README.md).
+
+```bash
+./deploy/put_secrets.sh                              # once: API key, database URL, access code
+ALERT_EMAIL=you@example.com ./deploy/deploy.sh       # build, deploy, upload the site
+```
+
+GitHub Actions runs the tests against Postgres with pgvector, type-checks and builds the web app, and lints
+the AWS template on every push.
+
 ## Quick start
 
 ```bash
@@ -158,5 +202,11 @@ src/idt_copilot/
   agent/run.py         CLI: generate a brief for one participant
   evals/score.py       Scores a brief against its answer key
   evals/run_evals.py   Runs the agent across the cohort, writes results and a report
-tests/                 Cohort, chart tool, agent, and eval checks
+  export/static_bundle.py  Exports briefs and cited chart data as static JSON for the site
+  api/live.py          Gated live runs: access code, daily caps, run log, progress events
+  api/server.py        HTTP server for live runs, streamed as JSON lines (local and on Lambda)
+web/                   React app (Vite + TypeScript)
+deploy/                SAM template, Lambda build, deploy and secrets scripts
+.github/workflows/     CI
+tests/                 Cohort, chart tool, agent, eval, export, and live-run checks
 ```

@@ -1,0 +1,8 @@
+# What the live-run Lambda needs. No fastembed: live runs use keyword search, which keeps the
+# package small and cold starts fast. boto3 comes with the Lambda runtime.
+pydantic>=2.6
+psycopg[binary]>=3.1
+pgvector>=0.2.5
+mcp>=2.3,<3
+langgraph>=1.0,<2
+anthropic>=0.70

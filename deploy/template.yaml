@@ -1,0 +1,185 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  IDT Prep Copilot. A static site on S3 + CloudFront, and one Lambda function that streams live
+  agent runs through a Function URL. Secrets live in SSM Parameter Store; the database is Neon.
+  Built to stay inside AWS's always-free usage, with a $1 budget alert as a tripwire.
+
+Parameters:
+  AlertEmail:
+    Type: String
+    Description: Where the $1 budget alert is sent.
+  SsmPrefix:
+    Type: String
+    Default: /idt-copilot
+    Description: SSM path holding ANTHROPIC_API_KEY, DATABASE_URL and IDT_ACCESS_CODE.
+  DailyLiveLimit:
+    Type: Number
+    Default: 20
+  PerVisitorLimit:
+    Type: Number
+    Default: 3
+  ExtraAllowedOrigin:
+    Type: String
+    Default: ""
+    Description: Optional second origin allowed to call the live API, e.g. http://localhost:5173.
+
+Conditions:
+  HasExtraOrigin: !Not [!Equals [!Ref ExtraAllowedOrigin, ""]]
+
+Resources:
+  # ------------------------------------------------------------------ static site
+
+  SiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  SiteOriginAccess:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-site"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  SiteSecurityHeaders:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: !Sub "${AWS::StackName}-security-headers"
+        SecurityHeadersConfig:
+          ContentTypeOptions: { Override: true }
+          FrameOptions: { FrameOption: DENY, Override: true }
+          ReferrerPolicy: { ReferrerPolicy: strict-origin-when-cross-origin, Override: true }
+          StrictTransportSecurity:
+            AccessControlMaxAgeSec: 31536000
+            IncludeSubdomains: true
+            Override: true
+
+  SiteDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: IDT Prep Copilot
+        DefaultRootObject: index.html
+        HttpVersion: http2and3
+        PriceClass: PriceClass_100
+        Origins:
+          - Id: site
+            DomainName: !GetAtt SiteBucket.RegionalDomainName
+            OriginAccessControlId: !GetAtt SiteOriginAccess.Id
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        DefaultCacheBehavior:
+          TargetOriginId: site
+          ViewerProtocolPolicy: redirect-to-https
+          Compress: true
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # managed CachingOptimized
+          ResponseHeadersPolicyId: !Ref SiteSecurityHeaders
+
+  SiteBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref SiteBucket
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: { Service: cloudfront.amazonaws.com }
+            Action: s3:GetObject
+            Resource: !Sub "${SiteBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${SiteDistribution}"
+
+  # ------------------------------------------------------------------ live runs
+
+  LiveLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-live"
+      RetentionInDays: 7
+
+  LiveFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-live"
+      Description: Streams live IDT brief runs (LangGraph agent + Claude) to the browser.
+      CodeUri: ../build/lambda
+      Handler: run.sh
+      Runtime: python3.13
+      Architectures: [x86_64]
+      MemorySize: 1024
+      Timeout: 180
+      Layers:
+        - !Sub "arn:aws:lambda:${AWS::Region}:753240598075:layer:LambdaAdapterLayerX86:30"
+      LoggingConfig:
+        LogGroup: !Ref LiveLogGroup
+      Environment:
+        Variables:
+          AWS_LAMBDA_EXEC_WRAPPER: /opt/bootstrap
+          AWS_LWA_INVOKE_MODE: response_stream
+          AWS_LWA_PORT: "8080"
+          AWS_LWA_READINESS_CHECK_PATH: /
+          IDT_SSM_PREFIX: !Ref SsmPrefix
+          IDT_DISABLE_EMBEDDINGS: "1"
+          IDT_DAILY_LIVE_LIMIT: !Ref DailyLiveLimit
+          IDT_PER_CLIENT_LIMIT: !Ref PerVisitorLimit
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action: ssm:GetParameters
+              Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter${SsmPrefix}/*"
+      FunctionUrlConfig:
+        AuthType: NONE # the access code and daily caps in the app are the gate
+        InvokeMode: RESPONSE_STREAM
+        Cors:
+          AllowOrigins: !If
+            - HasExtraOrigin
+            - [!Sub "https://${SiteDistribution.DomainName}", !Ref ExtraAllowedOrigin]
+            - [!Sub "https://${SiteDistribution.DomainName}"]
+          AllowMethods: [POST]
+          AllowHeaders: [content-type]
+          MaxAge: 3600
+
+  # ------------------------------------------------------------------ cost tripwire
+
+  CostAlert:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: !Sub "${AWS::StackName}-1-dollar"
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit: { Amount: 1, Unit: USD }
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 1 # percent of $1, so any real charge (1 cent) sends an email
+          Subscribers: [{ SubscriptionType: EMAIL, Address: !Ref AlertEmail }]
+        - Notification:
+            NotificationType: FORECASTED
+            ComparisonOperator: GREATER_THAN
+            Threshold: 100
+          Subscribers: [{ SubscriptionType: EMAIL, Address: !Ref AlertEmail }]
+
+Outputs:
+  SiteUrl:
+    Value: !Sub "https://${SiteDistribution.DomainName}"
+  LiveApiUrl:
+    Value: !GetAtt LiveFunctionUrl.FunctionUrl
+  SiteBucketName:
+    Value: !Ref SiteBucket
+  DistributionId:
+    Value: !Ref SiteDistribution

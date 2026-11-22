@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: Tests (Python, Postgres + pgvector)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: idt
+          POSTGRES_PASSWORD: idt
+          POSTGRES_DB: idt
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U idt" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://idt:idt@localhost:5432/idt
+      IDT_DISABLE_EMBEDDINGS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -e ".[dev]" cfn-lint
+      - name: Load the synthetic cohort
+        run: python -m idt_copilot.db.load
+      - name: Run tests (scripted model, no API key needed)
+        run: pytest -q
+      - name: Lint the AWS template
+        run: cfn-lint deploy/template.yaml --regions us-east-1
+
+  web:
+    name: Web app (type check and build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npx tsc --noEmit -p .
+      - run: npm run build

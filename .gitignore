@@ -13,5 +13,15 @@ vendor/
 briefs/
 evals/runs/
 
+# Web app build output
+web/node_modules/
+web/dist/
+web/dist-live/
+
 # macOS
 .DS_Store
+
+# Lambda package (deploy/build_lambda.sh) and SAM artifacts
+build/
+.aws-sam/
+samconfig.toml
