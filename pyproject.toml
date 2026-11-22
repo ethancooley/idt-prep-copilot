@@ -1,6 +1,6 @@
 [project]
 name = "idt-prep-copilot"
-version = "0.3.0"
+version = "0.4.0"
 description = "An agentic copilot that drafts cited IDT meeting briefs for PACE care teams, built on synthetic data."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -22,6 +22,7 @@ idt-build-cohort = "idt_copilot.data.build_cohort:main"
 idt-load-db = "idt_copilot.db.load:main"
 idt-chart-server = "idt_copilot.chart.server:main"
 idt-brief = "idt_copilot.agent.run:main"
+idt-eval = "idt_copilot.evals.run_evals:main"
 
 [build-system]
 requires = ["setuptools>=68"]

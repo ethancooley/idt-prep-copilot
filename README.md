@@ -13,8 +13,8 @@ line to the note it came from, and leaves the final call to a clinician.
 | 1 | Synthetic data foundation: cohort, answer keys, Postgres + pgvector | Done |
 | 2 | MCP server with chart tools | Done |
 | 3 | LangGraph agent on Claude: plan, gather, draft, verify citations | Done |
-| 4 | Eval harness against the answer keys, run in CI | Next |
-| 5 | React app: brief with clickable citations, approve/edit/reject, audit log | |
+| 4 | Eval harness against the answer keys | Done |
+| 5 | React app: brief with clickable citations, approve/edit/reject, audit log | Next |
 | 6 | Docker, GitHub Actions, AWS deployment, tracing | |
 
 ## The data
@@ -99,6 +99,30 @@ chart through the MCP server over stdio, just like Claude Desktop; `--in-process
 
 The tests run the full graph against a scripted stand-in for Claude, so they need no API key.
 
+## Evaluation
+
+`src/idt_copilot/evals/` runs the agent across all 40 answer keys and scores every brief. Matching is by
+evidence, not wording: a brief catches an answer-key item only when one of its items cites a note that proves
+it, so scoring is deterministic and costs nothing.
+
+| Metric | What it measures |
+| --- | --- |
+| Recall | Share of answer-key items the brief caught |
+| High-severity recall | The same, for falls, ED visits, new confusion, weight loss, and other high-severity items |
+| Old events reported as new | Items about events from before the review period (target: 0) |
+| Items not tied to an answer-key item | A precision signal: extra items the team did not need |
+| Claims removed by the verifier | Draft claims that failed citation checks and never reached the team |
+| Cost and time per brief | From the run log of every brief |
+
+```bash
+python -m idt_copilot.evals.run_evals --limit 5          # quick live run against Claude
+python -m idt_copilot.evals.run_evals                    # all 40 participants
+python -m idt_copilot.evals.run_evals --briefs-dir evals/runs/<run>/briefs --min-recall 0.9 \
+    --max-distractor-violations 0                        # re-score saved briefs for free; exits 1 below the bar
+```
+
+Each run writes `evals/runs/<timestamp>/` with the briefs, `results.json`, and a Markdown `report.md`.
+
 ## Quick start
 
 ```bash
@@ -132,5 +156,7 @@ src/idt_copilot/
   agent/chart_client.py  Reaches the chart over MCP (stdio) or in process
   agent/llm.py         Anthropic client wrapper with token and cost tracking
   agent/run.py         CLI: generate a brief for one participant
-tests/                 Cohort, chart tool, and agent checks
+  evals/score.py       Scores a brief against its answer key
+  evals/run_evals.py   Runs the agent across the cohort, writes results and a report
+tests/                 Cohort, chart tool, agent, and eval checks
 ```

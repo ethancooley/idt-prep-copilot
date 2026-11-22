@@ -11,3 +11,7 @@ vendor/
 
 # Generated briefs (commit hand-picked examples to examples/ instead)
 briefs/
+evals/runs/
+
+# macOS
+.DS_Store

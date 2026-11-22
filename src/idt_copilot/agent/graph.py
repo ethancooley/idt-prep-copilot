@@ -20,7 +20,7 @@ from langgraph.graph import END, START, StateGraph
 
 from idt_copilot.agent import prompts
 from idt_copilot.agent.chart_client import ChartClient
-from idt_copilot.agent.llm import LLM, tool_input
+from idt_copilot.agent.llm import LLM, assistant_blocks, structured
 from idt_copilot.agent.schema import (
     BRIEF_TOOL, PLAN_TOOL, RECORD_CITATIONS, VERIFY_TOOL, Brief, BriefItem, Verdict,
 )
@@ -58,17 +58,6 @@ class AgentState(TypedDict, total=False):
     final: dict
 
 
-def _blocks(response: Any) -> list[dict]:
-    """Assistant content as plain dicts, safe to send back to the API."""
-    out = []
-    for b in response.content:
-        if b.type == "text":
-            out.append({"type": "text", "text": b.text})
-        elif b.type == "tool_use":
-            out.append({"type": "tool_use", "id": b.id, "name": b.name, "input": dict(b.input)})
-    return out
-
-
 def _absorb(name: str, result: Any, notes: dict, records: dict) -> None:
     """Keep every note the tools returned (for citations) and the latest structured records."""
     if isinstance(result, dict) and "error" in result:
@@ -92,15 +81,17 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
     async def call_llm(*args, **kwargs):
         return await asyncio.to_thread(llm.call, *args, **kwargs)
 
+    async def call_structured(*args, **kwargs):
+        return await asyncio.to_thread(structured, llm, *args, **kwargs)
+
     async def plan(state: AgentState) -> AgentState:
         pid = state["participant_id"]
         summary = await chart.call("get_participant_summary", {"participant_id": pid})
         if isinstance(summary, dict) and "error" in summary:
             raise ValueError(summary["error"])
-        resp = await call_llm("plan", cfg.plan_model, prompts.PLAN,
-                              [{"role": "user", "content": json.dumps(summary)}], max_tokens=800,
-                              tools=[PLAN_TOOL], tool_choice={"type": "tool", "name": "submit_plan"})
-        return {"summary": summary, "plan": tool_input(resp, "submit_plan")["checks"]}
+        result = await call_structured("plan", cfg.plan_model, prompts.PLAN,
+                                       [{"role": "user", "content": json.dumps(summary)}], PLAN_TOOL, 1500)
+        return {"summary": summary, "plan": result["checks"]}
 
     async def gather(state: AgentState) -> AgentState:
         pid, summary = state["participant_id"], state["summary"]
@@ -119,7 +110,7 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
 
         for _ in range(cfg.max_tool_rounds):
             resp = await call_llm("gather", cfg.gather_model, prompts.GATHER, messages, max_tokens=1500, tools=tools)
-            messages.append({"role": "assistant", "content": _blocks(resp)})
+            messages.append({"role": "assistant", "content": assistant_blocks(resp)})
             uses = [b for b in resp.content if b.type == "tool_use"]
             if not uses:
                 break
@@ -158,10 +149,9 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
         if state.get("feedback"):
             content += f"\n\nThe verifier rejected parts of your last draft:\n{state['feedback']}\n" \
                        "Fix or drop those claims."
-        resp = await call_llm("draft", cfg.draft_model, prompts.DRAFT, [{"role": "user", "content": content}],
-                              max_tokens=4000, tools=[BRIEF_TOOL],
-                              tool_choice={"type": "tool", "name": "submit_brief"})
-        return {"draft": tool_input(resp, "submit_brief")}
+        draft = await call_structured("draft", cfg.draft_model, prompts.DRAFT,
+                                      [{"role": "user", "content": content}], BRIEF_TOOL, 4000)
+        return {"draft": draft}
 
     async def verify(state: AgentState) -> AgentState:
         items = state["draft"].get("items", [])
@@ -187,10 +177,9 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
             s = state["summary"]
             content = (f"Review period: {s['window_start']} to {s['review_date']}\n\nItems to check:\n"
                        + json.dumps(to_check, indent=1))
-            resp = await call_llm("verify", cfg.verify_model, prompts.VERIFY, [{"role": "user", "content": content}],
-                                  max_tokens=2000, tools=[VERIFY_TOOL],
-                                  tool_choice={"type": "tool", "name": "submit_verification"})
-            for r in tool_input(resp, "submit_verification")["results"]:
+            checked = await call_structured("verify", cfg.verify_model, prompts.VERIFY,
+                                            [{"role": "user", "content": content}], VERIFY_TOOL, 3000)
+            for r in checked["results"]:
                 if r["index"] not in verdicts and 0 <= r["index"] < len(items):
                     verdicts[r["index"]] = r
         for i in range(len(items)):  # anything the verifier skipped is not trusted

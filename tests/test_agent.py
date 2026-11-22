@@ -116,3 +116,64 @@ def test_agent_runs_over_real_mcp_stdio(participant_id):
             return await run_agent(participant_id, LLM(ScriptedClaude()), chart)
     brief = asyncio.run(go())
     assert brief.participant_id == participant_id and brief.items
+
+
+# ------------------------------------------------------------ malformed structured output
+
+from idt_copilot.agent.llm import StructuredOutputError, structured  # noqa: E402
+from idt_copilot.agent.schema import PLAN_TOOL  # noqa: E402
+
+
+class FlakyPlanner:
+    def __init__(self, answers):
+        self.answers, self.calls = list(answers), []
+
+    def create(self, **kw):
+        self.calls.append(kw)
+        data, stop = self.answers.pop(0)
+        return _response(_tool("submit_plan", data), stop=stop)
+
+
+def test_missing_field_gets_one_guided_retry():
+    fake = FlakyPlanner([({}, "tool_use"), ({"checks": ["falls", "weight", "meds"]}, "tool_use")])
+    out = structured(LLM(fake), "plan", "m", "sys", [{"role": "user", "content": "x"}], PLAN_TOOL, 500)
+    assert out["checks"] == ["falls", "weight", "meds"]
+    retry = fake.calls[1]
+    assert retry["max_tokens"] == 1000
+    assert retry["messages"][-1]["content"][0]["is_error"] is True
+
+
+def test_common_shape_mistakes_are_repaired():
+    fake = FlakyPlanner([({"checks": '["falls", "weight", "meds"]'}, "tool_use")])
+    assert structured(LLM(fake), "plan", "m", "s", [], PLAN_TOOL, 500)["checks"][0] == "falls"
+    fake = FlakyPlanner([({"input": {"checks": ["a", "b", "c"]}}, "tool_use")])
+    assert structured(LLM(fake), "plan", "m", "s", [], PLAN_TOOL, 500)["checks"] == ["a", "b", "c"]
+
+
+def test_persistent_failure_explains_itself():
+    fake = FlakyPlanner([({}, "max_tokens"), ({}, "max_tokens")])
+    with pytest.raises(StructuredOutputError, match="ran out of output tokens"):
+        structured(LLM(fake), "plan", "m", "s", [], PLAN_TOOL, 500)
+
+
+class NoForcedToolsModel:
+    """Mimics models that reject tool_choice 'tool'/'any' with a 400."""
+
+    def __init__(self):
+        self.choices = []
+
+    def create(self, **kw):
+        choice = kw.get("tool_choice", {}).get("type")
+        self.choices.append(choice)
+        if choice in ("tool", "any"):
+            raise RuntimeError("Error code: 400 - tool_choice: type \"tool\" and \"any\" are not supported "
+                               "for this model.")
+        return _response(_tool("submit_plan", {"checks": ["a", "b", "c"]}))
+
+
+def test_models_that_reject_forced_tools_fall_back_to_auto():
+    fake = NoForcedToolsModel()
+    llm = LLM(fake)
+    assert structured(llm, "plan", "sonnet", "s", [], PLAN_TOOL, 500)["checks"] == ["a", "b", "c"]
+    assert structured(llm, "plan", "sonnet", "s", [], PLAN_TOOL, 500)["checks"] == ["a", "b", "c"]
+    assert fake.choices == ["tool", "auto", "auto"]  # learns once, then stops forcing for that model
