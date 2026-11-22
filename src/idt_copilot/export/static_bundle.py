@@ -83,14 +83,40 @@ def participant_bundle(repo: ChartRepository, brief: Brief, key: AnswerKey | Non
     return bundle
 
 
+def _day(iso: str) -> int:
+    from datetime import date
+    return date.fromisoformat(iso[:10]).toordinal()
+
+
 def index_entry(bundle: dict) -> dict:
+    """One row of the review queue, with what the dashboard summarizes about each participant."""
     p, b = bundle["participant"], bundle["brief"]
-    counts = {s: sum(i["severity"] == s for i in b["items"]) for s in SEVERITIES}
-    return {
+    items, run = b["items"], b.get("run", {})
+    counts = {s: sum(i["severity"] == s for i in items) for s in SEVERITIES}
+    cited = {c for i in items for c in i["citations"]}
+    start = _day(p["window_start"])
+    key = bundle.get("answer_key")
+    entry = {
         "id": p["id"], "name": f"{p['first_name']} {p['last_name']}", "age": p["age"], "sex": p["sex"],
         "city": p["city"], "headline": b["headline"], "counts": counts,
-        "flags": [i["category"] for i in b["items"] if i["severity"] == "high"][:3],
+        "flags": [i["category"] for i in items if i["severity"] == "high"][:3],
+        "categories": sorted({i["category"] for i in items}),
+        "items": len(items),
+        "removed": len(b.get("removed_claims", [])),
+        "partial": sum(i.get("verdict") == "partially_supported" for i in items),
+        "notes": len(bundle["notes"]),
+        "cited_notes": sum(n["id"] in cited for n in bundle["notes"]),
+        # Each note as [days since the review window opened, 1 if the brief cites it]: the queue's timeline.
+        "timeline": [[_day(n["note_date"]) - start, int(n["id"] in cited)] for n in bundle["notes"]],
+        "seconds": run.get("seconds"),
+        "cost_usd": run.get("cost_usd"),
+        "lookups": len(run.get("tool_calls", [])) + (0 if run.get("sample") else 1),
     }
+    if key:
+        entry["caught"] = sum(bool(t["caught_by"]) for t in key["must_surface"])
+        entry["planted"] = len(key["must_surface"])
+        entry["old_reported"] = sum(bool(d["reported_by"]) for d in key["old_events"])
+    return entry
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -131,6 +157,7 @@ def main(argv: list[str] | None = None) -> None:
         "source": "sample" if args.sample else "claude",
         "review_date": any_brief.review_date if any_brief else None,
         "window_start": any_brief.window_start if any_brief else None,
+        "window_days": (_day(any_brief.review_date) - _day(any_brief.window_start)) if any_brief else None,
         "models": any_brief.run.get("models", {}) if any_brief else {},
         "evaluation": evaluation,
         "participants": entries,

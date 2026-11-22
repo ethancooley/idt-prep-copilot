@@ -12,6 +12,18 @@ Parameters:
   Branch:
     Type: String
     Default: main
+  GitHubOwnerId:
+    Type: String
+    Default: ""
+    Description: >
+      Numeric GitHub account ID. Some repos' tokens name the repo with IDs
+      (repo:owner@123/repo@456:...); set this and GitHubRepoId to accept that form.
+  GitHubRepoId:
+    Type: String
+    Default: ""
+
+Conditions:
+  HasIds: !And [!Not [!Equals [!Ref GitHubOwnerId, ""]], !Not [!Equals [!Ref GitHubRepoId, ""]]]
 
 Resources:
   GitHubOidc:
@@ -34,7 +46,14 @@ Resources:
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubRepo}:ref:refs/heads/${Branch}"
+                token.actions.githubusercontent.com:sub: !If
+                  - HasIds
+                  - - !Sub "repo:${GitHubRepo}:ref:refs/heads/${Branch}"
+                    - !Sub
+                      - "repo:${Owner}@${GitHubOwnerId}/${Repo}@${GitHubRepoId}:ref:refs/heads/${Branch}"
+                      - Owner: !Select [0, !Split ["/", !Ref GitHubRepo]]
+                        Repo: !Select [1, !Split ["/", !Ref GitHubRepo]]
+                  - !Sub "repo:${GitHubRepo}:ref:refs/heads/${Branch}"
       # The deploy creates IAM roles, CloudFront, Lambda, S3 and a budget, so it needs broad rights. The
       # trust policy above is what keeps it safe: only a push to main in this repo can assume the role.
       ManagedPolicyArns:

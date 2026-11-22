@@ -1,8 +1,9 @@
 {
- "generated_at": "2026-11-22T15:14:56+00:00",
+ "generated_at": "2026-11-22T21:22:02+00:00",
  "source": "claude",
  "review_date": "2026-11-30",
  "window_start": "2026-09-01",
+ "window_days": 90,
  "models": {
   "plan": "claude-haiku-5-5",
   "gather": "claude-haiku-5-5",
@@ -94,7 +95,92 @@
     "fall",
     "functional_status",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "fall",
+    "functional_status",
+    "medication_change",
+    "psychosocial"
+   ],
+   "items": 7,
+   "removed": 0,
+   "partial": 0,
+   "notes": 16,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     12,
+     1
+    ],
+    [
+     13,
+     0
+    ],
+    [
+     14,
+     1
+    ],
+    [
+     25,
+     0
+    ],
+    [
+     31,
+     1
+    ],
+    [
+     34,
+     1
+    ],
+    [
+     42,
+     1
+    ],
+    [
+     48,
+     1
+    ],
+    [
+     49,
+     0
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     56,
+     0
+    ],
+    [
+     56,
+     0
+    ],
+    [
+     69,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     75,
+     0
+    ]
+   ],
+   "seconds": 29.33,
+   "cost_usd": 0.041,
+   "lookups": 13,
+   "caught": 5,
+   "planted": 5,
+   "old_reported": 0
   },
   {
    "id": "aa0bac69-46b8-9677-e881-805eb63382d1",
@@ -112,7 +198,96 @@
     "fall",
     "fall",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "caregiver",
+    "fall",
+    "functional_status",
+    "medication_change",
+    "psychosocial",
+    "vitals"
+   ],
+   "items": 7,
+   "removed": 0,
+   "partial": 0,
+   "notes": 17,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     7,
+     0
+    ],
+    [
+     9,
+     0
+    ],
+    [
+     16,
+     0
+    ],
+    [
+     16,
+     0
+    ],
+    [
+     25,
+     0
+    ],
+    [
+     33,
+     0
+    ],
+    [
+     35,
+     1
+    ],
+    [
+     41,
+     1
+    ],
+    [
+     42,
+     1
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     44,
+     1
+    ],
+    [
+     54,
+     1
+    ],
+    [
+     60,
+     1
+    ],
+    [
+     64,
+     0
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     77,
+     0
+    ],
+    [
+     79,
+     1
+    ]
+   ],
+   "seconds": 40.99,
+   "cost_usd": 0.0494,
+   "lookups": 15,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "ddb0e16f-a868-42db-4354-2330906fd6ea",
@@ -130,7 +305,92 @@
     "fall",
     "fall",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "fall",
+    "functional_status",
+    "hospital_or_ed",
+    "psychosocial"
+   ],
+   "items": 7,
+   "removed": 0,
+   "partial": 2,
+   "notes": 16,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     3,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     17,
+     1
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     20,
+     1
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     31,
+     1
+    ],
+    [
+     35,
+     1
+    ],
+    [
+     40,
+     1
+    ],
+    [
+     61,
+     1
+    ],
+    [
+     65,
+     1
+    ],
+    [
+     67,
+     0
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     74,
+     0
+    ],
+    [
+     83,
+     0
+    ]
+   ],
+   "seconds": 31.08,
+   "cost_usd": 0.0409,
+   "lookups": 15,
+   "caught": 5,
+   "planted": 5,
+   "old_reported": 0
   },
   {
    "id": "1f2cf8aa-8ddb-cc82-042d-663fa814f69c",
@@ -148,7 +408,75 @@
     "cognition",
     "fall",
     "fall"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "fall",
+    "functional_status",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 6,
+   "timeline": [
+    [
+     9,
+     0
+    ],
+    [
+     20,
+     1
+    ],
+    [
+     25,
+     0
+    ],
+    [
+     28,
+     1
+    ],
+    [
+     32,
+     1
+    ],
+    [
+     34,
+     0
+    ],
+    [
+     39,
+     1
+    ],
+    [
+     53,
+     0
+    ],
+    [
+     66,
+     1
+    ],
+    [
+     77,
+     0
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     86,
+     0
+    ]
+   ],
+   "seconds": 28.58,
+   "cost_usd": 0.0365,
+   "lookups": 14,
+   "caught": 5,
+   "planted": 5,
+   "old_reported": 0
   },
   {
    "id": "1551c7c3-b324-6115-47fb-c78e719d5d96",
@@ -166,7 +494,79 @@
     "weight_loss",
     "fall",
     "fall"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 13,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     23,
+     0
+    ],
+    [
+     27,
+     1
+    ],
+    [
+     28,
+     0
+    ],
+    [
+     30,
+     1
+    ],
+    [
+     31,
+     1
+    ],
+    [
+     38,
+     1
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     50,
+     0
+    ],
+    [
+     54,
+     0
+    ],
+    [
+     67,
+     0
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     81,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 30.04,
+   "cost_usd": 0.0396,
+   "lookups": 18,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "54d552f1-657b-f05b-0b55-6a1a72e2dfa9",
@@ -184,7 +584,83 @@
     "fall",
     "functional_status",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 14,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     4,
+     0
+    ],
+    [
+     19,
+     0
+    ],
+    [
+     37,
+     0
+    ],
+    [
+     40,
+     1
+    ],
+    [
+     43,
+     1
+    ],
+    [
+     54,
+     0
+    ],
+    [
+     54,
+     0
+    ],
+    [
+     57,
+     0
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     71,
+     1
+    ],
+    [
+     71,
+     0
+    ],
+    [
+     78,
+     1
+    ],
+    [
+     79,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 34.63,
+   "cost_usd": 0.0404,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "12daa29d-1ab3-e1da-43f3-f4ff64980e5f",
@@ -202,7 +678,82 @@
     "cognition",
     "fall",
     "fall"
-   ]
+   ],
+   "categories": [
+    "cognition",
+    "fall",
+    "functional_status",
+    "weight_loss"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 1,
+   "notes": 14,
+   "cited_notes": 6,
+   "timeline": [
+    [
+     2,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     17,
+     1
+    ],
+    [
+     17,
+     0
+    ],
+    [
+     24,
+     1
+    ],
+    [
+     27,
+     0
+    ],
+    [
+     29,
+     0
+    ],
+    [
+     32,
+     0
+    ],
+    [
+     48,
+     1
+    ],
+    [
+     53,
+     1
+    ],
+    [
+     64,
+     0
+    ],
+    [
+     69,
+     1
+    ],
+    [
+     71,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 35.62,
+   "cost_usd": 0.0461,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "cc4adb8a-5881-ebb3-533e-d970dcac7896",
@@ -220,7 +771,78 @@
     "fall",
     "functional_status",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "psychosocial"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 1,
+   "notes": 13,
+   "cited_notes": 11,
+   "timeline": [
+    [
+     1,
+     0
+    ],
+    [
+     27,
+     0
+    ],
+    [
+     30,
+     1
+    ],
+    [
+     39,
+     1
+    ],
+    [
+     47,
+     1
+    ],
+    [
+     50,
+     1
+    ],
+    [
+     50,
+     1
+    ],
+    [
+     51,
+     1
+    ],
+    [
+     52,
+     1
+    ],
+    [
+     59,
+     1
+    ],
+    [
+     67,
+     1
+    ],
+    [
+     70,
+     1
+    ],
+    [
+     79,
+     1
+    ]
+   ],
+   "seconds": 36.47,
+   "cost_usd": 0.0423,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "b81661eb-c2df-db81-6895-097a32ddbda1",
@@ -238,7 +860,84 @@
     "cognition",
     "weight_loss",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "cognition",
+    "fall",
+    "functional_status",
+    "hospital_or_ed",
+    "medication_change",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 1,
+   "notes": 14,
+   "cited_notes": 6,
+   "timeline": [
+    [
+     15,
+     0
+    ],
+    [
+     29,
+     1
+    ],
+    [
+     33,
+     1
+    ],
+    [
+     35,
+     0
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     62,
+     1
+    ],
+    [
+     65,
+     0
+    ],
+    [
+     66,
+     0
+    ],
+    [
+     67,
+     1
+    ],
+    [
+     69,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     82,
+     0
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     85,
+     1
+    ]
+   ],
+   "seconds": 31.83,
+   "cost_usd": 0.0381,
+   "lookups": 16,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "e2062053-c54f-e137-1e90-5872f5dc95c0",
@@ -256,7 +955,80 @@
     "cognition",
     "fall",
     "weight_loss"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "fall",
+    "functional_status",
+    "vitals",
+    "weight_loss"
+   ],
+   "items": 7,
+   "removed": 0,
+   "partial": 0,
+   "notes": 13,
+   "cited_notes": 6,
+   "timeline": [
+    [
+     5,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     34,
+     1
+    ],
+    [
+     38,
+     1
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     57,
+     0
+    ],
+    [
+     59,
+     0
+    ],
+    [
+     68,
+     1
+    ],
+    [
+     77,
+     0
+    ],
+    [
+     80,
+     0
+    ],
+    [
+     81,
+     1
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     88,
+     0
+    ]
+   ],
+   "seconds": 38.18,
+   "cost_usd": 0.0535,
+   "lookups": 14,
+   "caught": 5,
+   "planted": 5,
+   "old_reported": 0
   },
   {
    "id": "853cdf9c-16ce-7d6f-f8c2-03c2948d4ee4",
@@ -274,7 +1046,92 @@
     "fall",
     "functional_status",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "fall",
+    "functional_status",
+    "hospital_or_ed",
+    "medication_change"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 16,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     17,
+     1
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     19,
+     0
+    ],
+    [
+     20,
+     1
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     32,
+     0
+    ],
+    [
+     37,
+     0
+    ],
+    [
+     38,
+     1
+    ],
+    [
+     39,
+     1
+    ],
+    [
+     41,
+     1
+    ],
+    [
+     49,
+     1
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     66,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     82,
+     0
+    ]
+   ],
+   "seconds": 31.66,
+   "cost_usd": 0.0424,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "bde01e11-0f68-c9f7-13b5-8f574c33248d",
@@ -292,7 +1149,76 @@
     "fall",
     "weight_loss",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "fall",
+    "functional_status",
+    "medication_change",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 1,
+   "notes": 12,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     5,
+     0
+    ],
+    [
+     9,
+     0
+    ],
+    [
+     42,
+     1
+    ],
+    [
+     52,
+     0
+    ],
+    [
+     53,
+     1
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     62,
+     0
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     68,
+     1
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     76,
+     1
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 39.6,
+   "cost_usd": 0.0521,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "200f5e70-66ec-1a4c-a48b-6efee352ee25",
@@ -310,7 +1236,88 @@
     "cognition",
     "weight_loss",
     "fall"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "fall",
+    "functional_status",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 15,
+   "cited_notes": 9,
+   "timeline": [
+    [
+     11,
+     0
+    ],
+    [
+     28,
+     1
+    ],
+    [
+     28,
+     0
+    ],
+    [
+     32,
+     1
+    ],
+    [
+     35,
+     0
+    ],
+    [
+     56,
+     1
+    ],
+    [
+     62,
+     0
+    ],
+    [
+     69,
+     0
+    ],
+    [
+     70,
+     1
+    ],
+    [
+     77,
+     1
+    ],
+    [
+     79,
+     1
+    ],
+    [
+     81,
+     1
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     88,
+     0
+    ],
+    [
+     88,
+     1
+    ]
+   ],
+   "seconds": 33.38,
+   "cost_usd": 0.0432,
+   "lookups": 12,
+   "caught": 5,
+   "planted": 5,
+   "old_reported": 0
   },
   {
    "id": "ce68b239-7833-761e-5c61-7e8de395e132",
@@ -328,7 +1335,75 @@
     "fall",
     "weight_loss",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     9,
+     0
+    ],
+    [
+     13,
+     1
+    ],
+    [
+     17,
+     1
+    ],
+    [
+     19,
+     1
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     27,
+     1
+    ],
+    [
+     47,
+     0
+    ],
+    [
+     53,
+     0
+    ],
+    [
+     69,
+     0
+    ],
+    [
+     74,
+     0
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     85,
+     0
+    ]
+   ],
+   "seconds": 30.54,
+   "cost_usd": 0.0395,
+   "lookups": 17,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "a8c7671b-a81f-cbeb-d613-cb365d1928bb",
@@ -346,7 +1421,70 @@
     "cognition",
     "hospital_or_ed",
     "medication_change"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "hospital_or_ed",
+    "medication_change"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 1,
+   "notes": 11,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     32,
+     1
+    ],
+    [
+     33,
+     1
+    ],
+    [
+     34,
+     1
+    ],
+    [
+     37,
+     1
+    ],
+    [
+     43,
+     0
+    ],
+    [
+     48,
+     0
+    ],
+    [
+     52,
+     1
+    ],
+    [
+     72,
+     0
+    ],
+    [
+     75,
+     1
+    ],
+    [
+     75,
+     1
+    ],
+    [
+     82,
+     0
+    ]
+   ],
+   "seconds": 41.69,
+   "cost_usd": 0.0527,
+   "lookups": 13,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "f616934b-f469-da11-01f0-1d16f34249a8",
@@ -364,7 +1502,75 @@
     "cognition",
     "other",
     "care_plan_due"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "hospital_or_ed",
+    "medication_change",
+    "other"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 1,
+   "notes": 12,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     5,
+     0
+    ],
+    [
+     11,
+     1
+    ],
+    [
+     17,
+     1
+    ],
+    [
+     18,
+     1
+    ],
+    [
+     22,
+     0
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     30,
+     1
+    ],
+    [
+     39,
+     0
+    ],
+    [
+     40,
+     1
+    ],
+    [
+     41,
+     1
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     51,
+     0
+    ]
+   ],
+   "seconds": 36.85,
+   "cost_usd": 0.0421,
+   "lookups": 13,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "126822f8-bc47-c89f-2641-da07aca9b7bb",
@@ -382,7 +1588,79 @@
     "cognition",
     "fall",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "cognition",
+    "fall",
+    "functional_status"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 0,
+   "notes": 13,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     15,
+     0
+    ],
+    [
+     24,
+     1
+    ],
+    [
+     28,
+     1
+    ],
+    [
+     33,
+     0
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     57,
+     0
+    ],
+    [
+     62,
+     1
+    ],
+    [
+     73,
+     1
+    ],
+    [
+     82,
+     1
+    ],
+    [
+     85,
+     0
+    ]
+   ],
+   "seconds": 36.09,
+   "cost_usd": 0.0408,
+   "lookups": 18,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "55e538c8-eceb-9516-2a67-f2246194560b",
@@ -400,7 +1678,79 @@
     "hospital_or_ed",
     "cognition",
     "weight_loss"
-   ]
+   ],
+   "categories": [
+    "caregiver",
+    "cognition",
+    "hospital_or_ed",
+    "medication_change",
+    "weight_loss"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 0,
+   "notes": 13,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     1,
+     0
+    ],
+    [
+     11,
+     0
+    ],
+    [
+     31,
+     0
+    ],
+    [
+     35,
+     0
+    ],
+    [
+     43,
+     0
+    ],
+    [
+     46,
+     0
+    ],
+    [
+     47,
+     0
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     59,
+     1
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     65,
+     1
+    ],
+    [
+     72,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 38.39,
+   "cost_usd": 0.048,
+   "lookups": 15,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "de1e1874-bb08-e1de-bd72-d544fcf227f1",
@@ -418,7 +1768,83 @@
     "weight_loss",
     "functional_status",
     "hospital_or_ed"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "hospital_or_ed",
+    "weight_loss"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 1,
+   "notes": 14,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     3,
+     0
+    ],
+    [
+     11,
+     0
+    ],
+    [
+     17,
+     0
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     29,
+     1
+    ],
+    [
+     38,
+     0
+    ],
+    [
+     47,
+     0
+    ],
+    [
+     51,
+     0
+    ],
+    [
+     53,
+     0
+    ],
+    [
+     59,
+     1
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     67,
+     0
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 27.28,
+   "cost_usd": 0.0353,
+   "lookups": 14,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "f5b72836-ed1d-8dfe-0569-83f635bc52a7",
@@ -436,7 +1862,74 @@
     "functional_status",
     "fall",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "fall",
+    "functional_status"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 3,
+   "timeline": [
+    [
+     7,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     49,
+     0
+    ],
+    [
+     54,
+     1
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     57,
+     0
+    ],
+    [
+     58,
+     0
+    ],
+    [
+     70,
+     0
+    ],
+    [
+     74,
+     1
+    ],
+    [
+     79,
+     1
+    ],
+    [
+     88,
+     0
+    ]
+   ],
+   "seconds": 23.84,
+   "cost_usd": 0.0279,
+   "lookups": 14,
+   "caught": 2,
+   "planted": 2,
+   "old_reported": 0
   },
   {
    "id": "f98298b3-5d47-ad24-42ca-c483a2265acf",
@@ -454,7 +1947,74 @@
     "vitals",
     "medication_change",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "medication_change",
+    "vitals"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 2,
+   "timeline": [
+    [
+     2,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     11,
+     0
+    ],
+    [
+     13,
+     0
+    ],
+    [
+     17,
+     0
+    ],
+    [
+     23,
+     0
+    ],
+    [
+     28,
+     0
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     71,
+     1
+    ],
+    [
+     76,
+     0
+    ],
+    [
+     81,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 28.58,
+   "cost_usd": 0.027,
+   "lookups": 15,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "9cc6e430-3b55-303d-d1f8-d0e79e0fe215",
@@ -472,7 +2032,66 @@
     "hospital_or_ed",
     "cognition",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "cognition",
+    "hospital_or_ed"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 1,
+   "notes": 10,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     14,
+     0
+    ],
+    [
+     24,
+     0
+    ],
+    [
+     29,
+     0
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     50,
+     1
+    ],
+    [
+     57,
+     0
+    ],
+    [
+     58,
+     0
+    ],
+    [
+     61,
+     1
+    ],
+    [
+     68,
+     1
+    ],
+    [
+     74,
+     1
+    ]
+   ],
+   "seconds": 30.3,
+   "cost_usd": 0.031,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "7d8911a6-9697-5c23-3a4a-a22ef14ec200",
@@ -490,7 +2109,82 @@
     "psychosocial",
     "medication_change",
     "hospital_or_ed"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "hospital_or_ed",
+    "medication_change",
+    "psychosocial"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 1,
+   "notes": 14,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     1,
+     0
+    ],
+    [
+     24,
+     1
+    ],
+    [
+     26,
+     1
+    ],
+    [
+     37,
+     0
+    ],
+    [
+     40,
+     0
+    ],
+    [
+     41,
+     0
+    ],
+    [
+     46,
+     0
+    ],
+    [
+     47,
+     0
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     66,
+     1
+    ],
+    [
+     66,
+     1
+    ],
+    [
+     68,
+     1
+    ],
+    [
+     75,
+     0
+    ],
+    [
+     86,
+     1
+    ]
+   ],
+   "seconds": 30.15,
+   "cost_usd": 0.0375,
+   "lookups": 16,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "ee8576d5-c6ab-db1f-72ee-c60f1edc7262",
@@ -507,7 +2201,91 @@
    "flags": [
     "cognition",
     "weight_loss"
-   ]
+   ],
+   "categories": [
+    "cognition",
+    "hospital_or_ed",
+    "medication_change",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 0,
+   "notes": 16,
+   "cited_notes": 8,
+   "timeline": [
+    [
+     15,
+     0
+    ],
+    [
+     22,
+     0
+    ],
+    [
+     28,
+     0
+    ],
+    [
+     39,
+     0
+    ],
+    [
+     46,
+     0
+    ],
+    [
+     52,
+     1
+    ],
+    [
+     54,
+     1
+    ],
+    [
+     60,
+     0
+    ],
+    [
+     64,
+     0
+    ],
+    [
+     76,
+     1
+    ],
+    [
+     77,
+     1
+    ],
+    [
+     79,
+     1
+    ],
+    [
+     81,
+     1
+    ],
+    [
+     83,
+     1
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     88,
+     0
+    ]
+   ],
+   "seconds": 37.35,
+   "cost_usd": 0.0457,
+   "lookups": 13,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "835bbc07-b7e4-858e-8998-92249f9ff74e",
@@ -524,7 +2302,76 @@
    "flags": [
     "cognition",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "cognition",
+    "hospital_or_ed",
+    "medication_change",
+    "vitals"
+   ],
+   "items": 6,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 6,
+   "timeline": [
+    [
+     2,
+     0
+    ],
+    [
+     13,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     31,
+     1
+    ],
+    [
+     33,
+     0
+    ],
+    [
+     37,
+     1
+    ],
+    [
+     37,
+     1
+    ],
+    [
+     37,
+     0
+    ],
+    [
+     39,
+     1
+    ],
+    [
+     63,
+     0
+    ],
+    [
+     67,
+     1
+    ],
+    [
+     69,
+     1
+    ]
+   ],
+   "seconds": 34.57,
+   "cost_usd": 0.0461,
+   "lookups": 13,
+   "caught": 5,
+   "planted": 5,
+   "old_reported": 0
   },
   {
    "id": "23d5346a-3e4d-83f0-c991-b2f876f13dae",
@@ -541,7 +2388,74 @@
    "flags": [
     "vitals",
     "psychosocial"
-   ]
+   ],
+   "categories": [
+    "caregiver",
+    "medication_change",
+    "psychosocial",
+    "vitals"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     5,
+     0
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     0
+    ],
+    [
+     33,
+     1
+    ],
+    [
+     50,
+     0
+    ],
+    [
+     62,
+     0
+    ],
+    [
+     63,
+     0
+    ],
+    [
+     66,
+     0
+    ],
+    [
+     67,
+     1
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     77,
+     1
+    ],
+    [
+     79,
+     1
+    ]
+   ],
+   "seconds": 36.5,
+   "cost_usd": 0.0369,
+   "lookups": 19,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "1462f7fa-b21b-4046-e34c-89994cf65db4",
@@ -558,7 +2472,70 @@
    "flags": [
     "cognition",
     "fall"
-   ]
+   ],
+   "categories": [
+    "cognition",
+    "fall",
+    "functional_status",
+    "hospital_or_ed"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 11,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     2,
+     0
+    ],
+    [
+     10,
+     0
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     0
+    ],
+    [
+     30,
+     1
+    ],
+    [
+     51,
+     0
+    ],
+    [
+     65,
+     1
+    ],
+    [
+     71,
+     1
+    ],
+    [
+     75,
+     1
+    ],
+    [
+     85,
+     0
+    ]
+   ],
+   "seconds": 39.41,
+   "cost_usd": 0.0385,
+   "lookups": 20,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "b158639c-8d13-dfc8-6533-30ddeb64b0aa",
@@ -575,7 +2552,82 @@
    "flags": [
     "cognition",
     "weight_loss"
-   ]
+   ],
+   "categories": [
+    "cognition",
+    "medication_change",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 1,
+   "notes": 14,
+   "cited_notes": 7,
+   "timeline": [
+    [
+     7,
+     1
+    ],
+    [
+     8,
+     0
+    ],
+    [
+     9,
+     1
+    ],
+    [
+     35,
+     0
+    ],
+    [
+     43,
+     0
+    ],
+    [
+     51,
+     0
+    ],
+    [
+     61,
+     0
+    ],
+    [
+     71,
+     1
+    ],
+    [
+     71,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     75,
+     1
+    ],
+    [
+     77,
+     1
+    ],
+    [
+     78,
+     1
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 37.59,
+   "cost_usd": 0.0451,
+   "lookups": 13,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "08e17e4e-b18f-32c9-fbf5-996e180b5ca3",
@@ -592,7 +2644,71 @@
    "flags": [
     "weight_loss",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "other",
+    "vitals",
+    "weight_loss"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 0,
+   "notes": 11,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     1,
+     1
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     7,
+     0
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     26,
+     1
+    ],
+    [
+     26,
+     1
+    ],
+    [
+     33,
+     0
+    ],
+    [
+     38,
+     0
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     84,
+     1
+    ],
+    [
+     87,
+     1
+    ]
+   ],
+   "seconds": 28.1,
+   "cost_usd": 0.033,
+   "lookups": 13,
+   "caught": 2,
+   "planted": 2,
+   "old_reported": 0
   },
   {
    "id": "6d94779f-af3f-06b0-2f80-4a0e1111027c",
@@ -609,7 +2725,66 @@
    "flags": [
     "functional_status",
     "fall"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "medication_change"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 0,
+   "notes": 10,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     9,
+     0
+    ],
+    [
+     32,
+     0
+    ],
+    [
+     34,
+     1
+    ],
+    [
+     36,
+     0
+    ],
+    [
+     40,
+     1
+    ],
+    [
+     50,
+     0
+    ],
+    [
+     54,
+     0
+    ],
+    [
+     64,
+     0
+    ],
+    [
+     73,
+     1
+    ],
+    [
+     75,
+     1
+    ]
+   ],
+   "seconds": 27.62,
+   "cost_usd": 0.0345,
+   "lookups": 13,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "8c1fde4c-d177-969f-6e61-88d89da77758",
@@ -626,7 +2801,70 @@
    "flags": [
     "weight_loss",
     "functional_status"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "functional_status",
+    "hospital_or_ed",
+    "weight_loss"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 11,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     9,
+     0
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     23,
+     0
+    ],
+    [
+     38,
+     1
+    ],
+    [
+     42,
+     1
+    ],
+    [
+     56,
+     1
+    ],
+    [
+     64,
+     1
+    ],
+    [
+     67,
+     0
+    ],
+    [
+     68,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 36.49,
+   "cost_usd": 0.0424,
+   "lookups": 15,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "be868a94-6457-2a63-04e5-212f66ac90b0",
@@ -643,7 +2881,79 @@
    "flags": [
     "cognition",
     "weight_loss"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "cognition",
+    "medication_change",
+    "weight_loss"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 3,
+   "notes": 13,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     4,
+     0
+    ],
+    [
+     9,
+     0
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     19,
+     0
+    ],
+    [
+     24,
+     0
+    ],
+    [
+     24,
+     0
+    ],
+    [
+     50,
+     0
+    ],
+    [
+     53,
+     1
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     72,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 35.41,
+   "cost_usd": 0.0386,
+   "lookups": 13,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "d497eb21-1b94-c3b6-e5f9-e585a64f248b",
@@ -660,7 +2970,70 @@
    "flags": [
     "functional_status",
     "medication_change"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "fall",
+    "functional_status",
+    "medication_change"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 1,
+   "notes": 11,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     10,
+     0
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     47,
+     0
+    ],
+    [
+     58,
+     1
+    ],
+    [
+     60,
+     1
+    ],
+    [
+     62,
+     1
+    ],
+    [
+     62,
+     0
+    ],
+    [
+     66,
+     1
+    ],
+    [
+     75,
+     1
+    ],
+    [
+     86,
+     0
+    ]
+   ],
+   "seconds": 34.8,
+   "cost_usd": 0.0424,
+   "lookups": 16,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "5acf64b1-265c-3230-0e25-79bfb8519c9f",
@@ -677,7 +3050,66 @@
    "flags": [
     "functional_status",
     "vitals"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "functional_status",
+    "medication_change",
+    "vitals"
+   ],
+   "items": 5,
+   "removed": 0,
+   "partial": 1,
+   "notes": 10,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     2,
+     0
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     30,
+     1
+    ],
+    [
+     43,
+     0
+    ],
+    [
+     63,
+     0
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     66,
+     0
+    ],
+    [
+     67,
+     1
+    ],
+    [
+     68,
+     0
+    ],
+    [
+     69,
+     0
+    ]
+   ],
+   "seconds": 31.91,
+   "cost_usd": 0.037,
+   "lookups": 12,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "c862299d-f928-8096-8963-323658b0290e",
@@ -694,7 +3126,82 @@
    "flags": [
     "weight_loss",
     "psychosocial"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "hospital_or_ed",
+    "psychosocial",
+    "weight_loss"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 14,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     1,
+     0
+    ],
+    [
+     7,
+     0
+    ],
+    [
+     18,
+     1
+    ],
+    [
+     20,
+     1
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     29,
+     0
+    ],
+    [
+     42,
+     0
+    ],
+    [
+     48,
+     0
+    ],
+    [
+     51,
+     0
+    ],
+    [
+     55,
+     0
+    ],
+    [
+     68,
+     0
+    ],
+    [
+     71,
+     1
+    ],
+    [
+     73,
+     1
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 38.54,
+   "cost_usd": 0.0431,
+   "lookups": 13,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "b2f73253-94ac-ffc4-881b-c08afb4669f9",
@@ -711,7 +3218,70 @@
    "flags": [
     "cognition",
     "weight_loss"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "vitals",
+    "weight_loss"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 11,
+   "cited_notes": 4,
+   "timeline": [
+    [
+     27,
+     0
+    ],
+    [
+     37,
+     0
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     63,
+     1
+    ],
+    [
+     69,
+     0
+    ],
+    [
+     69,
+     0
+    ],
+    [
+     71,
+     0
+    ],
+    [
+     73,
+     0
+    ],
+    [
+     75,
+     1
+    ],
+    [
+     75,
+     0
+    ],
+    [
+     84,
+     1
+    ]
+   ],
+   "seconds": 73.51,
+   "cost_usd": 0.1008,
+   "lookups": 29,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "8ecee851-2aa5-5abb-4264-8d4add66543d",
@@ -728,7 +3298,78 @@
    "flags": [
     "cognition",
     "hospital_or_ed"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "hospital_or_ed",
+    "medication_change"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 1,
+   "notes": 13,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     8,
+     0
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     33,
+     0
+    ],
+    [
+     43,
+     0
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     57,
+     1
+    ],
+    [
+     62,
+     1
+    ],
+    [
+     62,
+     0
+    ],
+    [
+     67,
+     1
+    ],
+    [
+     69,
+     1
+    ],
+    [
+     77,
+     0
+    ],
+    [
+     82,
+     0
+    ]
+   ],
+   "seconds": 31.28,
+   "cost_usd": 0.038,
+   "lookups": 16,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "8ea8952a-9bc0-c643-686c-508badc8bb8a",
@@ -745,7 +3386,78 @@
    "flags": [
     "psychosocial",
     "caregiver"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "psychosocial",
+    "vitals"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 13,
+   "cited_notes": 3,
+   "timeline": [
+    [
+     13,
+     0
+    ],
+    [
+     29,
+     0
+    ],
+    [
+     37,
+     0
+    ],
+    [
+     40,
+     0
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     54,
+     0
+    ],
+    [
+     55,
+     1
+    ],
+    [
+     57,
+     1
+    ],
+    [
+     58,
+     0
+    ],
+    [
+     67,
+     0
+    ],
+    [
+     72,
+     1
+    ],
+    [
+     83,
+     0
+    ],
+    [
+     84,
+     0
+    ]
+   ],
+   "seconds": 23.95,
+   "cost_usd": 0.0285,
+   "lookups": 13,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   },
   {
    "id": "da33a5c4-024c-c353-bdf1-697c1d22985c",
@@ -761,7 +3473,70 @@
    },
    "flags": [
     "vitals"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "caregiver",
+    "medication_change",
+    "vitals"
+   ],
+   "items": 4,
+   "removed": 0,
+   "partial": 0,
+   "notes": 11,
+   "cited_notes": 5,
+   "timeline": [
+    [
+     6,
+     1
+    ],
+    [
+     8,
+     1
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     31,
+     0
+    ],
+    [
+     31,
+     0
+    ],
+    [
+     41,
+     0
+    ],
+    [
+     42,
+     1
+    ],
+    [
+     61,
+     1
+    ],
+    [
+     71,
+     1
+    ]
+   ],
+   "seconds": 40.17,
+   "cost_usd": 0.043,
+   "lookups": 14,
+   "caught": 4,
+   "planted": 4,
+   "old_reported": 0
   },
   {
    "id": "7bbb35dc-7d97-fe30-1027-7f8096398496",
@@ -777,7 +3552,73 @@
    },
    "flags": [
     "cognition"
-   ]
+   ],
+   "categories": [
+    "care_plan_due",
+    "cognition",
+    "psychosocial"
+   ],
+   "items": 3,
+   "removed": 0,
+   "partial": 0,
+   "notes": 12,
+   "cited_notes": 3,
+   "timeline": [
+    [
+     24,
+     0
+    ],
+    [
+     31,
+     0
+    ],
+    [
+     33,
+     1
+    ],
+    [
+     33,
+     0
+    ],
+    [
+     52,
+     0
+    ],
+    [
+     58,
+     0
+    ],
+    [
+     63,
+     0
+    ],
+    [
+     79,
+     1
+    ],
+    [
+     81,
+     1
+    ],
+    [
+     81,
+     0
+    ],
+    [
+     86,
+     0
+    ],
+    [
+     86,
+     0
+    ]
+   ],
+   "seconds": 65.3,
+   "cost_usd": 0.0808,
+   "lookups": 30,
+   "caught": 3,
+   "planted": 3,
+   "old_reported": 0
   }
  ]
 }

@@ -135,13 +135,20 @@ export interface Bundle {
 
 export interface Evaluation {
   participants: number;
+  errors?: number;
   recall: number;
   high_severity_recall: number;
   perfect_briefs: number;
   distractor_violations: number;
+  items_per_brief?: number;
+  extra_item_rate?: number;
+  partially_supported_items?: number;
   removed_claims: number;
+  cost_usd_total?: number;
   cost_usd_per_brief: number;
   seconds_median: number;
+  seconds_p90?: number;
+  recall_by_category?: Record<string, { caught: number; total: number; recall: number }>;
 }
 
 export interface QueueEntry {
@@ -153,6 +160,20 @@ export interface QueueEntry {
   headline: string;
   counts: Record<Severity, number>;
   flags: string[];
+  categories?: string[];
+  items?: number;
+  removed?: number;
+  partial?: number;
+  notes?: number;
+  cited_notes?: number;
+  /** each note as [days since the review window opened, 1 if cited] */
+  timeline?: [number, number][];
+  seconds?: number | null;
+  cost_usd?: number | null;
+  lookups?: number;
+  caught?: number;
+  planted?: number;
+  old_reported?: number;
 }
 
 export interface Index {
@@ -160,6 +181,7 @@ export interface Index {
   source: "claude" | "sample";
   review_date: string | null;
   window_start: string | null;
+  window_days?: number | null;
   models: Record<string, string>;
   evaluation: Evaluation | null;
   participants: QueueEntry[];

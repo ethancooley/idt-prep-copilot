@@ -133,3 +133,9 @@ export function highlightSentences(text: string, claim: string): { text: string;
 }
 
 export const pct = (x: number) => `${Math.round(x * 100)}%`;
+
+/** "claude-haiku-5-5" -> "Claude Haiku 5.5"; falls back to a description when no model is known. */
+export function modelLabel(id: string | undefined, fallback: string): string {
+  if (!id) return fallback;
+  return id.replace(/^claude-/, "Claude ").replace(/-(\d+)-(\d+)$/, " $1.$2").replace(/ (\w)/, (_, c: string) => ` ${c.toUpperCase()}`);
+}
