@@ -87,6 +87,7 @@ def main(argv: list[str] | None = None) -> None:
         with conn.cursor() as cur:
             for p in participants:
                 insert_participant(cur, p)
+        conn.commit()  # keep the structured data even if embedding fails below
         print(f"Loaded {len(participants)} participants, "
               f"{sum(len(p.notes) for p in participants)} notes.")
         if args.embed:

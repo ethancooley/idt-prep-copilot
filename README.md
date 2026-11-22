@@ -11,8 +11,8 @@ line to the note it came from, and leaves the final call to a clinician.
 | Phase | What | Status |
 | --- | --- | --- |
 | 1 | Synthetic data foundation: cohort, answer keys, Postgres + pgvector | Done |
-| 2 | MCP server with chart tools | Next |
-| 3 | LangGraph agent on Claude: plan, gather, draft, verify citations | |
+| 2 | MCP server with chart tools | Done |
+| 3 | LangGraph agent on Claude: plan, gather, draft, verify citations | Next |
 | 4 | Eval harness against the answer keys, run in CI | |
 | 5 | React app: brief with clickable citations, approve/edit/reject, audit log | |
 | 6 | Docker, GitHub Actions, AWS deployment, tracing | |
@@ -33,6 +33,46 @@ Because the generator knows exactly which events it planted, it also writes an *
 participant (`data/golden/`): what a good brief must surface, which notes prove it, and which older events it
 must not report as new. Synthea records from inside the window are dropped so the chart holds no unplanned
 changes and the answer key stays complete. These keys drive the evaluations in phase 4.
+
+## Chart tools (MCP server)
+
+`src/idt_copilot/chart/server.py` exposes read-only tools over the
+[Model Context Protocol](https://modelcontextprotocol.io). The agent gets chart facts only through these tools,
+and every note comes back with an id the brief must cite.
+
+| Tool | Returns |
+| --- | --- |
+| `list_participants` | Who is up for IDT review, with note counts since the last review |
+| `get_participant_summary` | Demographics, conditions, active medications, allergies, review window |
+| `get_notes` | Interdisciplinary notes, defaulting to the period since the last review; filter by date or discipline |
+| `get_note` | One note by id, used to verify citations |
+| `search_notes` | Semantic search over a participant's notes (keyword fallback if embeddings are not loaded) |
+| `get_vitals` | Weight and blood pressure trends, with weight change in kg, lb, and percent |
+| `get_encounters` | ED visits and hospital admissions |
+| `get_medication_changes` | Medications started or stopped |
+
+**Try it in Claude Code** (from the repo, with the database running):
+
+```bash
+claude mcp add idt-chart -e DATABASE_URL=postgresql://idt:idt@localhost:5432/idt \
+  -- "$PWD/.venv/bin/python" -m idt_copilot.chart.server
+```
+
+**Or in Claude Desktop**, add this to `claude_desktop_config.json` (use your own absolute path):
+
+```json
+{
+  "mcpServers": {
+    "idt-chart": {
+      "command": "/absolute/path/to/idt-prep-copilot/.venv/bin/python",
+      "args": ["-m", "idt_copilot.chart.server"],
+      "env": { "DATABASE_URL": "postgresql://idt:idt@localhost:5432/idt" }
+    }
+  }
+}
+```
+
+Then ask: *"Using the idt-chart tools, what changed for Mariana Arriaga since her last IDT review? Cite note ids."*
 
 ## Quick start
 
@@ -61,5 +101,7 @@ src/idt_copilot/
   data/build_cohort.py Builds data/cohort and data/golden
   db/schema.sql        Postgres + pgvector schema
   db/load.py           Loads the cohort; --embed adds note embeddings (local model, no API cost)
-tests/                 Cohort consistency checks
+  chart/repository.py  Read-only chart queries used by the tools
+  chart/server.py      MCP server exposing the chart tools
+tests/                 Cohort consistency and chart tool checks
 ```
