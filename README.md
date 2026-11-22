@@ -104,17 +104,18 @@ step is scoring a fresh set of charts the agent has never seen.
 - **Not connected to an EHR.** A real deployment would read from the PACE organization's records system and
   keep the review log on a server, not in the browser.
 
-## Built with
+## How it's built
 
-- **Claude** (Anthropic API): Haiku for planning and reading, Sonnet for writing and checking
-- **LangGraph** to run the agent's steps, **Model Context Protocol (MCP)** for its read-only chart tools
-- **Postgres with pgvector** for the chart and note search
-- **Synthea** and a custom generator for synthetic participants, notes, and answer keys
-- **React and TypeScript** for the web app
-- **AWS** (S3, CloudFront, Lambda, Parameter Store) for hosting at $0 a month, and **GitHub Actions** for
-  testing every change
+I built every layer, from the data to the interface:
 
-Running it costs about 4 cents per brief.
+| Layer | What it is | Built with |
+| --- | --- | --- |
+| Data | EHR-style records for each participant: notes from every discipline, vitals, ED visits and hospital stays, medications, immunizations | Postgres, pgvector, Synthea plus a custom generator for notes and answer keys |
+| Tools | Read-only lookups into one participant's chart, with keyword and semantic search over notes | Model Context Protocol (MCP) server in Python |
+| Agent | Plans, gathers, drafts, and verifies, going back to the chart once when a claim fails | LangGraph, Claude Haiku and Claude Sonnet via the Anthropic API, with prompt caching and structured tool outputs |
+| Evaluation | Scores every brief against planted answer keys: recall, high-severity recall, old events reported as new, unsupported lines, cost, latency | Python eval harness, rerunnable in CI on saved briefs |
+| Interface | Review queue, cited brief with evidence pane, line-by-line approval, audit log, PDF export, and a live view of the agent working | React, TypeScript, Vite |
+| Infrastructure | Static site, a streaming API for live runs gated by an access code and daily limits, secrets kept out of code | AWS (CloudFront, S3, Lambda, Parameter Store) defined as infrastructure as code, GitHub Actions for testing and deployment on every push |
 
 ## For developers
 

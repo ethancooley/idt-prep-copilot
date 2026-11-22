@@ -152,9 +152,9 @@ VITE_LIVE_API_URL=http://localhost:8787 npm run dev
 
 ## Deployment
 
-The site runs on AWS for $0 a month: S3 and CloudFront for the static site, one Lambda function behind a
-Function URL that streams live runs, secrets in SSM Parameter Store, and Postgres on Neon's free plan. A $1
-budget emails at the first cent. Setup and costs are in [deploy/README.md](../deploy/README.md).
+The site runs on AWS: S3 and CloudFront for the static site, one Lambda function behind a
+Function URL that streams live runs, secrets in SSM Parameter Store, and Postgres on Neon. Setup is in
+[deploy/README.md](../deploy/README.md).
 
 ```bash
 ./deploy/put_secrets.sh                              # once: API key, database URL, access code
