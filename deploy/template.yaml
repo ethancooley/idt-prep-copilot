@@ -23,9 +23,20 @@ Parameters:
     Type: String
     Default: ""
     Description: Optional second origin allowed to call the live API, e.g. http://localhost:5173.
+  CustomDomain:
+    Type: String
+    Default: ""
+    Description: Optional domain for the site, e.g. idt.ethancooley.com. Needs CertificateArn.
+  CertificateArn:
+    Type: String
+    Default: ""
+    Description: ACM certificate in us-east-1 covering CustomDomain (CloudFront only accepts us-east-1).
 
 Conditions:
   HasExtraOrigin: !Not [!Equals [!Ref ExtraAllowedOrigin, ""]]
+  HasCustomDomain: !And
+    - !Not [!Equals [!Ref CustomDomain, ""]]
+    - !Not [!Equals [!Ref CertificateArn, ""]]
 
 Resources:
   # ------------------------------------------------------------------ static site
@@ -75,6 +86,13 @@ Resources:
         DefaultRootObject: index.html
         HttpVersion: http2and3
         PriceClass: PriceClass_100
+        Aliases: !If [HasCustomDomain, [!Ref CustomDomain], !Ref AWS::NoValue]
+        ViewerCertificate: !If
+          - HasCustomDomain
+          - AcmCertificateArn: !Ref CertificateArn
+            SslSupportMethod: sni-only
+            MinimumProtocolVersion: TLSv1.2_2021
+          - CloudFrontDefaultCertificate: true
         Origins:
           - Id: site
             DomainName: !GetAtt SiteBucket.RegionalDomainName
@@ -144,10 +162,10 @@ Resources:
         AuthType: NONE # the access code and daily caps in the app are the gate
         InvokeMode: RESPONSE_STREAM
         Cors:
-          AllowOrigins: !If
-            - HasExtraOrigin
-            - [!Sub "https://${SiteDistribution.DomainName}", !Ref ExtraAllowedOrigin]
-            - [!Sub "https://${SiteDistribution.DomainName}"]
+          AllowOrigins:
+            - !Sub "https://${SiteDistribution.DomainName}"
+            - !If [HasCustomDomain, !Sub "https://${CustomDomain}", !Ref AWS::NoValue]
+            - !If [HasExtraOrigin, !Ref ExtraAllowedOrigin, !Ref AWS::NoValue]
           AllowMethods: [POST]
           AllowHeaders: [content-type]
           MaxAge: 3600
@@ -176,7 +194,13 @@ Resources:
 
 Outputs:
   SiteUrl:
-    Value: !Sub "https://${SiteDistribution.DomainName}"
+    Value: !If
+      - HasCustomDomain
+      - !Sub "https://${CustomDomain}"
+      - !Sub "https://${SiteDistribution.DomainName}"
+  CloudFrontDomain:
+    Description: Point your custom domain's CNAME record here.
+    Value: !GetAtt SiteDistribution.DomainName
   LiveApiUrl:
     Value: !GetAtt LiveFunctionUrl.FunctionUrl
   SiteBucketName:

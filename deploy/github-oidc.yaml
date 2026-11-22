@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Lets GitHub Actions deploy IDT Prep Copilot without stored AWS keys. GitHub proves which repo and branch
+  a workflow run comes from (OIDC), and AWS hands that run short-lived credentials for the role below.
+  Only pushes to the main branch of the one repo named here can use it. Deploy this once, by hand.
+
+Parameters:
+  GitHubRepo:
+    Type: String
+    Default: ethancooley/idt-prep-copilot
+    Description: owner/repo allowed to deploy.
+  Branch:
+    Type: String
+    Default: main
+
+Resources:
+  GitHubOidc:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList: [sts.amazonaws.com]
+
+  DeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Description: Assumed by GitHub Actions to deploy IDT Prep Copilot from the main branch.
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Federated: !Ref GitHubOidc }
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubRepo}:ref:refs/heads/${Branch}"
+      # The deploy creates IAM roles, CloudFront, Lambda, S3 and a budget, so it needs broad rights. The
+      # trust policy above is what keeps it safe: only a push to main in this repo can assume the role.
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
+
+Outputs:
+  DeployRoleArn:
+    Description: Save this in the GitHub repo as the AWS_DEPLOY_ROLE_ARN variable.
+    Value: !GetAtt DeployRole.Arn

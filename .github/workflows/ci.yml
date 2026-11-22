@@ -1,9 +1,10 @@
-name: CI
+name: CI and deploy
 
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch: # "Run workflow" button, to redeploy without a new commit
 
 permissions:
   contents: read
@@ -55,3 +56,46 @@ jobs:
       - run: npm ci
       - run: npx tsc --noEmit -p .
       - run: npm run build
+
+  deploy:
+    name: Deploy to AWS
+    # Only after the tests and the web build pass, and only for main (never for pull requests).
+    needs: [python, web]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.AWS_DEPLOY_ROLE_ARN != ''
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false # let a running deploy finish; the next one waits its turn
+    permissions:
+      contents: read
+      id-token: write # lets GitHub prove to AWS which repo and branch this run comes from
+    env:
+      AWS_REGION: us-east-1
+      ALERT_EMAIL: ${{ vars.ALERT_EMAIL }}
+      CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
+      CERT_ARN: ${{ vars.CERT_ARN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+      - uses: aws-actions/setup-sam@v2
+        with:
+          use-installer: true
+      - name: Deploy
+        run: ./deploy/deploy.sh
+      - name: Check the site and the live API
+        run: |
+          SITE=$(aws cloudformation describe-stacks --stack-name idt-copilot --query "Stacks[0].Outputs[?OutputKey=='SiteUrl'].OutputValue" --output text)
+          API=$(aws cloudformation describe-stacks --stack-name idt-copilot --query "Stacks[0].Outputs[?OutputKey=='LiveApiUrl'].OutputValue" --output text)
+          curl -fsS -o /dev/null "$SITE" && echo "Site OK: $SITE"
+          curl -fsS "${API%/}/" && echo " Live API OK"

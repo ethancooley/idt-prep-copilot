@@ -4,9 +4,18 @@
 #   ALERT_EMAIL=you@example.com ./deploy/deploy.sh
 #
 # Needs: AWS CLI v2 (signed in), AWS SAM CLI, Node.js, and the secrets from put_secrets.sh.
+# Optional custom domain (see deploy/README.md):
+#   CUSTOM_DOMAIN=idt.example.com CERT_ARN=arn:aws:acm:us-east-1:... ALERT_EMAIL=... ./deploy/deploy.sh
 # Run it again any time; it only changes what changed.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+
+# Settings you'd otherwise retype every deploy (ALERT_EMAIL, CUSTOM_DOMAIN, CERT_ARN) can live in
+# deploy/config.env, which git ignores. Copy deploy/config.env.example to start.
+if [[ -f deploy/config.env ]]; then
+  # shellcheck disable=SC1091
+  source deploy/config.env
+fi
 
 STACK="${STACK:-idt-copilot}"
 REGION="${AWS_REGION:-us-east-1}"
@@ -23,7 +32,8 @@ sam deploy \
   --capabilities CAPABILITY_IAM \
   --resolve-s3 \
   --no-fail-on-empty-changeset \
-  --parameter-overrides "AlertEmail=$ALERT_EMAIL" ${EXTRA_ORIGIN:+"ExtraAllowedOrigin=$EXTRA_ORIGIN"}
+  --parameter-overrides "AlertEmail=$ALERT_EMAIL" ${EXTRA_ORIGIN:+"ExtraAllowedOrigin=$EXTRA_ORIGIN"} \
+    ${CUSTOM_DOMAIN:+"CustomDomain=$CUSTOM_DOMAIN"} ${CERT_ARN:+"CertificateArn=$CERT_ARN"}
 
 output() {
   aws cloudformation describe-stacks --region "$REGION" --stack-name "$STACK" \
@@ -53,5 +63,8 @@ aws cloudfront create-invalidation --distribution-id "$DIST" --paths "/*" \
 
 echo
 echo "Site:     $SITE_URL"
+if [[ -n "${CUSTOM_DOMAIN:-}" ]]; then
+  echo "DNS:      CNAME $CUSTOM_DOMAIN -> $(output CloudFrontDomain)"
+fi
 echo "Live API: $LIVE_URL"
 echo "Check:    curl -s ${LIVE_URL%/}/   (should print {\"ok\": true})"

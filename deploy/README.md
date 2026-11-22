@@ -86,6 +86,58 @@ curl -s https://<function-url>/            # {"ok": true}
 
 and open the site, pick a participant, and choose **Watch the agent build one live**.
 
+## Use your own domain
+
+The site works at its `cloudfront.net` address, but a subdomain of a domain you own, such as
+`idt.ethancooley.com`, looks better and costs nothing extra: the certificate is free, and the DNS records go
+wherever your domain's DNS already lives.
+
+1. **Request a certificate** in us-east-1 (CloudFront only accepts certificates from there):
+   ```bash
+   aws acm request-certificate --region us-east-1 --domain-name idt.example.com --validation-method DNS \
+     --query CertificateArn --output text
+   ```
+2. **Prove you own the domain.** Get the validation record:
+   ```bash
+   aws acm describe-certificate --region us-east-1 --certificate-arn <arn> \
+     --query "Certificate.DomainValidationOptions[0].ResourceRecord"
+   ```
+   At your DNS provider, add a **CNAME** with that `Name` and `Value`. Leave it in place: ACM uses it to renew
+   the certificate automatically. Wait until the status is `ISSUED` (usually 5 to 30 minutes):
+   ```bash
+   aws acm describe-certificate --region us-east-1 --certificate-arn <arn> --query Certificate.Status
+   ```
+3. **Deploy with the domain.** Put `CUSTOM_DOMAIN` and `CERT_ARN` in `deploy/config.env` and run
+   `./deploy/deploy.sh`. It prints the record to add next.
+4. **Point the subdomain at CloudFront.** At your DNS provider, add a **CNAME** from `idt` to the
+   `xxxx.cloudfront.net` address the deploy printed. Once DNS updates (minutes, sometimes an hour), the site
+   is live at your domain, with HTTPS.
+
+The `cloudfront.net` address keeps working too.
+
+## Deploy on every push to main
+
+Once this is set up, pushing to `main` runs the tests and the web build on GitHub Actions and, only if they
+pass, runs `deploy.sh`. GitHub signs in to AWS with short-lived credentials (OIDC), so no AWS keys are stored
+in GitHub.
+
+1. **Create the role GitHub will use** (once):
+   ```bash
+   aws cloudformation deploy --template-file deploy/github-oidc.yaml --stack-name idt-copilot-github \
+     --capabilities CAPABILITY_IAM
+   aws cloudformation describe-stacks --stack-name idt-copilot-github \
+     --query "Stacks[0].Outputs[?OutputKey=='DeployRoleArn'].OutputValue" --output text
+   ```
+   Only pushes to `main` in `ethancooley/idt-prep-copilot` can use this role. If the repo has another name,
+   add `--parameter-overrides GitHubRepo=owner/repo`.
+2. **Add repository variables** on GitHub: **Settings → Secrets and variables → Actions → Variables**:
+   `AWS_DEPLOY_ROLE_ARN` (from step 1), `ALERT_EMAIL`, and, if you use one, `CUSTOM_DOMAIN` and `CERT_ARN`.
+   None of these are secrets. The real secrets stay in SSM Parameter Store.
+3. **Push to `main`.** Watch it under the repo's **Actions** tab. The **Run workflow** button redeploys without
+   a new commit.
+
+Until `AWS_DEPLOY_ROLE_ARN` is set, the deploy job is skipped and CI runs as before.
+
 ## Day to day
 
 | Task | How |

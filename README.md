@@ -7,7 +7,7 @@ participant up for review, it reads everything in the chart since the last revie
 what changed and what the team should discuss, and links every line to the note it came from. A clinician
 checks each line and approves the brief before the meeting.
 
-**[Try the live demo](https://YOUR-SITE-URL)** <!-- replace with the CloudFront URL after deploying -->
+**[Try it at idt.ethancooley.com](https://idt.ethancooley.com)**
 
 <!-- Add a 30-second screen recording of a live run here, e.g. docs/images/live-run.gif -->
 
@@ -124,4 +124,5 @@ and [deploy/README.md](deploy/README.md).
 ## About
 
 Built by [Ethan Cooley](https://ethancooley.com), a machine learning engineer working on AI for clinical
-decision-making. Questions, or want an access code for live runs? Reach out through my site.
+decision-making. Want an access code to watch the agent work live, or have questions? Reach out through
+[ethancooley.com](https://ethancooley.com).

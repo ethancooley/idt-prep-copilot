@@ -25,3 +25,6 @@ web/dist-live/
 build/
 .aws-sam/
 samconfig.toml
+
+# Personal deploy settings
+deploy/config.env
