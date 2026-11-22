@@ -106,3 +106,12 @@ def test_mcp_server_exposes_tools(repo):
     assert names == {"list_participants", "get_participant_summary", "get_notes", "get_note",
                      "search_notes", "get_vitals", "get_encounters", "get_medication_changes",
                      "get_immunizations"}
+
+
+def test_a_bad_database_url_is_never_echoed():
+    """A mistyped DATABASE_URL is often a password; errors must not repeat it."""
+    from idt_copilot.chart.repository import ChartRepository
+    for bad in ("npg_secretpassword123", "postgresql://user:npg_secret@host/db?sslmode=require bad=x y"):
+        with pytest.raises(Exception) as err:
+            ChartRepository(database_url=bad, use_embeddings=False).conn
+        assert "secret" not in str(err.value)

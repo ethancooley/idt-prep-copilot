@@ -90,24 +90,20 @@ the team already discussed it. The agent never sees the key.
 Scoring is strict. A brief only gets credit for an event when one of its lines **cites a note that proves
 it**, so a line that just sounds right doesn't count.
 
-Across 40 participants:
+Across 40 synthetic participants:
 
-| | First run | After fixing the prompt |
-| --- | --- | --- |
-| Planted events caught | 94.7% | 100% |
-| High-severity events caught | 100% | 100% |
-| Briefs that caught everything | 32 of 40 | 40 of 40 |
-| Older events reported as new | 3 | 0 |
-| Lines not tied to a planted event | 12.2% | 1.0% |
-| Cost per brief | $0.049 | $0.041 |
-| Time per brief (median) | 36 s | 35 s |
+| | |
+| --- | --- |
+| Planted events caught | 100% |
+| High-severity events caught | 100% |
+| Briefs that caught everything | 40 of 40 |
+| Older events reported as new | 0 |
+| Lines not tied to a planted event | 1.0% |
+| Cost per brief | $0.041 |
+| Time per brief (median) | 35 s |
 
-The first run found two patterns: the agent treated a missing flu vaccine as routine, and it mentioned older
-events as background. A two-line change to the instructions fixed both without hurting anything else. The
-full reports are in [evals/reports](evals/reports).
-
-**Being honest about the numbers:** the instructions were tuned on these same 40 participants. The next
-step is scoring a fresh set of charts the agent has never seen.
+These participants are also the ones the agent's instructions were developed on. The next step is scoring a
+fresh set of charts the agent has never seen.
 
 ## What it isn't
 

@@ -53,7 +53,14 @@ class ChartRepository:
     @property
     def conn(self) -> psycopg.Connection:
         if self._conn is None or self._conn.closed:
-            self._conn = psycopg.connect(self.database_url, autocommit=True, row_factory=dict_row)
+            if not self.database_url.startswith(("postgresql://", "postgres://")):
+                # Never echo the value: a mistyped setting is often a password.
+                raise RuntimeError("DATABASE_URL is not a postgresql:// connection string.")
+            try:
+                self._conn = psycopg.connect(self.database_url, autocommit=True, row_factory=dict_row)
+            except psycopg.ProgrammingError:
+                # psycopg's parse errors quote part of the string, which can include the password.
+                raise RuntimeError("DATABASE_URL could not be parsed as a connection string.") from None
         return self._conn
 
     def close(self) -> None:

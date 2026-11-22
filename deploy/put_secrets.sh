@@ -9,6 +9,14 @@ put() {
   local name="$1" prompt="$2" value
   read -r -s -p "$prompt: " value; echo
   if [[ -z "$value" ]]; then echo "  skipped $name (empty)"; return; fi
+  if [[ "$name" == "DATABASE_URL" && ! "$value" =~ ^postgres(ql)?:// ]]; then
+    echo "  NOT saved: that isn't a connection string. Paste the whole postgresql://... string from Neon's Connect button."
+    return
+  fi
+  if [[ "$name" == "ANTHROPIC_API_KEY" && ! "$value" =~ ^sk-ant- ]]; then
+    echo "  NOT saved: Anthropic keys start with sk-ant-."
+    return
+  fi
   aws ssm put-parameter --region "$REGION" --name "$PREFIX/$name" --type SecureString \
     --value "$value" --overwrite >/dev/null
   echo "  saved $PREFIX/$name"
