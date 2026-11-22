@@ -137,3 +137,28 @@ def test_client_ip_prefers_forwarded_headers():
     ctx = '{"http": {"sourceIp": "8.8.4.4"}}'
     assert client_ip({"x-amzn-request-context": ctx}, "127.0.0.1") == "8.8.4.4"
     assert client_ip({}, "127.0.0.1") == "127.0.0.1"
+
+
+def test_server_answers_unexpected_errors_with_json(live_env, monkeypatch):
+    """A crash inside a handler must still produce a response the page can read, never a dropped connection."""
+    import json
+    import threading
+    import urllib.error
+    import urllib.request
+    from http.server import ThreadingHTTPServer
+
+    from idt_copilot.api import server
+
+    def boom(*a, **k):
+        raise RuntimeError("database unavailable")
+
+    monkeypatch.setattr(server, "handle_admin", boom)
+    httpd = ThreadingHTTPServer(("127.0.0.1", 0), server.Handler)
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
+    try:
+        with pytest.raises(urllib.error.HTTPError) as err:
+            urllib.request.urlopen(f"http://127.0.0.1:{httpd.server_address[1]}/admin/codes", timeout=10)
+        assert err.value.code == 500
+        assert "went wrong" in json.loads(err.value.read())["error"]
+    finally:
+        httpd.shutdown()

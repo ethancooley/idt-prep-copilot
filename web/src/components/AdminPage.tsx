@@ -49,21 +49,28 @@ export default function AdminPage() {
   const [error, setError] = useState<string | null>(null);
   const [created, setCreated] = useState<{ code: string; record: CodeRecord } | null>(null);
 
-  const call = useCallback(async (method: string, path: string, body?: unknown) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const call = useCallback(async (method: string, path: string, body?: unknown): Promise<any> => {
     const r = await fetch(`${LIVE_API_URL}${path}`, {
       method,
       headers: { Authorization: `Bearer ${token}`, ...(body ? { "Content-Type": "application/json" } : {}) },
       body: body ? JSON.stringify(body) : undefined,
     });
-    const data = await r.json().catch(() => ({}));
+    const text = await r.text();
+    let data: Record<string, unknown> = {};
+    try { data = text ? JSON.parse(text) : {}; } catch { /* not JSON: reported below */ }
     if (r.status === 401) { saveToken(""); setToken(""); }
-    if (!r.ok) throw new Error(data.error ?? `The request failed (status ${r.status}).`);
+    if (!r.ok) throw new Error((data.error as string) ?? `The request failed (status ${r.status}).`);
+    if (!text || !Object.keys(data).length) throw new Error(`The live API sent an empty or unreadable answer to ${path}.`);
     return data;
   }, [token]);
 
   const refresh = useCallback(async () => {
     try {
       const [c, r] = await Promise.all([call("GET", "/admin/codes"), call("GET", "/admin/runs")]);
+      if (!Array.isArray(c?.codes) || !Array.isArray(r?.runs) || !r?.today) {
+        throw new Error("The live API answered, but not with access-code data. It may still be running an older version; redeploy and try again.");
+      }
       setCodes(c.codes);
       setRuns(r);
       setError(null);

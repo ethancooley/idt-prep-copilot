@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import AdminPage from "./components/AdminPage";
+import ErrorBoundary from "./components/ErrorBoundary";
 import BriefPage from "./components/BriefPage";
 import Dashboard from "./components/Dashboard";
 import EvaluationPage from "./components/EvaluationPage";
@@ -77,6 +78,7 @@ export default function App() {
           {error && <p className="notice">{error} Refresh the page to try again.</p>}
           {!error && !index && <p className="loading">Loading the review queue</p>}
           {index && (
+            <ErrorBoundary resetKey={pathname}>
             <Routes>
               <Route path="/" element={<Dashboard index={index} />} />
               <Route path="/p/:id" element={<BriefPage index={index} />} />
@@ -85,6 +87,7 @@ export default function App() {
               <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<p className="notice">That page does not exist. <Link to="/">Go to the review queue</Link>.</p>} />
             </Routes>
+            </ErrorBoundary>
           )}
         </main>
       </div>

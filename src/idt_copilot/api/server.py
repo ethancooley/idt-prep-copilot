@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import os
+import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from idt_copilot.agent.run import load_dotenv
@@ -99,14 +100,33 @@ class Handler(BaseHTTPRequestHandler):
     def do_OPTIONS(self):  # CORS preflight (local development)
         self._send(204, None)
 
+    def _guarded(self, handler) -> None:
+        """Answer every request, even when something unexpected breaks: log the details, send a short error."""
+        try:
+            handler()
+        except (BrokenPipeError, ConnectionResetError):
+            pass
+        except Exception:
+            traceback.print_exc()
+            try:
+                self._send(500, {"error": "Something went wrong on the server. Try again in a moment."})
+            except Exception:
+                pass
+
     def do_GET(self):
+        self._guarded(self._get)
+
+    def do_POST(self):
+        self._guarded(self._post)
+
+    def _get(self):
         if self.path in ("/", "/health"):
             return self._send(200, {"ok": True})
         if self.path.startswith("/admin/"):
             return self._send(*handle_admin("GET", self.path, self.headers.get("Authorization")))
         self._send(404, {"error": "Not found"})
 
-    def do_POST(self):
+    def _post(self):
         if self.path.startswith("/admin/"):
             body = self._body()
             if body is None:
