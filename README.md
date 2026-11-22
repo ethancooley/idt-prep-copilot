@@ -9,7 +9,19 @@ checks each line and approves the brief before the meeting.
 
 **[Try it at idt.ethancooley.com](https://idt.ethancooley.com)**
 
-<!-- Add a 30-second screen recording of a live run here, e.g. docs/images/live-run.gif -->
+![The review queue: participants due for review, concerns across the cohort, how the agent ran, and an evidence timeline for every participant](docs/images/dashboard.png)
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/brief.png" alt="A participant's brief: every line cites its source, and the source note opens beside it"></td>
+    <td width="50%"><img src="docs/images/evaluation.png" alt="The evaluation page: recall against planted answer keys, by kind of event, with time and cost"></td>
+  </tr>
+  <tr>
+    <td>A brief, with the note behind a line open beside it</td>
+    <td>How it scored against the answer keys</td>
+  </tr>
+</table>
+
 
 > Every participant in this project is synthetic. No real patient data is used anywhere.
 
