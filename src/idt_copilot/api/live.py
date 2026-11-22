@@ -27,13 +27,14 @@ import queue
 import threading
 import time
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Iterator
 
 from idt_copilot.agent.chart_client import InProcessChartClient
 from idt_copilot.agent.graph import AgentConfig, run_agent
 from idt_copilot.agent.llm import LLM
 from idt_copilot.chart.repository import ChartRepository, NotFound
-from idt_copilot.export.static_bundle import participant_bundle
+from idt_copilot.export.static_bundle import load_answer_key, participant_bundle
 
 RUNS_TABLE = """
 CREATE TABLE IF NOT EXISTS live_runs (
@@ -145,7 +146,8 @@ def stream_live_run(run: LiveRun, heartbeat_seconds: float = 10.0) -> Iterator[d
     brief = outcome["brief"]
     conn.execute("UPDATE live_runs SET status = 'ok', cost_usd = %s, seconds = %s WHERE id = %s",
                  (brief.run.get("cost_usd"), brief.run.get("seconds"), run.run_id))
-    bundle = participant_bundle(run.repo, brief)
+    key = load_answer_key(run.participant_id, Path(os.environ.get("IDT_GOLDEN_DIR", "data/golden")))
+    bundle = participant_bundle(run.repo, brief, key)
     bundle["live"] = {"runs_left_today": run.runs_left_today}
     yield {"type": "done", "bundle": bundle}
 

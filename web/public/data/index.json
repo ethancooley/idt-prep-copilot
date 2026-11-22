@@ -1,259 +1,117 @@
 {
- "generated_at": "2026-11-22T03:51:22+00:00",
- "source": "sample",
+ "generated_at": "2026-11-22T15:14:56+00:00",
+ "source": "claude",
  "review_date": "2026-11-30",
  "window_start": "2026-09-01",
- "models": {},
- "evaluation": null,
+ "models": {
+  "plan": "claude-haiku-5-5",
+  "gather": "claude-haiku-5-5",
+  "draft": "claude-sonnet-5-5",
+  "verify": "claude-sonnet-5-5"
+ },
+ "evaluation": {
+  "participants": 40,
+  "errors": 0,
+  "recall": 1.0,
+  "high_severity_recall": 1.0,
+  "perfect_briefs": 40,
+  "distractor_violations": 0,
+  "items_per_brief": 5.2,
+  "extra_item_rate": 0.024,
+  "partially_supported_items": 18,
+  "removed_claims": 0,
+  "cost_usd_total": 1.7217,
+  "cost_usd_per_brief": 0.043,
+  "seconds_median": 34.7,
+  "seconds_p90": 41.0,
+  "recall_by_category": {
+   "care_plan_due": {
+    "caught": 26,
+    "total": 26,
+    "recall": 1.0
+   },
+   "caregiver": {
+    "caught": 14,
+    "total": 14,
+    "recall": 1.0
+   },
+   "cognition": {
+    "caught": 18,
+    "total": 18,
+    "recall": 1.0
+   },
+   "fall": {
+    "caught": 15,
+    "total": 15,
+    "recall": 1.0
+   },
+   "functional_status": {
+    "caught": 16,
+    "total": 16,
+    "recall": 1.0
+   },
+   "hospital_or_ed": {
+    "caught": 15,
+    "total": 15,
+    "recall": 1.0
+   },
+   "medication_change": {
+    "caught": 13,
+    "total": 13,
+    "recall": 1.0
+   },
+   "psychosocial": {
+    "caught": 9,
+    "total": 9,
+    "recall": 1.0
+   },
+   "vitals": {
+    "caught": 6,
+    "total": 6,
+    "recall": 1.0
+   },
+   "weight_loss": {
+    "caught": 18,
+    "total": 18,
+    "recall": 1.0
+   }
+  }
+ },
  "participants": [
   {
-   "id": "ee8576d5-c6ab-db1f-72ee-c60f1edc7262",
-   "name": "Benito Olvera",
-   "age": 76,
-   "sex": "M",
-   "city": "Los Angeles",
-   "headline": "Weight down about 18 lb (9%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 0
-   },
-   "flags": [
-    "weight_loss",
-    "cognition",
-    "hospital_or_ed"
-   ]
-  },
-  {
-   "id": "b81661eb-c2df-db81-6895-097a32ddbda1",
-   "name": "Carlota Maya",
-   "age": 81,
+   "id": "0669150c-6293-58dd-99d9-d75855bc9fc5",
+   "name": "Debora Hudson",
+   "age": 75,
    "sex": "F",
    "city": "Los Angeles",
-   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "headline": "Debora fell at home on 2026-10-02 and now needs moderate help with bathing and lower-body dressing. Her spouse and caregiver Kevin reports exhaustion and has asked for respite.",
    "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 0
+    "high": 4,
+    "medium": 2,
+    "low": 1
    },
    "flags": [
-    "cognition",
-    "hospital_or_ed",
-    "weight_loss"
+    "fall",
+    "functional_status",
+    "functional_status"
    ]
   },
   {
-   "id": "e2062053-c54f-e137-1e90-5872f5dc95c0",
-   "name": "Chong Smitham",
+   "id": "aa0bac69-46b8-9677-e881-805eb63382d1",
+   "name": "Francene Keebler",
    "age": 86,
-   "sex": "M",
-   "city": "Granite Bay",
-   "headline": "Weight down about 13 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "weight_loss",
-    "fall",
-    "cognition"
-   ]
-  },
-  {
-   "id": "1f2cf8aa-8ddb-cc82-042d-663fa814f69c",
-   "name": "Cristian M\u00e9ndez",
-   "age": 91,
-   "sex": "M",
-   "city": "Fresno",
-   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
-   "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "cognition",
-    "weight_loss",
-    "fall"
-   ]
-  },
-  {
-   "id": "200f5e70-66ec-1a4c-a48b-6efee352ee25",
-   "name": "Elena Valdivia",
-   "age": 70,
    "sex": "F",
-   "city": "Napa",
-   "headline": "Weight down about 13 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "city": "San Francisco",
+   "headline": "Francene fell at home on 2026-10-25 after a rapid decline in bathing and dressing independence, and her son and primary caregiver Angela now reports exhaustion and is asking for respite.",
    "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "weight_loss",
-    "fall",
-    "cognition"
-   ]
-  },
-  {
-   "id": "b158639c-8d13-dfc8-6533-30ddeb64b0aa",
-   "name": "Lindy Smith",
-   "age": 85,
-   "sex": "F",
-   "city": "Rolling Hills Estates",
-   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
-   "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 0
-   },
-   "flags": [
-    "cognition",
-    "weight_loss",
-    "medication_change"
-   ]
-  },
-  {
-   "id": "bde01e11-0f68-c9f7-13b5-8f574c33248d",
-   "name": "Mohammed Gutkowski",
-   "age": 77,
-   "sex": "M",
-   "city": "Brea",
-   "headline": "Weight down about 13 lb (6%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 0
-   },
-   "flags": [
-    "weight_loss",
-    "medication_change",
-    "fall"
-   ]
-  },
-  {
-   "id": "12daa29d-1ab3-e1da-43f3-f4ff64980e5f",
-   "name": "Roman O'Keefe",
-   "age": 74,
-   "sex": "M",
-   "city": "Kingsburg",
-   "headline": "Fall at home on Oct 19, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
-   "counts": {
-    "high": 3,
-    "medium": 1,
-    "low": 0
-   },
-   "flags": [
-    "fall",
-    "weight_loss",
-    "cognition"
-   ]
-  },
-  {
-   "id": "1462f7fa-b21b-4046-e34c-89994cf65db4",
-   "name": "Karissa Pfeffer",
-   "age": 85,
-   "sex": "F",
-   "city": "Oakland",
-   "headline": "ED visit on Nov 5, 2026 for dehydration and dizziness.",
-   "counts": {
-    "high": 3,
-    "medium": 0,
-    "low": 0
-   },
-   "flags": [
-    "hospital_or_ed",
-    "fall",
-    "cognition"
-   ]
-  },
-  {
-   "id": "55e538c8-eceb-9516-2a67-f2246194560b",
-   "name": "Lucas Smith",
-   "age": 71,
-   "sex": "M",
-   "city": "Milpitas",
-   "headline": "Weight down about 15 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 3,
-    "medium": 0,
-    "low": 0
-   },
-   "flags": [
-    "weight_loss",
-    "cognition",
-    "hospital_or_ed"
-   ]
-  },
-  {
-   "id": "8ecee851-2aa5-5abb-4264-8d4add66543d",
-   "name": "Rafael West",
-   "age": 83,
-   "sex": "M",
-   "city": "El Sobrante",
-   "headline": "ED visit on Nov 2, 2026 for dehydration and dizziness.",
-   "counts": {
-    "high": 3,
-    "medium": 0,
-    "low": 1
-   },
-   "flags": [
-    "hospital_or_ed",
-    "cognition",
-    "medication_change"
-   ]
-  },
-  {
-   "id": "be868a94-6457-2a63-04e5-212f66ac90b0",
-   "name": "Salvador Mercado",
-   "age": 82,
-   "sex": "M",
-   "city": "Los Angeles",
-   "headline": "Started apixaban 5 MG on Oct 24, 2026 for new atrial fibrillation found on ECG.",
-   "counts": {
-    "high": 3,
-    "medium": 0,
-    "low": 1
-   },
-   "flags": [
-    "medication_change",
-    "weight_loss",
-    "cognition"
-   ]
-  },
-  {
-   "id": "853cdf9c-16ce-7d6f-f8c2-03c2948d4ee4",
-   "name": "Damaris Bayer",
-   "age": 71,
-   "sex": "F",
-   "city": "Los Angeles",
-   "headline": "ED visit on Sep 18, 2026 for urinary tract infection with acute confusion.",
-   "counts": {
-    "high": 2,
-    "medium": 2,
-    "low": 0
-   },
-   "flags": [
-    "hospital_or_ed",
-    "fall"
-   ]
-  },
-  {
-   "id": "835bbc07-b7e4-858e-8998-92249f9ff74e",
-   "name": "Dorthea Gutkowski",
-   "age": 71,
-   "sex": "F",
-   "city": "Cathedral City",
-   "headline": "Hospital admission on Sep 29, 2026 for chest pain; cardiac workup negative (3 days).",
-   "counts": {
-    "high": 2,
+    "high": 4,
     "medium": 2,
     "low": 1
    },
    "flags": [
-    "hospital_or_ed",
-    "cognition"
+    "fall",
+    "fall",
+    "caregiver"
    ]
   },
   {
@@ -262,66 +120,34 @@
    "age": 80,
    "sex": "F",
    "city": "Lakeside",
-   "headline": "ED visit on Sep 18, 2026 for urinary tract infection with acute confusion.",
+   "headline": "Tajuana fell at home on 2026-10-02 and now needs moderate help with bathing and lower-body dressing. Her son and caregiver, Robert, reports exhaustion and has asked for respite.",
    "counts": {
-    "high": 2,
+    "high": 4,
     "medium": 2,
     "low": 1
    },
    "flags": [
-    "hospital_or_ed",
-    "fall"
+    "fall",
+    "fall",
+    "functional_status"
    ]
   },
   {
-   "id": "c862299d-f928-8096-8963-323658b0290e",
-   "name": "Federico Delao",
-   "age": 83,
+   "id": "1f2cf8aa-8ddb-cc82-042d-663fa814f69c",
+   "name": "Cristian M\u00e9ndez",
+   "age": 91,
    "sex": "M",
-   "city": "Buena Park",
-   "headline": "Weight down about 13 lb (6%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "city": "Fresno",
+   "headline": "Cristian fell on Oct 3, 2026 and now needs moderate help with bathing. He has also lost about 8% of his weight since Sep 5, and since about Oct 23 he has been more confused in the evenings.",
    "counts": {
-    "high": 2,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "weight_loss",
-    "hospital_or_ed"
-   ]
-  },
-  {
-   "id": "ce68b239-7833-761e-5c61-7e8de395e132",
-   "name": "Fred Streich",
-   "age": 75,
-   "sex": "M",
-   "city": "Los Angeles",
-   "headline": "Weight down about 12 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 2,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "weight_loss",
-    "fall"
-   ]
-  },
-  {
-   "id": "9cc6e430-3b55-303d-d1f8-d0e79e0fe215",
-   "name": "Garland Beahan",
-   "age": 79,
-   "sex": "M",
-   "city": "Los Angeles",
-   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
-   "counts": {
-    "high": 2,
+    "high": 4,
     "medium": 1,
     "low": 1
    },
    "flags": [
     "cognition",
-    "hospital_or_ed"
+    "fall",
+    "fall"
    ]
   },
   {
@@ -330,14 +156,15 @@
    "age": 80,
    "sex": "M",
    "city": "Stevenson Ranch",
-   "headline": "Weight down about 17 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "headline": "Gonzalo fell at home on 2026-09-28 and has since declined in bathing and dressing, and he has lost 8.5% of his body weight (92.0 to 84.2 kg) in under 3 months.",
    "counts": {
-    "high": 2,
+    "high": 4,
     "medium": 1,
     "low": 1
    },
    "flags": [
     "weight_loss",
+    "fall",
     "fall"
    ]
   },
@@ -347,148 +174,33 @@
    "age": 89,
    "sex": "M",
    "city": "Tracy",
-   "headline": "Weight down about 16 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "headline": "Hank had a fall on Oct 11 and now needs moderate help with bathing and lower-body dressing. He has also lost 7.6% of his body weight since Sep 5.",
    "counts": {
-    "high": 2,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "weight_loss",
-    "fall"
-   ]
-  },
-  {
-   "id": "126822f8-bc47-c89f-2641-da07aca9b7bb",
-   "name": "Jer\u00f3nimo Montes",
-   "age": 73,
-   "sex": "M",
-   "city": "San Diego",
-   "headline": "Fall at home on Sep 25, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
-   "counts": {
-    "high": 2,
+    "high": 4,
     "medium": 1,
     "low": 1
    },
    "flags": [
     "fall",
-    "cognition"
+    "functional_status",
+    "functional_status"
    ]
   },
   {
-   "id": "a8c7671b-a81f-cbeb-d613-cb365d1928bb",
-   "name": "Kraig Steuber",
-   "age": 75,
+   "id": "12daa29d-1ab3-e1da-43f3-f4ff64980e5f",
+   "name": "Roman O'Keefe",
+   "age": 74,
    "sex": "M",
-   "city": "Chula Vista",
-   "headline": "ED visit on Oct 3, 2026 for urinary tract infection with acute confusion.",
+   "city": "Kingsburg",
+   "headline": "Roman has had a fall (Oct 19), new evening confusion (Nov 9), a drop in weight of about 9% since Sep 5, and a decline in bathing and dressing ability since Sep 18, so the team should review these together.",
    "counts": {
-    "high": 2,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "hospital_or_ed",
-    "cognition"
-   ]
-  },
-  {
-   "id": "b2f73253-94ac-ffc4-881b-c08afb4669f9",
-   "name": "Luisa Quiroz",
-   "age": 70,
-   "sex": "F",
-   "city": "West Covina",
-   "headline": "Weight down about 13 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 2,
-    "medium": 1,
-    "low": 1
-   },
-   "flags": [
-    "weight_loss",
-    "cognition"
-   ]
-  },
-  {
-   "id": "de1e1874-bb08-e1de-bd72-d544fcf227f1",
-   "name": "Renato Botsford",
-   "age": 75,
-   "sex": "M",
-   "city": "Albany",
-   "headline": "Weight down about 15 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 2,
+    "high": 4,
     "medium": 1,
     "low": 0
    },
    "flags": [
-    "weight_loss",
-    "hospital_or_ed"
-   ]
-  },
-  {
-   "id": "8c1fde4c-d177-969f-6e61-88d89da77758",
-   "name": "Ricardo Fajardo",
-   "age": 78,
-   "sex": "M",
-   "city": "Modesto",
-   "headline": "Weight down about 14 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
-   "counts": {
-    "high": 2,
-    "medium": 1,
-    "low": 0
-   },
-   "flags": [
-    "weight_loss",
-    "hospital_or_ed"
-   ]
-  },
-  {
-   "id": "f616934b-f469-da11-01f0-1d16f34249a8",
-   "name": "Winford Fahey",
-   "age": 73,
-   "sex": "M",
-   "city": "San Diego",
-   "headline": "ED visit on Sep 12, 2026 for COPD exacerbation.",
-   "counts": {
-    "high": 2,
-    "medium": 0,
-    "low": 1
-   },
-   "flags": [
-    "hospital_or_ed",
-    "cognition"
-   ]
-  },
-  {
-   "id": "0669150c-6293-58dd-99d9-d75855bc9fc5",
-   "name": "Debora Hudson",
-   "age": 75,
-   "sex": "F",
-   "city": "Los Angeles",
-   "headline": "Fall at home on Oct 2, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
-   "counts": {
-    "high": 1,
-    "medium": 3,
-    "low": 1
-   },
-   "flags": [
-    "fall"
-   ]
-  },
-  {
-   "id": "aa0bac69-46b8-9677-e881-805eb63382d1",
-   "name": "Francene Keebler",
-   "age": 86,
-   "sex": "F",
-   "city": "San Francisco",
-   "headline": "Fall at home on Oct 25, 2026 with no injury; PT recommends a walker and home safety evaluation.",
-   "counts": {
-    "high": 1,
-    "medium": 3,
-    "low": 0
-   },
-   "flags": [
+    "cognition",
+    "fall",
     "fall"
    ]
   },
@@ -498,14 +210,268 @@
    "age": 80,
    "sex": "F",
    "city": "Moorpark",
-   "headline": "Fall at home on Oct 10, 2026 with right hip bruising; PT recommends a walker and home safety evaluation.",
+   "headline": "Darleen fell at home on 2026-10-10 and has since declined in bathing and dressing independence, become afraid of slipping, and reported low mood with missed day center days.",
    "counts": {
-    "high": 1,
+    "high": 4,
+    "medium": 0,
+    "low": 2
+   },
+   "flags": [
+    "fall",
+    "functional_status",
+    "functional_status"
+   ]
+  },
+  {
+   "id": "b81661eb-c2df-db81-6895-097a32ddbda1",
+   "name": "Carlota Maya",
+   "age": 81,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "Carlota has new evening confusion (including leaving the stove on), a 6% weight loss over about 12 weeks, and a decline in bathing and dressing independence, all after a Nov 2 ED visit for chest pain.",
+   "counts": {
+    "high": 3,
+    "medium": 3,
+    "low": 0
+   },
+   "flags": [
+    "cognition",
+    "weight_loss",
+    "functional_status"
+   ]
+  },
+  {
+   "id": "e2062053-c54f-e137-1e90-5872f5dc95c0",
+   "name": "Chong Smitham",
+   "age": 86,
+   "sex": "M",
+   "city": "Granite Bay",
+   "headline": "Chong had a fall on Oct 5, new evening confusion since mid-October (including a stove left on), 6.7% weight loss since Sep 5, and three elevated BP readings. No follow-up results are documented for the confusion work-up.",
+   "counts": {
+    "high": 3,
+    "medium": 3,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "fall",
+    "weight_loss"
+   ]
+  },
+  {
+   "id": "853cdf9c-16ce-7d6f-f8c2-03c2948d4ee4",
+   "name": "Damaris Bayer",
+   "age": 71,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "Damaris fell at home on Oct 12, 2026 and PT found unsteady gait (TUG 19 s). Her caregiver, grandson Teresa, reported exhaustion on Nov 3 and asked for respite.",
+   "counts": {
+    "high": 3,
+    "medium": 3,
+    "low": 0
+   },
+   "flags": [
+    "fall",
+    "functional_status",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "bde01e11-0f68-c9f7-13b5-8f574c33248d",
+   "name": "Mohammed Gutkowski",
+   "age": 77,
+   "sex": "M",
+   "city": "Brea",
+   "headline": "Mohammed fell at home on Nov 3 about 10 days after starting apixaban for new atrial fibrillation, and he has lost 6.5% of his body weight since Sep 5 while his caregiver reports exhaustion.",
+   "counts": {
+    "high": 3,
+    "medium": 3,
+    "low": 0
+   },
+   "flags": [
+    "fall",
+    "weight_loss",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "200f5e70-66ec-1a4c-a48b-6efee352ee25",
+   "name": "Elena Valdivia",
+   "age": 70,
+   "sex": "F",
+   "city": "Napa",
+   "headline": "Elena had a fall on 2026-09-29 and has since had 7.7% weight loss, new evening confusion and a stove incident, and low mood with day center withdrawal after a friend's death.",
+   "counts": {
+    "high": 3,
     "medium": 2,
     "low": 1
    },
    "flags": [
+    "cognition",
+    "weight_loss",
     "fall"
+   ]
+  },
+  {
+   "id": "ce68b239-7833-761e-5c61-7e8de395e132",
+   "name": "Fred Streich",
+   "age": 75,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Fred fell at home on Sep 14, 2026, has since lost bathing and dressing independence, and has lost about 7% of his body weight (83.9 to 78.3 kg) from Sep 5 to Nov 24.",
+   "counts": {
+    "high": 3,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "fall",
+    "weight_loss",
+    "functional_status"
+   ]
+  },
+  {
+   "id": "a8c7671b-a81f-cbeb-d613-cb365d1928bb",
+   "name": "Kraig Steuber",
+   "age": 75,
+   "sex": "M",
+   "city": "Chula Vista",
+   "headline": "Kraig's confusion returned: the nurse documented new evening confusion on 2026-10-23, including a stove left on, after his 2026-10-03 ED visit for UTI with acute confusion. The notes don't show the outcome of the planned workup.",
+   "counts": {
+    "high": 3,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "hospital_or_ed",
+    "medication_change"
+   ]
+  },
+  {
+   "id": "f616934b-f469-da11-01f0-1d16f34249a8",
+   "name": "Winford Fahey",
+   "age": 73,
+   "sex": "M",
+   "city": "San Diego",
+   "headline": "New evening confusion reported 2026-10-01, including a stove left on, started about two weeks after a 2026-09-12 ED visit. The notes don't show whether the planned work-up was done.",
+   "counts": {
+    "high": 3,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "other",
+    "care_plan_due"
+   ]
+  },
+  {
+   "id": "126822f8-bc47-c89f-2641-da07aca9b7bb",
+   "name": "Jer\u00f3nimo Montes",
+   "age": 73,
+   "sex": "M",
+   "city": "San Diego",
+   "headline": "Jer\u00f3nimo had a fall on 9/25 and new evening confusion since about mid-October. His grandson and sole caregiver Robert reported exhaustion on 11/22 and asked for respite.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "fall",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "55e538c8-eceb-9516-2a67-f2246194560b",
+   "name": "Lucas Smith",
+   "age": 71,
+   "sex": "M",
+   "city": "Milpitas",
+   "headline": "Lucas had an ED visit on 10/30 for a UTI with acute confusion, and he has lost 7.1% of his body weight since 9/5 (93.6 to 87.0 kg), so the team should review both.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "cognition",
+    "weight_loss"
+   ]
+  },
+  {
+   "id": "de1e1874-bb08-e1de-bd72-d544fcf227f1",
+   "name": "Renato Botsford",
+   "age": 75,
+   "sex": "M",
+   "city": "Albany",
+   "headline": "Renato has lost 8.3% of his body weight (84.1 to 77.1 kg, Sep 5 to Nov 24) and now needs moderate help with bathing and lower-body dressing. He was also hospitalized Oct 27 for chest pain.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "functional_status",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "f5b72836-ed1d-8dfe-0569-83f635bc52a7",
+   "name": "Winfred Crist",
+   "age": 74,
+   "sex": "M",
+   "city": "Compton",
+   "headline": "Winfred has had a functional decline in bathing and lower-body dressing, with a fear of slipping and skipped showers. His niece and primary caregiver also reports exhaustion and asks for respite.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "functional_status",
+    "fall",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "f98298b3-5d47-ad24-42ca-c483a2265acf",
+   "name": "Billie Lindgren",
+   "age": 85,
+   "sex": "M",
+   "city": "Merced",
+   "headline": "Blood pressure has been persistently elevated (169\u2013176/92\u201398 across three readings, Oct\u2013Nov 2026) with admitted missed evening doses, and his spouse and caregiver James is exhausted and asking for respite.",
+   "counts": {
+    "high": 3,
+    "medium": 0,
+    "low": 1
+   },
+   "flags": [
+    "vitals",
+    "medication_change",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "9cc6e430-3b55-303d-d1f8-d0e79e0fe215",
+   "name": "Garland Beahan",
+   "age": 79,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Garland was admitted for 3 days after a Nov 5 ED visit for chest pain (cardiac workup negative), following about two weeks of new evening confusion, and his son and caregiver Linda reports exhaustion and has asked for respite.",
+   "counts": {
+    "high": 3,
+    "medium": 0,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "cognition",
+    "caregiver"
    ]
   },
   {
@@ -514,30 +480,101 @@
    "age": 68,
    "sex": "F",
    "city": "Los Angeles",
-   "headline": "Hospital admission on Oct 31, 2026 for chest pain; cardiac workup negative (3 days).",
+   "headline": "Georgianne was admitted after an Oct 31 ED visit for chest pain (cardiac workup negative). She has also been withdrawn, with 6 of 8 day center days missed and low mood after a friend's death, about 6 weeks after sertraline was started for a PHQ-9 of 14.",
    "counts": {
-    "high": 1,
-    "medium": 2,
-    "low": 1
+    "high": 3,
+    "medium": 0,
+    "low": 2
    },
    "flags": [
+    "psychosocial",
+    "medication_change",
     "hospital_or_ed"
    ]
   },
   {
-   "id": "da33a5c4-024c-c353-bdf1-697c1d22985c",
-   "name": "Lamont Kuhn",
-   "age": 84,
+   "id": "ee8576d5-c6ab-db1f-72ee-c60f1edc7262",
+   "name": "Benito Olvera",
+   "age": 76,
    "sex": "M",
    "city": "Los Angeles",
-   "headline": "Started apixaban 5 MG on Sep 7, 2026 for new atrial fibrillation found on ECG.",
+   "headline": "Benito has new evening confusion with a stove safety event, an 8.6% weight loss since Sep 5, and low mood with missed day center days. These all appeared after his Oct 21 hospital admission.",
    "counts": {
-    "high": 1,
+    "high": 2,
     "medium": 2,
     "low": 1
    },
    "flags": [
-    "medication_change"
+    "cognition",
+    "weight_loss"
+   ]
+  },
+  {
+   "id": "835bbc07-b7e4-858e-8998-92249f9ff74e",
+   "name": "Dorthea Gutkowski",
+   "age": 71,
+   "sex": "F",
+   "city": "Cathedral City",
+   "headline": "New evening confusion for about two weeks, including a stove left on, together with spouse caregiver exhaustion and a respite request, needs prompt team attention for safety and supports.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 2
+   },
+   "flags": [
+    "cognition",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "23d5346a-3e4d-83f0-c991-b2f876f13dae",
+   "name": "Elmer Murray",
+   "age": 82,
+   "sex": "M",
+   "city": "Sunnyvale",
+   "headline": "Elmer's blood pressure has risen across three readings (175/88 on 2026-11-07) with missed evening doses, and he is withdrawing and feeling down after a friend's death, while his caregiver Rosa reports exhaustion and asks for respite.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 0
+   },
+   "flags": [
+    "vitals",
+    "psychosocial"
+   ]
+  },
+  {
+   "id": "1462f7fa-b21b-4046-e34c-89994cf65db4",
+   "name": "Karissa Pfeffer",
+   "age": 85,
+   "sex": "F",
+   "city": "Oakland",
+   "headline": "New evening confusion reported Nov 15, after a Sep 23 fall and a Nov 5 ED visit for dehydration and dizziness, needs team follow-up on safety and workup results.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 0
+   },
+   "flags": [
+    "cognition",
+    "fall"
+   ]
+  },
+  {
+   "id": "b158639c-8d13-dfc8-6533-30ddeb64b0aa",
+   "name": "Lindy Smith",
+   "age": 85,
+   "sex": "F",
+   "city": "Rolling Hills Estates",
+   "headline": "Lindy has new evening confusion (including a stove left on), a 7.5% weight loss since Sep 5, and low mood with missed day center days. She started apixaban on Sep 8.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 0
+   },
+   "flags": [
+    "cognition",
+    "weight_loss"
    ]
   },
   {
@@ -546,13 +583,65 @@
    "age": 81,
    "sex": "F",
    "city": "Los Angeles",
-   "headline": "Weight down about 14 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "headline": "Mariana has lost 8% of her body weight (77.9 to 71.7 kg) from Sep 5 to Nov 24, 2026, with poor appetite. Her son and primary caregiver also reported exhaustion and asked for respite on Sep 27.",
    "counts": {
-    "high": 1,
-    "medium": 1,
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "6d94779f-af3f-06b0-2f80-4a0e1111027c",
+   "name": "Minnie Upton",
+   "age": 71,
+   "sex": "F",
+   "city": "Bakersfield",
+   "headline": "Minnie's bathing and lower-body dressing independence has declined since the last review, and she is skipping showers because she fears slipping. Sertraline was started on 2026-11-13 for depressive symptoms.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "functional_status",
+    "fall"
+   ]
+  },
+  {
+   "id": "8c1fde4c-d177-969f-6e61-88d89da77758",
+   "name": "Ricardo Fajardo",
+   "age": 78,
+   "sex": "M",
+   "city": "Modesto",
+   "headline": "Ricardo has lost 7.4% of his body weight in under 3 months and now needs moderate help with bathing and lower-body dressing, after an ED visit for dehydration and dizziness on Oct 9.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
     "low": 0
    },
    "flags": [
+    "weight_loss",
+    "functional_status"
+   ]
+  },
+  {
+   "id": "be868a94-6457-2a63-04e5-212f66ac90b0",
+   "name": "Salvador Mercado",
+   "age": 82,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Salvador has new evening confusion (including a stove left on) that began about two weeks before 2026-11-03, shortly after apixaban was started on 2026-10-24. He has also lost 8.4% of his weight since 2026-09-05.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
     "weight_loss"
    ]
   },
@@ -562,14 +651,116 @@
    "age": 82,
    "sex": "M",
    "city": "Granite Bay",
-   "headline": "Started apixaban 5 MG on Oct 29, 2026 for new atrial fibrillation found on ECG.",
+   "headline": "Santos now needs moderate help with bathing and lower-body dressing (independent at last review), is skipping showers out of fear of slipping, and started apixaban on 2026-10-29.",
    "counts": {
-    "high": 1,
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "functional_status",
+    "medication_change"
+   ]
+  },
+  {
+   "id": "5acf64b1-265c-3230-0e25-79bfb8519c9f",
+   "name": "Shelby Gulgowski",
+   "age": 74,
+   "sex": "M",
+   "city": "Lodi",
+   "headline": "Shelby has new moderate ADL dependence for bathing and lower-body dressing, with fear of slipping, plus three elevated BP readings and admitted missed evening doses since 2026-09-01.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "functional_status",
+    "vitals"
+   ]
+  },
+  {
+   "id": "c862299d-f928-8096-8963-323658b0290e",
+   "name": "Federico Delao",
+   "age": 83,
+   "sex": "M",
+   "city": "Buena Park",
+   "headline": "Federico has lost 5.7 kg (6.4%) since Sep 5 and has become withdrawn and low in mood since a close friend died, with day center attendance falling.",
+   "counts": {
+    "high": 2,
     "medium": 1,
     "low": 1
    },
    "flags": [
-    "medication_change"
+    "weight_loss",
+    "psychosocial"
+   ]
+  },
+  {
+   "id": "b2f73253-94ac-ffc4-881b-c08afb4669f9",
+   "name": "Luisa Quiroz",
+   "age": 70,
+   "sex": "F",
+   "city": "West Covina",
+   "headline": "Three linked concerns this period: new evening confusion with a stove-safety event, 8.4% weight loss in about 12 weeks, and three elevated BP readings with missed evening doses.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "weight_loss"
+   ]
+  },
+  {
+   "id": "8ecee851-2aa5-5abb-4264-8d4add66543d",
+   "name": "Rafael West",
+   "age": 83,
+   "sex": "M",
+   "city": "El Sobrante",
+   "headline": "New evening confusion since about late October, including the stove left on, began after apixaban was started (10/26) and an ED visit for dehydration and dizziness (11/2). The work-up planned on 11/9 has no documented results in the evidence.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "8ea8952a-9bc0-c643-686c-508badc8bb8a",
+   "name": "Annalee Zemlak",
+   "age": 90,
+   "sex": "F",
+   "city": "Porterville",
+   "headline": "Annalee has withdrawn since a close friend died last month, missing 6 of 8 day center days and reporting feeling \"down\", and her spouse Marcus, her primary caregiver, is exhausted and asking for respite.",
+   "counts": {
+    "high": 2,
+    "medium": 0,
+    "low": 2
+   },
+   "flags": [
+    "psychosocial",
+    "caregiver"
+   ]
+  },
+  {
+   "id": "da33a5c4-024c-c353-bdf1-697c1d22985c",
+   "name": "Lamont Kuhn",
+   "age": 84,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Blood pressure has been elevated on all three readings since September, with self-reported missed evening doses, and the primary caregiver (his son Linda) is exhausted and asking for respite.",
+   "counts": {
+    "high": 1,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "vitals"
    ]
   },
   {
@@ -578,7 +769,7 @@
    "age": 81,
    "sex": "M",
    "city": "Lakewood",
-   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "headline": "Evening confusion with a stove left on (reported Oct 4) has no documented work-up results, and a new low mood with day center withdrawal followed a close friend's death.",
    "counts": {
     "high": 1,
     "medium": 1,
@@ -587,90 +778,6 @@
    "flags": [
     "cognition"
    ]
-  },
-  {
-   "id": "23d5346a-3e4d-83f0-c991-b2f876f13dae",
-   "name": "Elmer Murray",
-   "age": 82,
-   "sex": "M",
-   "city": "Sunnyvale",
-   "headline": "Missed 4 of last 8 day center days; low mood after a friend's death. Depression screen planned.",
-   "counts": {
-    "high": 0,
-    "medium": 3,
-    "low": 0
-   },
-   "flags": []
-  },
-  {
-   "id": "8ea8952a-9bc0-c643-686c-508badc8bb8a",
-   "name": "Annalee Zemlak",
-   "age": 90,
-   "sex": "F",
-   "city": "Porterville",
-   "headline": "Primary caregiver (spouse) reports burnout and is requesting respite.",
-   "counts": {
-    "high": 0,
-    "medium": 2,
-    "low": 1
-   },
-   "flags": []
-  },
-  {
-   "id": "f98298b3-5d47-ad24-42ca-c483a2265acf",
-   "name": "Billie Lindgren",
-   "age": 85,
-   "sex": "M",
-   "city": "Merced",
-   "headline": "Primary caregiver (spouse) reports burnout and is requesting respite.",
-   "counts": {
-    "high": 0,
-    "medium": 2,
-    "low": 1
-   },
-   "flags": []
-  },
-  {
-   "id": "6d94779f-af3f-06b0-2f80-4a0e1111027c",
-   "name": "Minnie Upton",
-   "age": 71,
-   "sex": "F",
-   "city": "Bakersfield",
-   "headline": "Started sertraline 25 MG on Nov 13, 2026 for depressive symptoms (PHQ-9 of 14).",
-   "counts": {
-    "high": 0,
-    "medium": 2,
-    "low": 1
-   },
-   "flags": []
-  },
-  {
-   "id": "5acf64b1-265c-3230-0e25-79bfb8519c9f",
-   "name": "Shelby Gulgowski",
-   "age": 74,
-   "sex": "M",
-   "city": "Lodi",
-   "headline": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
-   "counts": {
-    "high": 0,
-    "medium": 2,
-    "low": 1
-   },
-   "flags": []
-  },
-  {
-   "id": "f5b72836-ed1d-8dfe-0569-83f635bc52a7",
-   "name": "Winfred Crist",
-   "age": 74,
-   "sex": "M",
-   "city": "Compton",
-   "headline": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
-   "counts": {
-    "high": 0,
-    "medium": 2,
-    "low": 0
-   },
-   "flags": []
   }
  ]
 }

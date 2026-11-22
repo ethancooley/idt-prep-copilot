@@ -177,3 +177,34 @@ def test_models_that_reject_forced_tools_fall_back_to_auto():
     assert structured(llm, "plan", "sonnet", "s", [], PLAN_TOOL, 500)["checks"] == ["a", "b", "c"]
     assert structured(llm, "plan", "sonnet", "s", [], PLAN_TOOL, 500)["checks"] == ["a", "b", "c"]
     assert fake.choices == ["tool", "auto", "auto"]  # learns once, then stops forcing for that model
+
+
+class CutOffClaude(ScriptedClaude):
+    """The first gather reply asks for a search with no query, as happens when a reply is cut off."""
+
+    def __init__(self):
+        super().__init__()
+        self.retried = False
+
+    def create(self, **kw):
+        if (kw.get("tool_choice") or {}).get("name") is None:
+            last = kw["messages"][-1]
+            content = last["content"] if isinstance(last["content"], list) else []
+            rejected = [c for c in content if c.get("type") == "tool_result" and c.get("is_error")]
+            if rejected:
+                self.retried = "needs query" in rejected[0]["content"]
+                return _response(_tool("search_notes", {"query": "fall"}, 3), stop="tool_use")
+            if len(kw["messages"]) == 1:
+                return _response(_tool("search_notes", {}, 1), stop="tool_use")
+        return super().create(**kw)
+
+
+def test_a_lookup_missing_its_query_is_sent_back_not_run(participant_id):
+    model = CutOffClaude()
+    events = []
+    brief = asyncio.run(run_agent(participant_id, LLM(model), InProcessChartClient(), AgentConfig(),
+                                  emit=events.append))
+    assert model.retried
+    searches = [e for e in events if e["type"] == "tool_end" and e["tool"] == "search_notes"]
+    assert searches and all(e["ok"] and e["args"].get("query") for e in searches)
+    assert brief.items

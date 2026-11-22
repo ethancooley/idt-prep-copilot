@@ -81,7 +81,9 @@ Emit = Callable[[dict], None]
 def describe_result(name: str, result: Any) -> str:
     """A one-line, human-readable summary of what a chart tool returned (for the live progress view)."""
     if isinstance(result, dict) and "error" in result:
-        return f"error: {result['error']}"
+        first = str(result["error"]).split("\n")[0]
+        first = first.removeprefix(f"Error executing tool {name}: ")
+        return "the chart rejected this lookup: " + (first if len(first) <= 90 else first[:87] + "...")
     try:
         if name == "get_notes":
             return f"{len(result)} note{'s' if len(result) != 1 else ''}"
@@ -162,6 +164,8 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None,
         calls = list(state.get("tool_calls", []))
         tools = await chart.tools()
         takes_pid = {t["name"] for t in tools if "participant_id" in t["input_schema"].get("properties", {})}
+        required = {t["name"]: [k for k in t["input_schema"].get("required", []) if k != "participant_id"]
+                    for t in tools}
         brief_of_task = (
             f"Participant id: {pid}\nReview period: {summary['window_start']} to {summary['review_date']}\n"
             "Plan:\n" + "\n".join(f"- {c}" for c in state["plan"]))
@@ -172,7 +176,7 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None,
         called: set[str] = {c["tool"] for c in calls}
 
         for _ in range(cfg.max_tool_rounds):
-            resp = await call_llm("gather", cfg.gather_model, prompts.GATHER, messages, max_tokens=1500, tools=tools)
+            resp = await call_llm("gather", cfg.gather_model, prompts.GATHER, messages, max_tokens=4000, tools=tools)
             messages.append({"role": "assistant", "content": assistant_blocks(resp)})
             uses = [b for b in resp.content if b.type == "tool_use"]
             if not uses:
@@ -182,6 +186,13 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None,
                 args = dict(use.input)
                 if use.name in takes_pid:
                     args["participant_id"] = pid  # the agent may only read this participant's chart
+                missing = [k for k in required.get(use.name, []) if args.get(k) in (None, "")]
+                if missing:
+                    # Usually a reply cut off mid-call. Ask again instead of sending a broken lookup.
+                    results.append({"type": "tool_result", "tool_use_id": use.id, "is_error": True,
+                                    "content": f"{use.name} needs {', '.join(missing)}. Call it again with "
+                                               f"{'it' if len(missing) == 1 else 'them'} filled in, or skip it."})
+                    continue
                 result = await chart_call(use.name, args, "model")
                 _absorb(use.name, result, notes, records)
                 calls.append({"tool": use.name, "args": args, "by": "model"})
@@ -302,12 +313,22 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None,
 
 async def run_agent(participant_id: str, llm: LLM, chart: ChartClient, config: AgentConfig | None = None,
                     emit: Emit | None = None) -> Brief:
-    graph = build_agent(llm, chart, config, emit)
+    """Every run records its progress events in brief.run["trace"], so the site can replay what the
+    agent did step by step: the plan, each chart lookup, every draft, and the verifier's verdicts."""
+    trace: list[dict] = []
+
+    def record(event: dict) -> None:
+        trace.append(event)
+        if emit is not None:
+            emit(event)
+
+    graph = build_agent(llm, chart, config, record)
     start = time.perf_counter()
     state = await graph.ainvoke({"participant_id": participant_id, "attempts": 0, "notes": {}, "records": {},
                                  "tool_calls": []}, {"recursion_limit": 25})
     brief = Brief.model_validate(state["final"])
     brief.run["seconds"] = round(time.perf_counter() - start, 2)
+    brief.run["trace"] = trace
     return brief
 
 

@@ -11,6 +11,7 @@ python -m pip install --quiet --upgrade \
   --platform manylinux2014_x86_64 --implementation cp --python-version 3.13 --only-binary=:all: \
   --target "$OUT" -r deploy/requirements-lambda.txt
 cp -R src/idt_copilot "$OUT/"
+mkdir -p "$OUT/data" && cp -R data/golden "$OUT/data/"   # answer keys, so live runs can be scored too
 cp deploy/run.sh "$OUT/run.sh"
 chmod 755 "$OUT/run.sh"
 find "$OUT" -name "__pycache__" -type d -prune -exec rm -rf {} +

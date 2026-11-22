@@ -151,3 +151,22 @@ def summarize(scores: list[ParticipantScore]) -> dict:
 
 def as_dict(score: ParticipantScore) -> dict:
     return {**asdict(score), "recall": round(score.recall, 3)}
+
+
+def explain(brief: Brief, key: AnswerKey) -> dict:
+    """The answer key for one participant, with which brief lines caught each item, for the web app."""
+    items = brief.items
+    must = []
+    for t in key.must_surface:
+        hits = [i for i, item in enumerate(items) if _matches(t, item)]
+        must.append({"id": t.id, "category": t.category, "severity": t.severity.value, "summary": t.summary,
+                     "event_date": t.event_date.isoformat() if t.event_date else None,
+                     "note_ids": t.supporting_note_ids, "caught_by": hits})
+    old = []
+    for d in key.must_not_surface_as_new:
+        phrases = _date_phrases(d.reason)
+        bad = [i for i, item in enumerate(items)
+               if set(d.note_ids) & set(item.citations) or any(p in item.statement.lower() for p in phrases)]
+        old.append({"id": d.id, "reason": d.reason, "note_ids": d.note_ids, "reported_by": bad})
+    return {"window_start": key.window_start.isoformat(), "review_date": key.review_date.isoformat(),
+            "must_surface": must, "old_events": old}

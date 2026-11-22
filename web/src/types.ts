@@ -34,7 +34,44 @@ export interface Brief {
     cost_usd?: number;
     seconds?: number;
     by_step?: Record<string, { calls: number; cost_usd: number }>;
+    trace?: AgentEvent[];
   };
+}
+
+// ---------------------------------------------------------------- what the agent did, step by step
+
+export type ToolArgs = Record<string, unknown>;
+export type AgentEvent =
+  | { type: "start"; name: string; runs_left_today: number; models: Record<string, string> }
+  | { type: "heartbeat" }
+  | { type: "step"; step: "plan" | "gather" | "draft" | "verify" | "finalize"; t: number; cost_usd: number;
+      model?: string; attempt?: number; notes?: number; items?: number; kept?: number; removed?: number }
+  | { type: "plan"; checks: string[]; t: number; cost_usd: number }
+  | { type: "tool_start"; tool: string; args: ToolArgs; by: string; t: number; cost_usd: number }
+  | { type: "tool_end"; tool: string; args: ToolArgs; by: string; ok: boolean; summary: string; t: number;
+      cost_usd: number }
+  | { type: "draft"; headline: string; t: number; cost_usd: number;
+      items: { severity: Severity; category: string; statement: string; citations: string[] }[] }
+  | { type: "verdicts"; attempt: number; retry: boolean; t: number; cost_usd: number;
+      results: { index: number; verdict: Verdict; reason: string; statement: string }[] }
+  | { type: "done"; bundle: Bundle }
+  | { type: "error"; message: string };
+
+// ---------------------------------------------------------------- the answer key (test data only)
+
+export interface AnswerKey {
+  window_start: string;
+  review_date: string;
+  must_surface: {
+    id: string;
+    category: string;
+    severity: Severity;
+    summary: string;
+    event_date: string | null;
+    note_ids: string[];
+    caught_by: number[];
+  }[];
+  old_events: { id: string; reason: string; note_ids: string[]; reported_by: number[] }[];
 }
 
 export interface Note {
@@ -92,6 +129,8 @@ export interface Bundle {
     };
   };
   live?: { runs_left_today: number };
+  answer_key?: AnswerKey;
+  older_notes?: Note[];
 }
 
 export interface Evaluation {

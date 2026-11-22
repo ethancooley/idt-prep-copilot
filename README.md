@@ -129,6 +129,14 @@ Each run writes `evals/runs/<timestamp>/` with the briefs, `results.json`, and a
 never trigger a model call.
 
 - **Review queue** of participants due for IDT review, most urgent first
+- **Four steps on every participant's page**, written for people who don't code:
+  1. *The chart*: every note and record from the review period, readable in full, with the ones the brief
+     cites marked
+  2. *What the agent did*: the recorded run, replayable: the plan, every chart lookup and what it returned,
+     each draft, and the checker highlighting or striking each line
+  3. *The brief*, below
+  4. *The answer key*: the events planted in that chart, whether the brief caught each one, and the
+     note that proves it
 - **Brief reader** with a timeline of every note since the last review, colored by discipline. Selecting a
   citation opens the source note with the most relevant sentences highlighted, or the vitals, encounters,
   medication, or immunization record it points to

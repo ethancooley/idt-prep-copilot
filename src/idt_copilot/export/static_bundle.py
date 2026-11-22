@@ -20,6 +20,7 @@ from pathlib import Path
 
 from idt_copilot.agent.schema import Brief, BriefItem, Verdict
 from idt_copilot.chart.repository import ChartRepository
+from idt_copilot.evals.score import explain
 from idt_copilot.models import AnswerKey
 
 SEVERITIES = ("high", "medium", "low")
@@ -40,7 +41,14 @@ def sample_brief(key: AnswerKey, summary: dict) -> Brief:
     )
 
 
-def participant_bundle(repo: ChartRepository, brief: Brief) -> dict:
+def load_answer_key(participant_id: str, golden_dir: Path = Path("data/golden")) -> AnswerKey | None:
+    path = golden_dir / f"{participant_id}.json"
+    return AnswerKey.model_validate_json(path.read_text()) if path.exists() else None
+
+
+def participant_bundle(repo: ChartRepository, brief: Brief, key: AnswerKey | None = None) -> dict:
+    """Everything the site shows for one participant: the chart the agent read, the brief with its
+    step-by-step trace, and (when there is one) the answer key with what the brief caught."""
     pid = brief.participant_id
     summary = repo.get_participant_summary(pid)
     notes = {n["id"]: n for n in repo.get_notes(pid, limit=200)}
@@ -50,7 +58,7 @@ def participant_bundle(repo: ChartRepository, brief: Brief) -> dict:
             notes[note_id] = repo.get_note(note_id)
         except LookupError:
             pass
-    return {
+    bundle = {
         "participant": summary,
         "brief": brief.model_dump(mode="json"),
         "notes": sorted(notes.values(), key=lambda n: (n["note_date"], n["id"])),
@@ -61,6 +69,18 @@ def participant_bundle(repo: ChartRepository, brief: Brief) -> dict:
             "record:immunizations": repo.get_immunizations(pid),
         },
     }
+    if key is not None:
+        bundle["answer_key"] = explain(brief, key)
+        older = {}
+        for d in key.must_not_surface_as_new:
+            for note_id in d.note_ids:
+                if note_id not in notes:
+                    try:
+                        older[note_id] = repo.get_note(note_id)
+                    except LookupError:
+                        pass
+        bundle["older_notes"] = sorted(older.values(), key=lambda n: (n["note_date"], n["id"]))
+    return bundle
 
 
 def index_entry(bundle: dict) -> dict:
@@ -97,7 +117,7 @@ def main(argv: list[str] | None = None) -> None:
         old.unlink()
     entries = []
     for brief in briefs:
-        bundle = participant_bundle(repo, brief)
+        bundle = participant_bundle(repo, brief, keys.get(brief.participant_id))
         (args.out_dir / "p" / f"{brief.participant_id}.json").write_text(json.dumps(bundle))
         entries.append(index_entry(bundle))
     entries.sort(key=lambda e: (-e["counts"]["high"], -e["counts"]["medium"], e["name"]))

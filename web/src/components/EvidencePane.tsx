@@ -58,7 +58,7 @@ function NoteView({ note, claim }: { note: Note; claim: BriefItem | null }) {
   );
 }
 
-function RecordView({ bundle, cite }: { bundle: Bundle; cite: string }) {
+export function RecordView({ bundle, cite }: { bundle: Bundle; cite: string }) {
   const r = bundle.records;
   if (cite === "record:vitals") {
     const w = r["record:vitals"].weight;

@@ -36,6 +36,32 @@ export default function Queue({ index }: { index: Index }) {
         ) : null}
       </section>
 
+      <section aria-labelledby="flow-heading" className="flow">
+        <h2 id="flow-heading">Open any participant to see four things</h2>
+        <ol className="flow-steps">
+          <li>
+            <span className="story-num" aria-hidden="true">1</span>
+            <strong>The chart</strong>
+            <p>Every note and record from the care team since the last review. This is what the agent had to work with.</p>
+          </li>
+          <li>
+            <span className="story-num" aria-hidden="true">2</span>
+            <strong>What the agent did</strong>
+            <p>Each step, replayed: its checklist, every chart lookup and what came back, its draft, and the check of every line.</p>
+          </li>
+          <li>
+            <span className="story-num" aria-hidden="true">3</span>
+            <strong>The brief</strong>
+            <p>What changed and what to discuss, with each line linked to its source, for a clinician to approve or fix.</p>
+          </li>
+          <li>
+            <span className="story-num" aria-hidden="true">4</span>
+            <strong>The answer key</strong>
+            <p>The events planted in that chart for testing, and whether the brief caught each one.</p>
+          </li>
+        </ol>
+      </section>
+
       <section aria-labelledby="queue-heading" className="queue">
         <div className="queue-heading">
           <h2 id="queue-heading">Due for review {reviewDate}</h2>
