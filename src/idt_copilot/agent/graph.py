@@ -14,7 +14,7 @@ import asyncio
 import json
 import time
 from dataclasses import dataclass
-from typing import Any, TypedDict
+from typing import Any, Callable, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
@@ -75,8 +75,67 @@ def _absorb(name: str, result: Any, notes: dict, records: dict) -> None:
         notes[n["id"]] = {k: n[k] for k in ("id", "note_date", "author_role", "note_type", "text")}
 
 
-def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None):
+Emit = Callable[[dict], None]
+
+
+def describe_result(name: str, result: Any) -> str:
+    """A one-line, human-readable summary of what a chart tool returned (for the live progress view)."""
+    if isinstance(result, dict) and "error" in result:
+        return f"error: {result['error']}"
+    try:
+        if name == "get_notes":
+            return f"{len(result)} note{'s' if len(result) != 1 else ''}"
+        if name == "search_notes":
+            n = len(result.get("results", []))
+            return f"{n} matching note{'s' if n != 1 else ''} ({result.get('mode', 'keyword')} search)"
+        if name == "get_note":
+            return f"{result.get('note_type', 'note')} from {result.get('note_date', '?')}"
+        if name == "get_vitals":
+            parts = []
+            if w := result.get("weight"):
+                parts.append(f"{len(w.get('readings', []))} weights")
+                if c := w.get("change"):
+                    parts.append(f"weight {c['percent']:+.1f}%")
+            if bp := result.get("blood_pressure"):
+                parts.append(f"{len(bp.get('readings', []))} blood pressures, {bp.get('elevated_count', 0)} high")
+            return ", ".join(parts) or "no readings"
+        if name == "get_encounters":
+            return f"{len(result)} encounter{'s' if len(result) != 1 else ''}"
+        if name == "get_medication_changes":
+            return f"{len(result.get('started', []))} started, {len(result.get('stopped', []))} stopped"
+        if name == "get_immunizations":
+            return "flu vaccine this season: " + ("yes" if result.get("flu_vaccine_this_season") else "no")
+        if name == "get_participant_summary":
+            return (f"age {result.get('age')}, {len(result.get('conditions', []))} conditions, "
+                    f"{len(result.get('active_medications', []))} medications")
+    except (AttributeError, KeyError, TypeError):
+        pass
+    return "done"
+
+
+def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None, emit: Emit | None = None):
+    """`emit` receives a small dict at each step (plan, every tool call, draft, verdicts) so a caller
+    can show the agent working. It never changes what the agent does."""
     cfg = config or AgentConfig()
+    started = time.perf_counter()
+
+    def send(event: dict) -> None:
+        if emit is None:
+            return
+        try:
+            emit({**event, "t": round(time.perf_counter() - started, 1),
+                  "cost_usd": llm.usage.as_dict().get("cost_usd", 0)})
+        except Exception:  # a broken listener must never break a run
+            pass
+
+    async def chart_call(name: str, args: dict, by: str) -> Any:
+        shown = {k: v for k, v in args.items() if k != "participant_id"}
+        send({"type": "tool_start", "tool": name, "args": shown, "by": by})
+        result = await chart.call(name, args)
+        send({"type": "tool_end", "tool": name, "args": shown, "by": by,
+              "ok": not (isinstance(result, dict) and "error" in result),
+              "summary": describe_result(name, result)})
+        return result
 
     async def call_llm(*args, **kwargs):
         return await asyncio.to_thread(llm.call, *args, **kwargs)
@@ -86,15 +145,19 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
 
     async def plan(state: AgentState) -> AgentState:
         pid = state["participant_id"]
-        summary = await chart.call("get_participant_summary", {"participant_id": pid})
+        send({"type": "step", "step": "plan", "model": cfg.plan_model})
+        summary = await chart_call("get_participant_summary", {"participant_id": pid}, "agent")
         if isinstance(summary, dict) and "error" in summary:
             raise ValueError(summary["error"])
         result = await call_structured("plan", cfg.plan_model, prompts.PLAN,
                                        [{"role": "user", "content": json.dumps(summary)}], PLAN_TOOL, 1500)
+        send({"type": "plan", "checks": result["checks"]})
         return {"summary": summary, "plan": result["checks"]}
 
     async def gather(state: AgentState) -> AgentState:
         pid, summary = state["participant_id"], state["summary"]
+        send({"type": "step", "step": "gather", "model": cfg.gather_model,
+              "attempt": state.get("attempts", 0) + 1})
         notes, records = dict(state.get("notes", {})), dict(state.get("records", {}))
         calls = list(state.get("tool_calls", []))
         tools = await chart.tools()
@@ -119,7 +182,7 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
                 args = dict(use.input)
                 if use.name in takes_pid:
                     args["participant_id"] = pid  # the agent may only read this participant's chart
-                result = await chart.call(use.name, args)
+                result = await chart_call(use.name, args, "model")
                 _absorb(use.name, result, notes, records)
                 calls.append({"tool": use.name, "args": args, "by": "model"})
                 called.add(use.name)
@@ -131,13 +194,14 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
         # Safety net: the brief must never miss a whole category because the model skipped a tool.
         for name in CORE_TOOLS:
             if name not in called:
-                result = await chart.call(name, {"participant_id": pid})
+                result = await chart_call(name, {"participant_id": pid}, "safety_net")
                 _absorb(name, result, notes, records)
                 calls.append({"tool": name, "args": {"participant_id": pid}, "by": "safety_net"})
         return {"notes": notes, "records": records, "tool_calls": calls}
 
     async def draft(state: AgentState) -> AgentState:
         s = state["summary"]
+        send({"type": "step", "step": "draft", "model": cfg.draft_model, "notes": len(state["notes"])})
         evidence = {
             "participant": {k: s.get(k) for k in ("id", "first_name", "last_name", "age", "sex", "conditions",
                                                    "active_medications", "allergies")},
@@ -151,10 +215,14 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
                        "Fix or drop those claims."
         draft = await call_structured("draft", cfg.draft_model, prompts.DRAFT,
                                       [{"role": "user", "content": content}], BRIEF_TOOL, 4000)
+        send({"type": "draft", "headline": draft.get("headline", ""),
+              "items": [{k: i.get(k) for k in ("severity", "category", "statement", "citations")}
+                        for i in draft.get("items", [])]})
         return {"draft": draft}
 
     async def verify(state: AgentState) -> AgentState:
         items = state["draft"].get("items", [])
+        send({"type": "step", "step": "verify", "model": cfg.verify_model, "items": len(items)})
         notes, records = state["notes"], state["records"]
         verdicts: dict[int, dict] = {}
         to_check = []
@@ -188,8 +256,13 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
         results = [verdicts[i] for i in range(len(items))]
         rejected = [r for r in results if r["verdict"] == Verdict.unsupported.value]
         feedback = "\n".join(f"- \"{items[r['index']]['statement']}\": {r['reason']}" for r in rejected)
+        attempts = state.get("attempts", 0) + 1
+        send({"type": "verdicts", "attempt": attempts,
+              "results": [{"index": r["index"], "verdict": r["verdict"], "reason": r["reason"],
+                           "statement": items[r["index"]]["statement"]} for r in results],
+              "retry": bool(feedback) and attempts < cfg.max_attempts})
         return {"draft": {**state["draft"], "items": items}, "verification": results,
-                "attempts": state.get("attempts", 0) + 1, "feedback": feedback}
+                "attempts": attempts, "feedback": feedback}
 
     def after_verify(state: AgentState) -> str:
         if state["feedback"] and state["attempts"] < cfg.max_attempts:
@@ -211,6 +284,7 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
                             "verify": cfg.verify_model},
                  "draft_attempts": state["attempts"], "tool_calls": state["tool_calls"], **llm.usage.as_dict()},
         )
+        send({"type": "step", "step": "finalize", "kept": len(kept), "removed": len(removed)})
         return {"final": brief.model_dump(mode="json")}
 
     g = StateGraph(AgentState)
@@ -226,8 +300,9 @@ def build_agent(llm: LLM, chart: ChartClient, config: AgentConfig | None = None)
     return g.compile()
 
 
-async def run_agent(participant_id: str, llm: LLM, chart: ChartClient, config: AgentConfig | None = None) -> Brief:
-    graph = build_agent(llm, chart, config)
+async def run_agent(participant_id: str, llm: LLM, chart: ChartClient, config: AgentConfig | None = None,
+                    emit: Emit | None = None) -> Brief:
+    graph = build_agent(llm, chart, config, emit)
     start = time.perf_counter()
     state = await graph.ainvoke({"participant_id": participant_id, "attempts": 0, "notes": {}, "records": {},
                                  "tool_calls": []}, {"recursion_limit": 25})

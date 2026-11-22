@@ -1,0 +1,676 @@
+{
+ "generated_at": "2026-11-22T03:51:22+00:00",
+ "source": "sample",
+ "review_date": "2026-11-30",
+ "window_start": "2026-09-01",
+ "models": {},
+ "evaluation": null,
+ "participants": [
+  {
+   "id": "ee8576d5-c6ab-db1f-72ee-c60f1edc7262",
+   "name": "Benito Olvera",
+   "age": 76,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Weight down about 18 lb (9%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "weight_loss",
+    "cognition",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "b81661eb-c2df-db81-6895-097a32ddbda1",
+   "name": "Carlota Maya",
+   "age": 81,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "cognition",
+    "hospital_or_ed",
+    "weight_loss"
+   ]
+  },
+  {
+   "id": "e2062053-c54f-e137-1e90-5872f5dc95c0",
+   "name": "Chong Smitham",
+   "age": 86,
+   "sex": "M",
+   "city": "Granite Bay",
+   "headline": "Weight down about 13 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "fall",
+    "cognition"
+   ]
+  },
+  {
+   "id": "1f2cf8aa-8ddb-cc82-042d-663fa814f69c",
+   "name": "Cristian M\u00e9ndez",
+   "age": 91,
+   "sex": "M",
+   "city": "Fresno",
+   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "weight_loss",
+    "fall"
+   ]
+  },
+  {
+   "id": "200f5e70-66ec-1a4c-a48b-6efee352ee25",
+   "name": "Elena Valdivia",
+   "age": 70,
+   "sex": "F",
+   "city": "Napa",
+   "headline": "Weight down about 13 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "fall",
+    "cognition"
+   ]
+  },
+  {
+   "id": "b158639c-8d13-dfc8-6533-30ddeb64b0aa",
+   "name": "Lindy Smith",
+   "age": 85,
+   "sex": "F",
+   "city": "Rolling Hills Estates",
+   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "cognition",
+    "weight_loss",
+    "medication_change"
+   ]
+  },
+  {
+   "id": "bde01e11-0f68-c9f7-13b5-8f574c33248d",
+   "name": "Mohammed Gutkowski",
+   "age": 77,
+   "sex": "M",
+   "city": "Brea",
+   "headline": "Weight down about 13 lb (6%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "weight_loss",
+    "medication_change",
+    "fall"
+   ]
+  },
+  {
+   "id": "12daa29d-1ab3-e1da-43f3-f4ff64980e5f",
+   "name": "Roman O'Keefe",
+   "age": 74,
+   "sex": "M",
+   "city": "Kingsburg",
+   "headline": "Fall at home on Oct 19, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
+   "counts": {
+    "high": 3,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "fall",
+    "weight_loss",
+    "cognition"
+   ]
+  },
+  {
+   "id": "1462f7fa-b21b-4046-e34c-89994cf65db4",
+   "name": "Karissa Pfeffer",
+   "age": 85,
+   "sex": "F",
+   "city": "Oakland",
+   "headline": "ED visit on Nov 5, 2026 for dehydration and dizziness.",
+   "counts": {
+    "high": 3,
+    "medium": 0,
+    "low": 0
+   },
+   "flags": [
+    "hospital_or_ed",
+    "fall",
+    "cognition"
+   ]
+  },
+  {
+   "id": "55e538c8-eceb-9516-2a67-f2246194560b",
+   "name": "Lucas Smith",
+   "age": 71,
+   "sex": "M",
+   "city": "Milpitas",
+   "headline": "Weight down about 15 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 3,
+    "medium": 0,
+    "low": 0
+   },
+   "flags": [
+    "weight_loss",
+    "cognition",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "8ecee851-2aa5-5abb-4264-8d4add66543d",
+   "name": "Rafael West",
+   "age": 83,
+   "sex": "M",
+   "city": "El Sobrante",
+   "headline": "ED visit on Nov 2, 2026 for dehydration and dizziness.",
+   "counts": {
+    "high": 3,
+    "medium": 0,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "cognition",
+    "medication_change"
+   ]
+  },
+  {
+   "id": "be868a94-6457-2a63-04e5-212f66ac90b0",
+   "name": "Salvador Mercado",
+   "age": 82,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Started apixaban 5 MG on Oct 24, 2026 for new atrial fibrillation found on ECG.",
+   "counts": {
+    "high": 3,
+    "medium": 0,
+    "low": 1
+   },
+   "flags": [
+    "medication_change",
+    "weight_loss",
+    "cognition"
+   ]
+  },
+  {
+   "id": "853cdf9c-16ce-7d6f-f8c2-03c2948d4ee4",
+   "name": "Damaris Bayer",
+   "age": 71,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "ED visit on Sep 18, 2026 for urinary tract infection with acute confusion.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 0
+   },
+   "flags": [
+    "hospital_or_ed",
+    "fall"
+   ]
+  },
+  {
+   "id": "835bbc07-b7e4-858e-8998-92249f9ff74e",
+   "name": "Dorthea Gutkowski",
+   "age": 71,
+   "sex": "F",
+   "city": "Cathedral City",
+   "headline": "Hospital admission on Sep 29, 2026 for chest pain; cardiac workup negative (3 days).",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "cognition"
+   ]
+  },
+  {
+   "id": "ddb0e16f-a868-42db-4354-2330906fd6ea",
+   "name": "Tajuana Eichmann",
+   "age": 80,
+   "sex": "F",
+   "city": "Lakeside",
+   "headline": "ED visit on Sep 18, 2026 for urinary tract infection with acute confusion.",
+   "counts": {
+    "high": 2,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "fall"
+   ]
+  },
+  {
+   "id": "c862299d-f928-8096-8963-323658b0290e",
+   "name": "Federico Delao",
+   "age": 83,
+   "sex": "M",
+   "city": "Buena Park",
+   "headline": "Weight down about 13 lb (6%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "ce68b239-7833-761e-5c61-7e8de395e132",
+   "name": "Fred Streich",
+   "age": 75,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Weight down about 12 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "fall"
+   ]
+  },
+  {
+   "id": "9cc6e430-3b55-303d-d1f8-d0e79e0fe215",
+   "name": "Garland Beahan",
+   "age": 79,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "cognition",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "1551c7c3-b324-6115-47fb-c78e719d5d96",
+   "name": "Gonzalo Carrillo",
+   "age": 80,
+   "sex": "M",
+   "city": "Stevenson Ranch",
+   "headline": "Weight down about 17 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "fall"
+   ]
+  },
+  {
+   "id": "54d552f1-657b-f05b-0b55-6a1a72e2dfa9",
+   "name": "Hank Willms",
+   "age": 89,
+   "sex": "M",
+   "city": "Tracy",
+   "headline": "Weight down about 16 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "fall"
+   ]
+  },
+  {
+   "id": "126822f8-bc47-c89f-2641-da07aca9b7bb",
+   "name": "Jer\u00f3nimo Montes",
+   "age": 73,
+   "sex": "M",
+   "city": "San Diego",
+   "headline": "Fall at home on Sep 25, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "fall",
+    "cognition"
+   ]
+  },
+  {
+   "id": "a8c7671b-a81f-cbeb-d613-cb365d1928bb",
+   "name": "Kraig Steuber",
+   "age": 75,
+   "sex": "M",
+   "city": "Chula Vista",
+   "headline": "ED visit on Oct 3, 2026 for urinary tract infection with acute confusion.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "cognition"
+   ]
+  },
+  {
+   "id": "b2f73253-94ac-ffc4-881b-c08afb4669f9",
+   "name": "Luisa Quiroz",
+   "age": 70,
+   "sex": "F",
+   "city": "West Covina",
+   "headline": "Weight down about 13 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "weight_loss",
+    "cognition"
+   ]
+  },
+  {
+   "id": "de1e1874-bb08-e1de-bd72-d544fcf227f1",
+   "name": "Renato Botsford",
+   "age": 75,
+   "sex": "M",
+   "city": "Albany",
+   "headline": "Weight down about 15 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "weight_loss",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "8c1fde4c-d177-969f-6e61-88d89da77758",
+   "name": "Ricardo Fajardo",
+   "age": 78,
+   "sex": "M",
+   "city": "Modesto",
+   "headline": "Weight down about 14 lb (7%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 2,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "weight_loss",
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "f616934b-f469-da11-01f0-1d16f34249a8",
+   "name": "Winford Fahey",
+   "age": 73,
+   "sex": "M",
+   "city": "San Diego",
+   "headline": "ED visit on Sep 12, 2026 for COPD exacerbation.",
+   "counts": {
+    "high": 2,
+    "medium": 0,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed",
+    "cognition"
+   ]
+  },
+  {
+   "id": "0669150c-6293-58dd-99d9-d75855bc9fc5",
+   "name": "Debora Hudson",
+   "age": 75,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "Fall at home on Oct 2, 2026 with a skin tear to the left forearm; PT recommends a walker and home safety evaluation.",
+   "counts": {
+    "high": 1,
+    "medium": 3,
+    "low": 1
+   },
+   "flags": [
+    "fall"
+   ]
+  },
+  {
+   "id": "aa0bac69-46b8-9677-e881-805eb63382d1",
+   "name": "Francene Keebler",
+   "age": 86,
+   "sex": "F",
+   "city": "San Francisco",
+   "headline": "Fall at home on Oct 25, 2026 with no injury; PT recommends a walker and home safety evaluation.",
+   "counts": {
+    "high": 1,
+    "medium": 3,
+    "low": 0
+   },
+   "flags": [
+    "fall"
+   ]
+  },
+  {
+   "id": "cc4adb8a-5881-ebb3-533e-d970dcac7896",
+   "name": "Darleen Bogan",
+   "age": 80,
+   "sex": "F",
+   "city": "Moorpark",
+   "headline": "Fall at home on Oct 10, 2026 with right hip bruising; PT recommends a walker and home safety evaluation.",
+   "counts": {
+    "high": 1,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "fall"
+   ]
+  },
+  {
+   "id": "7d8911a6-9697-5c23-3a4a-a22ef14ec200",
+   "name": "Georgianne Funk",
+   "age": 68,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "Hospital admission on Oct 31, 2026 for chest pain; cardiac workup negative (3 days).",
+   "counts": {
+    "high": 1,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "hospital_or_ed"
+   ]
+  },
+  {
+   "id": "da33a5c4-024c-c353-bdf1-697c1d22985c",
+   "name": "Lamont Kuhn",
+   "age": 84,
+   "sex": "M",
+   "city": "Los Angeles",
+   "headline": "Started apixaban 5 MG on Sep 7, 2026 for new atrial fibrillation found on ECG.",
+   "counts": {
+    "high": 1,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": [
+    "medication_change"
+   ]
+  },
+  {
+   "id": "08e17e4e-b18f-32c9-fbf5-996e180b5ca3",
+   "name": "Mariana Arriaga",
+   "age": 81,
+   "sex": "F",
+   "city": "Los Angeles",
+   "headline": "Weight down about 14 lb (8%) since Sep 5, 2026 with poor appetite; supplement started.",
+   "counts": {
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "flags": [
+    "weight_loss"
+   ]
+  },
+  {
+   "id": "d497eb21-1b94-c3b6-e5f9-e585a64f248b",
+   "name": "Santos Zieme",
+   "age": 82,
+   "sex": "M",
+   "city": "Granite Bay",
+   "headline": "Started apixaban 5 MG on Oct 29, 2026 for new atrial fibrillation found on ECG.",
+   "counts": {
+    "high": 1,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "medication_change"
+   ]
+  },
+  {
+   "id": "7bbb35dc-7d97-fe30-1027-7f8096398496",
+   "name": "Vincenzo Bernier",
+   "age": 81,
+   "sex": "M",
+   "city": "Lakewood",
+   "headline": "New evening confusion for about two weeks, including leaving the stove on; workup ordered.",
+   "counts": {
+    "high": 1,
+    "medium": 1,
+    "low": 1
+   },
+   "flags": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "23d5346a-3e4d-83f0-c991-b2f876f13dae",
+   "name": "Elmer Murray",
+   "age": 82,
+   "sex": "M",
+   "city": "Sunnyvale",
+   "headline": "Missed 4 of last 8 day center days; low mood after a friend's death. Depression screen planned.",
+   "counts": {
+    "high": 0,
+    "medium": 3,
+    "low": 0
+   },
+   "flags": []
+  },
+  {
+   "id": "8ea8952a-9bc0-c643-686c-508badc8bb8a",
+   "name": "Annalee Zemlak",
+   "age": 90,
+   "sex": "F",
+   "city": "Porterville",
+   "headline": "Primary caregiver (spouse) reports burnout and is requesting respite.",
+   "counts": {
+    "high": 0,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": []
+  },
+  {
+   "id": "f98298b3-5d47-ad24-42ca-c483a2265acf",
+   "name": "Billie Lindgren",
+   "age": 85,
+   "sex": "M",
+   "city": "Merced",
+   "headline": "Primary caregiver (spouse) reports burnout and is requesting respite.",
+   "counts": {
+    "high": 0,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": []
+  },
+  {
+   "id": "6d94779f-af3f-06b0-2f80-4a0e1111027c",
+   "name": "Minnie Upton",
+   "age": 71,
+   "sex": "F",
+   "city": "Bakersfield",
+   "headline": "Started sertraline 25 MG on Nov 13, 2026 for depressive symptoms (PHQ-9 of 14).",
+   "counts": {
+    "high": 0,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": []
+  },
+  {
+   "id": "5acf64b1-265c-3230-0e25-79bfb8519c9f",
+   "name": "Shelby Gulgowski",
+   "age": 74,
+   "sex": "M",
+   "city": "Lodi",
+   "headline": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+   "counts": {
+    "high": 0,
+    "medium": 2,
+    "low": 1
+   },
+   "flags": []
+  },
+  {
+   "id": "f5b72836-ed1d-8dfe-0569-83f635bc52a7",
+   "name": "Winfred Crist",
+   "age": 74,
+   "sex": "M",
+   "city": "Compton",
+   "headline": "Now needs moderate help with bathing and lower-body dressing (independent at last review); OT recommends more home care hours.",
+   "counts": {
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "flags": []
+  }
+ ]
+}
