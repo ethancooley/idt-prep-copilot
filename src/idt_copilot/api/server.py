@@ -13,7 +13,7 @@ Endpoints:
     POST /live-run           plain JSON: waits for the finished brief
 
 Secrets: when IDT_SSM_PREFIX is set (on Lambda), ANTHROPIC_API_KEY, DATABASE_URL and
-IDT_ACCESS_CODE are read once at startup from SSM Parameter Store, e.g. /idt-copilot/ANTHROPIC_API_KEY.
+IDT_ACCESS_CODE and IDT_ADMIN_TOKEN are read once at startup from SSM Parameter Store, e.g. /idt-copilot/ANTHROPIC_API_KEY.
 They are never written to logs.
 """
 from __future__ import annotations
@@ -23,10 +23,11 @@ import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from idt_copilot.agent.run import load_dotenv
+from idt_copilot.api.admin import handle_admin
 from idt_copilot.api.live import handle_live_run, open_live_run, stream_live_run
 
 MAX_BODY = 10_000
-SECRET_NAMES = ("ANTHROPIC_API_KEY", "DATABASE_URL", "IDT_ACCESS_CODE")
+SECRET_NAMES = ("ANTHROPIC_API_KEY", "DATABASE_URL", "IDT_ACCESS_CODE", "IDT_ADMIN_TOKEN")
 
 
 def load_ssm_secrets(prefix: str) -> None:
@@ -67,7 +68,7 @@ class Handler(BaseHTTPRequestHandler):
         origin = os.environ.get("IDT_ALLOWED_ORIGIN", "*")
         if origin:
             self.send_header("Access-Control-Allow-Origin", origin)
-            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type, Authorization")
             self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 
     def _send(self, status: int, payload: dict | None) -> None:
@@ -101,9 +102,16 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path in ("/", "/health"):
             return self._send(200, {"ok": True})
+        if self.path.startswith("/admin/"):
+            return self._send(*handle_admin("GET", self.path, self.headers.get("Authorization")))
         self._send(404, {"error": "Not found"})
 
     def do_POST(self):
+        if self.path.startswith("/admin/"):
+            body = self._body()
+            if body is None:
+                return
+            return self._send(*handle_admin("POST", self.path, self.headers.get("Authorization"), body))
         if self.path not in ("/live-run", "/live-run/stream"):
             return self._send(404, {"error": "Not found"})
         body = self._body()

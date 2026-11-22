@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import AdminPage from "./components/AdminPage";
 import BriefPage from "./components/BriefPage";
 import Dashboard from "./components/Dashboard";
 import EvaluationPage from "./components/EvaluationPage";
@@ -81,6 +82,7 @@ export default function App() {
               <Route path="/p/:id" element={<BriefPage index={index} />} />
               <Route path="/evaluation" element={<EvaluationPage index={index} />} />
               <Route path="/how-it-works" element={<HowItWorks index={index} />} />
+              <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<p className="notice">That page does not exist. <Link to="/">Go to the review queue</Link>.</p>} />
             </Routes>
           )}

@@ -42,7 +42,8 @@ export interface Brief {
 
 export type ToolArgs = Record<string, unknown>;
 export type AgentEvent =
-  | { type: "start"; name: string; runs_left_today: number; models: Record<string, string> }
+  | { type: "start"; name: string; runs_left_today: number; code?: { runs_left: number; budget_left: number } | null;
+      models: Record<string, string> }
   | { type: "heartbeat" }
   | { type: "step"; step: "plan" | "gather" | "draft" | "verify" | "finalize"; t: number; cost_usd: number;
       model?: string; attempt?: number; notes?: number; items?: number; kept?: number; removed?: number }
@@ -128,7 +129,7 @@ export interface Bundle {
       flu_vaccine_this_season: boolean;
     };
   };
-  live?: { runs_left_today: number };
+  live?: { runs_left_today: number; code?: { runs_left: number; budget_left: number } | null };
   answer_key?: AnswerKey;
   older_notes?: Note[];
 }

@@ -37,6 +37,7 @@ export default function LiveRunDialog({ participantId, name, onClose, onDone }: 
   const [started, setStarted] = useState(0);
   const [now, setNow] = useState(0);
   const [runsLeft, setRunsLeft] = useState<number | null>(null);
+  const [personal, setPersonal] = useState(false);
 
   useEffect(() => {
     ref.current?.showModal();
@@ -93,7 +94,10 @@ export default function LiveRunDialog({ participantId, name, onClose, onDone }: 
     let current = EMPTY;
     const apply = (event: AgentEvent) => {
       if (event.type === "heartbeat") return;
-      if (event.type === "start") return setRunsLeft(event.runs_left_today);
+      if (event.type === "start") {
+        setPersonal(!!event.code);
+        return setRunsLeft(event.code ? event.code.runs_left : event.runs_left_today);
+      }
       current = applyEvent(current, event);
       setRun(current);
     };
@@ -167,7 +171,7 @@ export default function LiveRunDialog({ participantId, name, onClose, onDone }: 
               {phase === "running" && "Closing this window does not stop the run; it still counts toward today’s limit."}
               {phase === "finished" && run.bundle &&
                 `${run.bundle.brief.items.length} items kept${removedCount ? `, ${removedCount} removed by the verifier` : ""}.` +
-                (runsLeft !== null ? ` ${runsLeft} live run${runsLeft === 1 ? "" : "s"} left today.` : "")}
+                (runsLeft !== null ? ` ${runsLeft} live run${runsLeft === 1 ? "" : "s"} left ${personal ? "on your code" : "today"}.` : "")}
             </p>
             <div className="dialog-actions">
               {phase === "running" && (

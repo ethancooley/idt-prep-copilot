@@ -33,20 +33,9 @@ from typing import Iterator
 from idt_copilot.agent.chart_client import InProcessChartClient
 from idt_copilot.agent.graph import AgentConfig, run_agent
 from idt_copilot.agent.llm import LLM
+from idt_copilot.api import codes, schema
 from idt_copilot.chart.repository import ChartRepository, NotFound
 from idt_copilot.export.static_bundle import load_answer_key, participant_bundle
-
-RUNS_TABLE = """
-CREATE TABLE IF NOT EXISTS live_runs (
-    id             SERIAL PRIMARY KEY,
-    created_at     TIMESTAMPTZ NOT NULL DEFAULT now(),
-    participant_id TEXT NOT NULL,
-    client_hash    TEXT NOT NULL,
-    status         TEXT NOT NULL DEFAULT 'running',
-    cost_usd       DOUBLE PRECISION,
-    seconds        DOUBLE PRECISION
-)"""
-
 
 @dataclass
 class LiveRun:
@@ -56,6 +45,7 @@ class LiveRun:
     runs_left_today: int
     repo: ChartRepository
     llm_factory: type | object = LLM
+    code: codes.Reserved | None = None  # set when a personal access code started the run
 
 
 def _error(status: int, message: str) -> tuple[int, dict]:
@@ -69,38 +59,59 @@ def _client_hash(client_id: str | None) -> str:
 
 
 def open_live_run(body: dict, client_id: str | None = None, llm_factory=LLM) -> tuple[int, dict] | LiveRun:
+    """Two kinds of code open a live run: the owner code (IDT_ACCESS_CODE, with per-visitor daily caps), and
+    personal codes made in the admin console, each with its own run and spending limits. The daily cap
+    across everyone applies to both."""
     expected = os.environ.get("IDT_ACCESS_CODE")
     if not expected:
         return _error(503, "Live runs are turned off on this site. Saved briefs are still available.")
-    code = str(body.get("access_code", ""))
-    if not hmac.compare_digest(code.encode(), expected.encode()):
-        time.sleep(0.5)  # slow down guessing
-        return _error(401, "That access code is not valid.")
-    participant_id = str(body.get("participant_id", ""))
+    code = str(body.get("access_code", "")).strip()
+    owner = hmac.compare_digest(code.encode(), expected.encode())
 
     repo = ChartRepository(use_embeddings=False)
+    conn = repo.conn
+    reserved: codes.Reserved | None = None
+    if not owner:
+        try:
+            reserved = codes.reserve_run(conn, code) if code else None
+        except codes.CodeRejected as e:
+            return _error(e.status, e.message)
+        if reserved is None:
+            time.sleep(0.5)  # slow down guessing
+            return _error(401, "That access code is not valid.")
+
+    def refuse(status: int, message: str) -> tuple[int, dict]:
+        if reserved:
+            codes.release_run(conn, reserved.code_id)  # the run never started, so it doesn't count
+        return _error(status, message)
+
+    participant_id = str(body.get("participant_id", ""))
     try:
         summary = repo.get_participant_summary(participant_id)
     except NotFound:
-        return _error(404, "No participant with that id.")
+        return refuse(404, "No participant with that id.")
 
     daily = int(os.environ.get("IDT_DAILY_LIVE_LIMIT", "20"))
     per_client = int(os.environ.get("IDT_PER_CLIENT_LIMIT", "3"))
     who = _client_hash(client_id)
-    conn = repo.conn
-    conn.execute(RUNS_TABLE)
+    schema.ensure_live_runs(conn)
     today = conn.execute("""
-        SELECT count(*) AS total, count(*) FILTER (WHERE client_hash = %s) AS mine
+        SELECT count(*) AS total,
+               count(*) FILTER (WHERE client_hash = %s AND code_id IS NULL) AS mine
         FROM live_runs WHERE created_at >= date_trunc('day', now())""", (who,)).fetchone()
     if today["total"] >= daily:
-        return _error(429, "Today's live runs are used up. Saved briefs are still available; try again tomorrow.")
-    if today["mine"] >= per_client:
+        return refuse(429, "Today's live runs are used up. Saved briefs are still available; try again tomorrow.")
+    if owner and today["mine"] >= per_client:
         return _error(429, f"You have used all {per_client} live runs for today. Saved briefs are still available.")
-    run_id = conn.execute("INSERT INTO live_runs (participant_id, client_hash) VALUES (%s, %s) RETURNING id",
-                          (participant_id, who)).fetchone()["id"]
-    left = max(0, min(daily - today["total"], per_client - today["mine"]) - 1)
-    return LiveRun(run_id, participant_id, f"{summary['first_name']} {summary['last_name']}", left, repo,
-                   llm_factory)
+    run_id = conn.execute(
+        "INSERT INTO live_runs (participant_id, client_hash, code_id) VALUES (%s, %s, %s) RETURNING id",
+        (participant_id, who, reserved.code_id if reserved else None)).fetchone()["id"]
+    if reserved:
+        left = min(reserved.runs_left, daily - today["total"] - 1)
+    else:
+        left = max(0, min(daily - today["total"], per_client - today["mine"]) - 1)
+    return LiveRun(run_id, participant_id, f"{summary['first_name']} {summary['last_name']}", max(0, left), repo,
+                   llm_factory, reserved)
 
 
 def stream_live_run(run: LiveRun, heartbeat_seconds: float = 10.0) -> Iterator[dict]:
@@ -116,7 +127,8 @@ def stream_live_run(run: LiveRun, heartbeat_seconds: float = 10.0) -> Iterator[d
 
     def work() -> None:
         try:
-            outcome["brief"] = asyncio.run(run_agent(run.participant_id, run.llm_factory(), InProcessChartClient(),
+            outcome["llm"] = llm = run.llm_factory()
+            outcome["brief"] = asyncio.run(run_agent(run.participant_id, llm, InProcessChartClient(),
                                                      config, emit=events.put))
         except Exception as e:  # reported to the client below
             outcome["error"] = e
@@ -124,7 +136,7 @@ def stream_live_run(run: LiveRun, heartbeat_seconds: float = 10.0) -> Iterator[d
             events.put(None)
 
     yield {"type": "start", "participant_id": run.participant_id, "name": run.participant_name,
-           "runs_left_today": run.runs_left_today, "models": {
+           "runs_left_today": run.runs_left_today, "code": _code_status(run), "models": {
                "plan": config.plan_model, "gather": config.gather_model,
                "draft": config.draft_model, "verify": config.verify_model}}
     threading.Thread(target=work, daemon=True).start()
@@ -140,16 +152,36 @@ def stream_live_run(run: LiveRun, heartbeat_seconds: float = 10.0) -> Iterator[d
 
     conn = run.repo.conn
     if "error" in outcome:
-        conn.execute("UPDATE live_runs SET status = 'failed' WHERE id = %s", (run.run_id,))
+        spent = _spent(outcome)  # a failed run still used tokens, so it still counts against the code
+        conn.execute("UPDATE live_runs SET status = 'failed', cost_usd = %s WHERE id = %s", (spent, run.run_id))
+        if run.code and spent:
+            codes.charge(conn, run.code.code_id, spent)
         yield {"type": "error", "message": f"The live run failed: {outcome['error']}"}
         return
     brief = outcome["brief"]
     conn.execute("UPDATE live_runs SET status = 'ok', cost_usd = %s, seconds = %s WHERE id = %s",
                  (brief.run.get("cost_usd"), brief.run.get("seconds"), run.run_id))
+    if run.code:
+        codes.charge(conn, run.code.code_id, brief.run.get("cost_usd") or 0.0)
+        run.code.budget_left = round(run.code.budget_left - (brief.run.get("cost_usd") or 0.0), 4)
     key = load_answer_key(run.participant_id, Path(os.environ.get("IDT_GOLDEN_DIR", "data/golden")))
     bundle = participant_bundle(run.repo, brief, key)
-    bundle["live"] = {"runs_left_today": run.runs_left_today}
+    bundle["live"] = {"runs_left_today": run.runs_left_today, "code": _code_status(run)}
     yield {"type": "done", "bundle": bundle}
+
+
+def _spent(outcome: dict) -> float:
+    llm = outcome.get("llm")
+    try:
+        return float(llm.usage.as_dict().get("cost_usd", 0.0)) if llm else 0.0
+    except Exception:
+        return 0.0
+
+
+def _code_status(run: LiveRun) -> dict | None:
+    if not run.code:
+        return None
+    return {"runs_left": run.code.runs_left, "budget_left": max(0.0, run.code.budget_left)}
 
 
 def handle_live_run(body: dict, client_id: str | None = None, llm_factory=LLM) -> tuple[int, dict]:

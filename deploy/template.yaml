@@ -166,8 +166,8 @@ Resources:
             - !Sub "https://${SiteDistribution.DomainName}"
             - !If [HasCustomDomain, !Sub "https://${CustomDomain}", !Ref AWS::NoValue]
             - !If [HasExtraOrigin, !Ref ExtraAllowedOrigin, !Ref AWS::NoValue]
-          AllowMethods: [POST]
-          AllowHeaders: [content-type]
+          AllowMethods: [GET, POST]
+          AllowHeaders: [content-type, authorization]
           MaxAge: 3600
 
   # ------------------------------------------------------------------ cost tripwire

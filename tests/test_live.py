@@ -5,6 +5,7 @@ import psycopg
 import pytest
 
 from idt_copilot.agent.llm import LLM
+from idt_copilot.api import schema
 from idt_copilot.api.live import handle_live_run
 from idt_copilot.chart.repository import ChartRepository
 
@@ -16,6 +17,8 @@ def live_env(monkeypatch):
     try:
         pid = repo.list_participants()[0]["id"]
         repo.conn.execute("DROP TABLE IF EXISTS live_runs")
+        schema.forget()
+        schema.forget()
     except psycopg.Error:
         pytest.skip("database not running or not loaded")
     monkeypatch.setenv("IDT_ACCESS_CODE", "correct-code")
@@ -23,6 +26,7 @@ def live_env(monkeypatch):
     monkeypatch.setenv("IDT_PER_CLIENT_LIMIT", "2")
     yield pid
     repo.conn.execute("DROP TABLE IF EXISTS live_runs")
+    schema.forget()
 
 
 def _scripted():

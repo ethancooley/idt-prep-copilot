@@ -59,8 +59,9 @@ so they never appear in your shell history, the repo, or the Lambda's environmen
 ./deploy/put_secrets.sh
 ```
 
-Pick an access code that is long and random (`openssl rand -base64 18`), and share it only with people you
-want to run the agent.
+It asks for four values: the site's Anthropic key, the Neon connection string, an owner access code for
+yourself, and an admin password for the access-code console. Make the last two long and random
+(`openssl rand -base64 18`).
 
 **4. Real briefs for the site.** Run the eval once and export its briefs, so the site opens on real agent
 output and real accuracy numbers:
@@ -142,6 +143,7 @@ Until `AWS_DEPLOY_ROLE_ARN` is set, the deploy job is skipped and CI runs as bef
 
 | Task | How |
 | --- | --- |
+| Give someone access to live runs | Open `/#/admin` on the site, sign in with the admin password, and make them a code with its own run and spending limits. Copy the ready-made message and send it |
 | Change a secret or the access code | `./deploy/put_secrets.sh`, then force a cold start: `aws lambda update-function-configuration --function-name idt-copilot-live --description "secrets updated $(date +%F)"` |
 | Turn live runs off | Delete `/idt-copilot/IDT_ACCESS_CODE` and force a cold start. The site keeps working; live runs answer 503 |
 | Change the caps | `sam deploy ... --parameter-overrides DailyLiveLimit=10 PerVisitorLimit=2` (or edit and rerun `deploy.sh`) |
@@ -152,7 +154,9 @@ Until `AWS_DEPLOY_ROLE_ARN` is set, the deploy job is skipped and CI runs as bef
 
 ## What protects your credits
 
-- **Access code**, compared in constant time, with a half-second delay after a wrong guess
+- **Personal access codes**, each with its own run limit, spending limit, and expiry, made and turned off in
+  the admin console. Only a fingerprint of each code is stored
+- **Owner access code** for you, compared in constant time, with a half-second delay after a wrong guess
 - **Caps** in Postgres: 3 live runs per visitor per day and 20 per day in total. Visitors are counted by a
   salted hash of their IP address; the address itself is never stored
 - **Anthropic spend limit** on the site's own key, as a hard ceiling
