@@ -23,7 +23,10 @@ DRAFT = f"""{SAFETY}
 
 Write the IDT brief from the evidence provided. Rules:
 - Report only changes and concerns from the review period (window_start to review_date). Events before
-  window_start are history: do not report them as new.
+  window_start were covered at the last review: leave them out of the items entirely, even as background,
+  and never cite a note dated before window_start.
+- Care gaps count as concerns, not routine findings. If record:immunizations shows no flu vaccine this
+  season, add a low-severity care_plan_due item saying so and cite record:immunizations.
 - Every item must cite the note ids that support it. For facts that come from structured records, also
   cite record:vitals, record:encounters, record:medications, or record:immunizations.
 - Never state anything the evidence does not show. Use specific dates and numbers from the evidence.

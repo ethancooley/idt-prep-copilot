@@ -36,13 +36,17 @@ class Usage:
 
 
 class LLM:
+    # Models that reject tool_choice "tool"/"any". Shared across instances: the eval makes one LLM per
+    # participant, and without sharing every brief would repeat the same rejected request.
+    _models_without_forced_tools: set[str] = set()
+
     def __init__(self, client: MessagesClient | None = None):
         if client is None:
             import anthropic
             client = anthropic.Anthropic().messages
         self.client = client
         self.usage = Usage()
-        self._no_forced_tools: set[str] = set()  # models that reject tool_choice "tool"/"any"
+        self._no_forced_tools = LLM._models_without_forced_tools  # shared, so each model is probed once
 
     def call(self, step: str, model: str, system: str, messages: list[dict], max_tokens: int = 2000,
              tools: list[dict] | None = None, tool_choice: dict | None = None) -> Any:
